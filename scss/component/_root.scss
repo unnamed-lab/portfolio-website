@@ -3,6 +3,7 @@
 
 html {
   width: auto;
+  scroll-behavior: smooth;
 
   body {
     max-width: 100vw;
@@ -682,7 +683,6 @@ html {
         font-weight: 600;
         font-size: calc(1.05 * var(--fs-400));
         letter-spacing: 1px;
-        caret: $g-900 block;
 
         &::placeholder {
           color: $g-400;
