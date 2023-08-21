@@ -1,1 +1,18 @@
 @use '../custom' as *;
+
+.footer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .credit {
+        
+        .footer-credit {
+            color: $primary;
+
+            &:hover {
+                transition: all 1s;
+                color: $secondary
+            }
+        }
+    }
+}
