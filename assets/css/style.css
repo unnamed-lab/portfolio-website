@@ -1032,12 +1032,12 @@ html body .section-body .extra .catalogue .catalogue-body .item-card {
   margin-bottom: 2.5rem;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 2rem;
+  border-radius: 1rem 1rem 2rem 2rem;
   overflow: hidden;
   background-color: #ffffff;
   outline: 0.5px solid #ffffff;
 }
-html body .section-body .extra .catalogue .catalogue-body .item-card:hover .previewer img {
+html body .section-body .extra .catalogue .catalogue-body .item-card:hover .previewer iframe {
   filter: brightness(125%);
 }
 html body .section-body .extra .catalogue .catalogue-body .item-card .previewer {
@@ -1057,8 +1057,10 @@ html body .section-body .extra .catalogue .catalogue-body .item-card .previewer:
   height: 5rem;
   background-image: linear-gradient(180deg, transparent, #000000);
 }
-html body .section-body .extra .catalogue .catalogue-body .item-card .previewer img {
-  width: 100%;
+html body .section-body .extra .catalogue .catalogue-body .item-card .previewer iframe {
+  transform: scale(0.27);
+  transform-origin: top left;
+  overflow: hidden;
 }
 html body .section-body .extra .catalogue .catalogue-body .item-card .card-container {
   display: block;

@@ -907,14 +907,14 @@ html {
               margin-bottom: 2.5rem;
               margin-left: auto;
               margin-right: auto;
-              border-radius: 2rem;
+              border-radius: 1rem 1rem 2rem 2rem;
               overflow: hidden;
               background-color: $white;
               outline: 0.5px solid $white;
 
               &:hover {
                 .previewer {
-                  img {
+                  iframe {
                     filter: brightness(125%);
                   }
                 }
@@ -943,8 +943,10 @@ html {
                   // background-color: $white;
                 }
 
-                img {
-                  width: 100%;
+                iframe {
+                  transform: scale(0.27);
+                  transform-origin: top left;
+                  overflow: hidden;
                 }
               }
 
