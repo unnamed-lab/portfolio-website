@@ -1,1 +1,30 @@
-@use '../custom' as *;
+@use "../custom" as *;
+
+@keyframes tree-dot {
+  0% {
+    background-color: $g-800;
+    transition: all 1s;
+    outline: 3px solid $g-600;
+  }
+
+  25% {
+    background-color: $primary;
+    outline: 3px solid $g-100;
+  }
+
+  50% {
+    background-color: $g-800;
+    outline: 3px solid $g-600;
+  }
+
+  75% {
+    background-color: $primary;
+    outline: 3px solid $g-100;
+  }
+
+  100% {
+    background-color: $g-800;
+    transition: all 1s;
+    outline: 3px solid $g-600;
+  }
+}

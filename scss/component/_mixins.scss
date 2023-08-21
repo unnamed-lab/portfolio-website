@@ -42,3 +42,7 @@
 @mixin bg-opacity($colour, $percentage) {
   background-color: rgba($color: $colour, $alpha: calc($percentage/100));
 }
+
+@mixin border-opacity($color, $opacity) {
+  border-color: rgba($color, $opacity);
+}

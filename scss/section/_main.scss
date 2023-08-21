@@ -1,9 +1,197 @@
-@use '../custom' as *;
+@use "../custom" as *;
+@use "../component/mixins" as *;
 
- //   Below Large Screen
-  @media (max-width: 768px) {
+// .bg {
+//   position: absolute;
+//   width: 100vw;
+//   height: 5rem;
+//   top: 0;
+//   left: 0;
+//   background-image: linear-gradient(180deg, transparent, $black);
+// }
+
+.hero {
+  position: relative;
+  display: block;
+  margin-top: 1.775rem;
+  margin-left: 13.5%;
+  margin-right: 15.5%;
+  min-height: 35vh;
+  max-height: 80vh;
+  overflow: hidden;
+  z-index: 1;
+
+  .intro {
+    width: 65%;
+    position: relative;
+    z-index: 2;
+    margin-top: 2rem;
+
+    .phrase {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .name {
+      max-width: 100%;
+      text-transform: capitalize;
+      font-size: 5.5rem;
+      font-weight: 700;
+      line-height: 6rem;
+      margin-block-start: 0rem;
+      margin-bottom: 2rem;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 6rem;
+        height: 0.6rem;
+        background-color: $primary;
+      }
+    }
+
+    .interlude {
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+      font-weight: 300;
+      color: $g-700;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+
+      b {
+        font-size: 1.5rem;
+        color: $g-500;
+      }
+    }
+
+    .social-menu {
+      position: relative;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+      .social-link {
+        margin-right: 1rem;
+        margin-left: 0;
+
+        span {
+          display: contents;
+          width: 3rem;
+
+          svg {
+            width: inherit;
+            margin: 0;
+          }
+        }
+      }
+    }
   }
 
-  //   Above Medium Screen
-  @media (min-width: 992px) {
+  .sub-intro {
+    // position: absolute;
+    width: 35%;
+    right: 0;
+    top: 0;
+
+    .profile-pic {
+      position: relative;
+      display: block;
+      height: 70dvh;
+      overflow: hidden;
+
+      img {
+        object-fit: fill;
+        position: absolute;
+        width: 50vw;
+        left: -60%;
+        top: -8%;
+        // clip: rect(20px, 330px, 420px, 160px);
+      }
+    }
+    .quote {
+      position: absolute;
+      text-align: center;
+      width: 45%;
+      left: 44%;
+      top: 35%;
+      line-height: 2rem;
+      font-weight: 600;
+
+      i {
+        text-align: left;
+        font-size: 5rem;
+        position: absolute;
+
+        &.top {
+          top: 2px;
+          left: -0.15rem;
+        }
+
+        &.bottom {
+          text-align: right;
+          bottom: -2.75rem;
+          right: 1rem;
+        }
+      }
+    }
   }
+}
+
+.about {
+  position: relative;
+  width: 100%;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid $g-800;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    width: 100vw;
+    height: 6rem;
+    top: -90px;
+    left: -55px;
+    background-image: linear-gradient(180deg, transparent, $black);
+  }
+
+  &::after {
+    position: absolute;
+    content: " ";
+    margin: 0;
+    top: 0;
+    left: -55px;
+    background-color: $black;
+    width: 100vw;
+    height: inherit;
+    z-index: -2;
+  }
+
+  .section-body {
+
+    .bio {
+      font-size: var(--fs-500);
+      margin-bottom: 0.5rem;
+    }
+
+  }
+}
+
+.work {
+  position: relative;
+  width: 100%;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid $g-900;
+}
+
+.skillset {
+  position: relative;
+  width: 100%;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid $g-900;
+}
