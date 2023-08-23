@@ -947,6 +947,7 @@ html {
                   transform: scale(0.27);
                   transform-origin: top left;
                   overflow: hidden;
+                  cursor: pointer;
                 }
               }
 
@@ -1007,7 +1008,7 @@ html {
                       padding-right: 0.33rem;
                       font-size: var(--fs-100);
                       border: none;
-                      border-radius: 2rem;
+                      border-radius: 1rem;
                       // outline: 1px solid $g-600;
                       background-color: $g-400;
                       color: $white;
@@ -1049,6 +1050,95 @@ html {
                 cursor: pointer;
                 transition: all 1s;
                 outline: 4px solid $g-700;
+              }
+            }
+          }
+        }
+
+        .carousel {
+          max-width: 100%;
+          margin-top: 4rem;
+          margin-bottom: 4rem;
+          display: flex;
+          overflow: hidden;
+          padding-left: 5%;
+          padding-right: 30%;
+
+          .carousel-body {
+            display: flex;
+            width: 100%;
+            .carousel-slide {
+              position: relative;
+              display: flex;
+              flex-wrap: wrap;
+              width: 100%;
+              flex-direction: column;
+              flex: 0 0 100%;
+              margin-top: 2rem;
+              margin-bottom: 2rem;
+              margin-left: 20%;
+              margin-right: 30%;
+              transition: transform 500ms ease-in-out;
+
+              .quote {
+                display: flex;
+                text-align: center;
+                font-size: var(--fs-700);
+                font-weight: 700;
+                margin-bottom: 0.75rem;
+
+                &::before {
+                  position: absolute;
+                  top: -50px;
+                  left: -50px;
+                  content: '"';
+                  font-size: calc(2.5 * var(--fs-800));
+                  margin-right: 2rem;
+                }
+
+                &::after {
+                  position: absolute;
+                  bottom: -30px;
+                  right: -30px;
+                  content: '"';
+                  font-size: calc(2.5 * var(--fs-800));
+                  margin-right: 2rem;
+                }
+              }
+
+              .client-profile {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-top: 1rem;
+
+                .detail {
+                  position: relative;
+                  display: block;
+                  .name {
+                    font-weight: 600;
+                    font-size: var(--fs-500);
+                    letter-spacing: 1px;
+                  }
+
+                  .position {
+                    font-weight: 400;
+                    color: $g-600;
+                  }
+                }
+
+                .profile-img {
+                  width: 2.5rem;
+                  height: 2.5rem;
+                  margin-right: 1.25rem;
+                  border-radius: 50%;
+                  background-color: $g-700;
+
+                  img {
+                    width: inherit;
+                  }
+                }
               }
             }
           }
