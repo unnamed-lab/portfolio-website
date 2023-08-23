@@ -70,3 +70,18 @@
     transition: all 1s;
   }
 }
+
+@keyframes card-glow {
+  0% {
+    transition: all 500ms;
+    box-shadow: 0 0 0px $g-100;
+  }
+  50% {
+    transition: all 500ms;
+    box-shadow: 0 0 15px $g-100;
+  }
+  0% {
+    transition: all 500ms;
+    box-shadow: 0 0 0px $g-100;
+  }
+}

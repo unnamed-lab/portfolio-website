@@ -26,7 +26,7 @@
     --fs-600: calc(0.85 * 1.44rem);
     --fs-700: calc(0.85 * 1.728rem);
     --fs-800: calc(0.85 * 2.07rem);
-    --fs-900: calc(0.75 * 2.48rem);
+    --fs-900: calc(0.85 * 2.48rem);
   }
 }
 @media (max-width: 767px) {
@@ -116,6 +116,38 @@
   text-align: right;
 }
 
+.btn {
+  width: 100%;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  background-color: #b4b4b4;
+  border-radius: 2rem;
+  border: none;
+  color: #000000 !important;
+  outline: 2px solid #c8c8c8;
+  padding-top: 0.12rem;
+  padding-bottom: 0.12rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: var(--fs-500);
+  font-weight: 600;
+}
+.btn:hover {
+  transition: all 1s ease-in-out;
+  color: #ffffff;
+  background-color: transparent;
+}
+.btn.primary {
+  background-color: #1ca7ec;
+  outline: 2px solid #1ca7ec;
+}
+.btn.primary:hover {
+  transition: all 1s ease-in-out;
+  color: #1ca7ec !important;
+  background-color: transparent;
+  outline: 3px solid #1ca7ec;
+}
+
 :root {
   --hp-glow: 60%;
   --fp-glow: 140%;
@@ -171,6 +203,20 @@
   100% {
     filter: brightness(var(--hp-glow));
     transition: all 1s;
+  }
+}
+@keyframes card-glow {
+  0% {
+    transition: all 500ms;
+    box-shadow: 0 0 0px #c8c8c8;
+  }
+  50% {
+    transition: all 500ms;
+    box-shadow: 0 0 15px #c8c8c8;
+  }
+  0% {
+    transition: all 500ms;
+    box-shadow: 0 0 0px #c8c8c8;
   }
 }
 html {
@@ -813,92 +859,6 @@ html body .modal-body .heading {
     font-size: calc(1.25 * var(--fs-800));
   }
 }
-html body .form-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: space-evenly;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
-}
-@media (max-width: 767px) {
-  html body .form-container {
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  html body .form-container {
-    padding-right: 1.25rem;
-    padding-left: 1.25rem;
-  }
-}
-html body .form-container .form-group {
-  display: inherit;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-@media (max-width: 1023px) {
-  html body .form-container .form-group {
-    flex-direction: column;
-  }
-}
-html body .form-container .btn {
-  margin-left: auto;
-  margin-right: auto;
-}
-html body .form-container label {
-  margin-right: 0.6rem;
-  font-size: var(--fs-500);
-}
-@media (max-width: 1023px) {
-  html body .form-container label {
-    margin-bottom: 0.33rem;
-    font-size: var(--fs-600);
-  }
-}
-html body .form-container span {
-  font-weight: 700;
-  font-size: var(--fs-700);
-  letter-spacing: 1px;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-@media (max-width: 1023px) {
-  html body .form-container span {
-    font-size: calc(1.33 * var(--fs-800));
-  }
-}
-html body .form-container .info {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: var(--fs-200);
-  text-align: center;
-  margin-bottom: 0.25rem;
-}
-html body .form-container .form-input {
-  width: auto;
-  flex: 1;
-  border: none;
-  border-radius: 0.4rem;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  font-size: calc(1.05 * var(--fs-400));
-  letter-spacing: 1px;
-}
-html body .form-container .form-input::placeholder {
-  color: #8c8c8c;
-  font-weight: 500;
-}
 html body .section-tab {
   min-width: 5rem;
   width: max-content;
@@ -1234,10 +1194,112 @@ html body .section-body .extra .carousel .carousel-body .carousel-slide .client-
 html body .section-body .extra .carousel .carousel-body .carousel-slide .client-profile .profile-img img {
   width: inherit;
 }
+html body .section-body .extra .profile-card {
+  max-width: 100%;
+  min-height: 5rem;
+  margin-top: 2rem;
+  margin-left: 2.75rem;
+  margin-right: 2.75rem;
+  outline: 2px solid #505050;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  display: block;
+  animation: card-glow 2500ms ease-in-out infinite;
+}
+html body .section-body .extra .profile-card .profile-img {
+  width: 10rem;
+  max-height: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #b4b4b4;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+html body .section-body .extra .profile-card .profile-img img {
+  width: inherit;
+  object-fit: contain;
+}
+html body .section-body .extra .profile-card .profile-details {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+html body .section-body .extra .profile-card .profile-details .name {
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 20px;
+  margin-bottom: 6px;
+}
+html body .section-body .extra .profile-card .profile-details .role {
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: #8c8c8c;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+html body .section-body .extra .profile-card .profile-details .social-menu {
+  max-width: 100%;
+  display: flex;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+html body .section-body .extra .profile-card .profile-details .social-menu .social-link {
+  margin-left: auto;
+  margin-right: auto;
+}
+html body .section-body .extra .profile-card .profile-details .social-menu .social-link span {
+  width: 100%;
+}
+html body .section-body .extra .profile-card .profile-details .social-menu .social-link span svg {
+  width: inherit;
+}
+html body .section-body .extra .profile-card .profile-details .hire-btn {
+  max-width: 100%;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+html body .section-body .extra .form {
+  max-width: 80%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+html body .section-body .extra .form .sub-heading {
+  margin-bottom: 1.5rem;
+}
+html body .section-body .extra .form .form-container {
+  position: relative;
+  width: 100%;
+}
+html body .section-body .extra .form .form-container .form-group {
+  position: relative;
+  display: flex;
+  margin-top: 0.6rem;
+  margin-bottom: 0.9rem;
+}
+html body .section-body .extra .form .form-container .form-group label {
+  margin-right: 1rem;
+}
+html body .section-body .extra .form .form-container .form-group .form-input {
+  flex: 1;
+}
 html body .section-body .title {
   display: block;
   width: 60%;
   margin-bottom: 0.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 html body .section-body .title::after {
   content: "";

@@ -380,10 +380,11 @@ let curIndex = 0;
 const changeSlide = function () {
   const offset = -curIndex * 100;
   for (let i = 0; i >= offset; i--) {
-    carousel.style.transform = `translateX(${i}%)`;
-    setTimeout(() => null, 100);
-  } 
-  
+    setTimeout(() => {
+      carousel.style.transform = `translateX(${i}%)`;
+    }, 200);
+  }
+
   if (curIndex >= slide.length - 1) curIndex = 0;
   else curIndex++;
 };

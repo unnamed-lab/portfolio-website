@@ -668,95 +668,6 @@ html {
       }
     }
 
-    .form-container {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-content: space-evenly;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      padding-right: 2rem;
-      padding-left: 2rem;
-
-      @include responsive(mobile) {
-        padding-right: 0.75rem;
-        padding-left: 0.75rem;
-      }
-
-      @include responsive(tablet) {
-        padding-right: 1.25rem;
-        padding-left: 1.25rem;
-      }
-
-      .form-group {
-        display: inherit;
-        flex-wrap: wrap;
-        align-items: center;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-
-        @include responsive(mediadown) {
-          flex-direction: column;
-        }
-      }
-
-      .btn {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      label {
-        margin-right: 0.6rem;
-        font-size: var(--fs-500);
-
-        @include responsive(mediadown) {
-          margin-bottom: 0.33rem;
-          font-size: var(--fs-600);
-        }
-      }
-
-      span {
-        font-weight: 700;
-        font-size: var(--fs-700);
-        letter-spacing: 1px;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-
-        @include responsive(mediadown) {
-          font-size: calc(1.33 * var(--fs-800));
-        }
-      }
-
-      .info {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: var(--fs-200);
-        text-align: center;
-        margin-bottom: 0.25rem;
-      }
-
-      .form-input {
-        width: auto;
-        flex: 1;
-        border: none;
-        border-radius: 0.4rem;
-        padding-top: 0.2rem;
-        padding-bottom: 0.2rem;
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
-        font-family: "Poppins", Arial, Helvetica, sans-serif;
-        font-weight: 600;
-        font-size: calc(1.05 * var(--fs-400));
-        letter-spacing: 1px;
-
-        &::placeholder {
-          color: $g-400;
-          font-weight: 500;
-        }
-      }
-    }
-
     .section-tab {
       min-width: 5rem;
       width: max-content;
@@ -1072,8 +983,8 @@ html {
               max-width: 60%;
               flex-direction: column;
               flex: 0 0 100%;
-              margin-top: .25rem;
-              margin-bottom: .25rem;
+              margin-top: 0.25rem;
+              margin-bottom: 0.25rem;
               margin-left: 20%;
               margin-right: 20%;
               transition: transform 500ms ease-in-out;
@@ -1111,7 +1022,7 @@ html {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
-                margin-top: .5rem;
+                margin-top: 0.5rem;
 
                 .detail {
                   position: relative;
@@ -1144,12 +1055,142 @@ html {
             }
           }
         }
+
+        .profile-card {
+          max-width: 100%;
+          min-height: 5rem;
+          margin-top: 2rem;
+          margin-left: 2.75rem;
+          margin-right: 2.75rem;
+          outline: 2px solid $g-700;
+          border-radius: 2rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+          text-align: center;
+          display: block;
+          animation: card-glow 2500ms ease-in-out infinite;
+
+          .profile-img {
+            width: 10rem;
+            max-height: 10rem;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: $g-200;
+            border-radius: 1.5rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+
+            img {
+              width: inherit;
+              object-fit: contain;
+            }
+          }
+
+          .profile-details {
+            max-width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            .name {
+              font-weight: 600;
+              font-size: 1.3rem;
+              line-height: 20px;
+              margin-bottom: 6px;
+            }
+
+            .role {
+              font-size: 0.6rem;
+              font-weight: 400;
+              color: $g-400;
+              letter-spacing: 1px;
+              margin-bottom: 12px;
+            }
+
+            .social-menu {
+              max-width: 100%;
+              display: flex;
+              padding-left: 1.5rem;
+              padding-right: 1.5rem;
+              margin-bottom: 0.25rem;
+
+              .social-link {
+                margin-left: auto;
+                margin-right: auto;
+
+                span {
+                  width: 100%;
+
+                  svg {
+                    width: inherit;
+                  }
+                }
+              }
+            }
+
+            .hire-btn {
+              max-width: 100%;
+              margin-top: 0.5rem;
+              padding-left: 1rem;
+              padding-right: 1rem;
+            }
+
+            // .location {
+            //   display: flex;
+            //   flex-wrap: wrap;
+            //   justify-content: center;
+            //   align-items: center;
+            //   span {
+            //     width: .55rem;
+            //     margin-right: .25rem;
+            //   }
+            // }
+          }
+        }
+
+        .form {
+          max-width: 80%;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 2rem;
+          padding-right: 2rem;
+
+          .sub-heading {
+            margin-bottom: 1.5rem;
+          }
+
+          .form-container {
+            position: relative;
+            width: 100%;
+
+            .form-group{
+              position: relative;
+              display: flex;
+              margin-top: .6rem;
+              margin-bottom: .9rem;
+
+              label {
+                margin-right: 1rem;
+              }
+
+              .form-input {
+                flex: 1;
+              }
+            }
+          }
+        }
       }
 
       .title {
         display: block;
         width: 60%;
         margin-bottom: 0.5rem;
+        font-weight: 600;
+        text-transform: capitalize;
 
         &::after {
           content: "";
