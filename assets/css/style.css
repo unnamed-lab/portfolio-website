@@ -1156,12 +1156,10 @@ html body .section-body .extra .catalogue .paginator .pag-btn:hover {
 }
 html body .section-body .extra .carousel {
   max-width: 100%;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   overflow: hidden;
-  padding-left: 5%;
-  padding-right: 30%;
 }
 html body .section-body .extra .carousel .carousel-body {
   display: flex;
@@ -1171,35 +1169,37 @@ html body .section-body .extra .carousel .carousel-body .carousel-slide {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  max-width: 60%;
   flex-direction: column;
   flex: 0 0 100%;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
   margin-left: 20%;
-  margin-right: 30%;
+  margin-right: 20%;
   transition: transform 500ms ease-in-out;
 }
 html body .section-body .extra .carousel .carousel-body .carousel-slide .quote {
   display: flex;
+  flex-wrap: warp;
+  flex-direction: column;
   text-align: center;
   font-size: var(--fs-700);
   font-weight: 700;
-  margin-bottom: 0.75rem;
+  width: 100%;
 }
 html body .section-body .extra .carousel .carousel-body .carousel-slide .quote::before {
-  position: absolute;
-  top: -50px;
-  left: -50px;
   content: '"';
+  display: flex;
+  height: 70px;
+  margin-right: auto;
   font-size: calc(2.5 * var(--fs-800));
   margin-right: 2rem;
 }
 html body .section-body .extra .carousel .carousel-body .carousel-slide .quote::after {
-  position: absolute;
-  bottom: -30px;
-  right: -30px;
   content: '"';
+  display: flex;
+  height: 70px;
+  margin-left: auto;
   font-size: calc(2.5 * var(--fs-800));
   margin-right: 2rem;
 }
@@ -1208,7 +1208,7 @@ html body .section-body .extra .carousel .carousel-body .carousel-slide .client-
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 html body .section-body .extra .carousel .carousel-body .carousel-slide .client-profile .detail {
   position: relative;
@@ -1228,7 +1228,8 @@ html body .section-body .extra .carousel .carousel-body .carousel-slide .client-
   height: 2.5rem;
   margin-right: 1.25rem;
   border-radius: 50%;
-  background-color: #505050;
+  background-color: #b4b4b4;
+  overflow: hidden;
 }
 html body .section-body .extra .carousel .carousel-body .carousel-slide .client-profile .profile-img img {
   width: inherit;

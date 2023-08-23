@@ -1057,12 +1057,10 @@ html {
 
         .carousel {
           max-width: 100%;
-          margin-top: 4rem;
-          margin-bottom: 4rem;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
           display: flex;
           overflow: hidden;
-          padding-left: 5%;
-          padding-right: 30%;
 
           .carousel-body {
             display: flex;
@@ -1071,36 +1069,38 @@ html {
               position: relative;
               display: flex;
               flex-wrap: wrap;
-              width: 100%;
+              max-width: 60%;
               flex-direction: column;
               flex: 0 0 100%;
-              margin-top: 2rem;
-              margin-bottom: 2rem;
+              margin-top: .25rem;
+              margin-bottom: .25rem;
               margin-left: 20%;
-              margin-right: 30%;
+              margin-right: 20%;
               transition: transform 500ms ease-in-out;
 
               .quote {
                 display: flex;
+                flex-wrap: warp;
+                flex-direction: column;
                 text-align: center;
                 font-size: var(--fs-700);
                 font-weight: 700;
-                margin-bottom: 0.75rem;
+                width: 100%;
 
                 &::before {
-                  position: absolute;
-                  top: -50px;
-                  left: -50px;
                   content: '"';
+                  display: flex;
+                  height: 70px;
+                  margin-right: auto;
                   font-size: calc(2.5 * var(--fs-800));
                   margin-right: 2rem;
                 }
 
                 &::after {
-                  position: absolute;
-                  bottom: -30px;
-                  right: -30px;
                   content: '"';
+                  display: flex;
+                  height: 70px;
+                  margin-left: auto;
                   font-size: calc(2.5 * var(--fs-800));
                   margin-right: 2rem;
                 }
@@ -1111,7 +1111,7 @@ html {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
-                margin-top: 1rem;
+                margin-top: .5rem;
 
                 .detail {
                   position: relative;
@@ -1133,7 +1133,8 @@ html {
                   height: 2.5rem;
                   margin-right: 1.25rem;
                   border-radius: 50%;
-                  background-color: $g-700;
+                  background-color: $g-200;
+                  overflow: hidden;
 
                   img {
                     width: inherit;

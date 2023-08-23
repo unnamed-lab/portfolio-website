@@ -327,19 +327,65 @@ btnProjectAPI.addEventListener("click", function () {
 })();
 
 //  Testimonial Carousel
+const carouselItem = [
+  {
+    name: "John Doe",
+    title: "CFO, Cypheir Technology",
+    image: "./assets/img/profile.png",
+    review:
+      "Ea nemo atque enim. Excepturi ipsam perferendis sunt ducimus? Et voluptatum cum atque exercitationem explicabo minima iure ipsam dolores mollitia.",
+  },
+  {
+    name: "Lorem Ipsum",
+    title: "CEO, Lorem Inc",
+    image: "./assets/img/profile.png",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias? Ea nemo atque enim.",
+  },
+  {
+    name: "Mack Shift",
+    title: "CFO, Marc Ltd",
+    image: "./assets/img/profile.png",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias? Ea nemo atque enim. Excepturi ipsam perferendis sunt ducimus?",
+  },
+];
 const carousel = document.querySelector(".carousel-body");
+(function () {
+  carousel.innerHTML = "";
+  carouselItem.map((item) => {
+    const html = `
+<div class="carousel-slide">
+  <div class="quote">
+    ${item.review}
+  </div>
+
+  <div class="client-profile">
+    <div class="profile-img">
+      <img src="${item.image}" alt="${item.name}">
+    </div>
+    <div class="detail">
+      <div class="name">${item.name}</div>
+      <div class="position">${item.title}</div>
+    </div>
+  </div>
+</div>
+    `;
+    carousel.insertAdjacentHTML("beforeend", html);
+  });
+})();
+
 const slide = document.querySelectorAll(".carousel-slide");
 let curIndex = 0;
 const changeSlide = function () {
+  const offset = -curIndex * 100;
+  for (let i = 0; i >= offset; i--) {
+    carousel.style.transform = `translateX(${i}%)`;
+    setTimeout(() => null, 100);
+  } 
+  
   if (curIndex >= slide.length - 1) curIndex = 0;
   else curIndex++;
-  const offset = -curIndex * 150;
-  for (let i = 0; i >= offset; i--) {
-    setTimeout(function () {
-      carousel.style.transform = `translateX(${i}%)`;
-      console.log(`Current iteration: ${i}`);
-    }, 10000);
-  }
 };
 setInterval(function () {
   changeSlide();
