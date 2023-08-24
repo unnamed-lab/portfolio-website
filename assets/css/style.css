@@ -232,7 +232,7 @@ html body {
   overflow-y: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 html body::-webkit-scrollbar {
   display: none;
@@ -679,10 +679,12 @@ html body .card.mini {
   min-height: 6rem;
   background-color: rgba(40, 40, 40, 0.9);
   padding-bottom: 1.15rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
   padding-top: 0.5rem;
   border-radius: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 html body .card.mini:hover {
   transition: all 1s;
@@ -708,6 +710,7 @@ html body .card .body .icon.python img {
   width: 6.5rem;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0.75rem;
 }
 html body .card .body .icon.animate {
   animation: glow 4s ease-in-out infinite;
@@ -865,6 +868,7 @@ html body .section-tab {
   height: 1rem;
   border: 2px solid #c8c8c8;
   border-radius: 1.5rem;
+  margin: 0 1rem;
   padding: 2px 0.75rem;
   display: flex;
   flex-wrap: wrap;
@@ -911,9 +915,24 @@ html body .section-body .extra .item {
   margin-bottom: 0.5rem;
   margin-right: auto;
 }
+@media (max-width: 1023px) {
+  html body .section-body .extra .item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 html body .section-body .extra .item.n-r {
   width: 100%;
   flex: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+html body .section-body .extra .item.n-r .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
 }
 html body .section-body .extra .item .list-menu {
   margin-top: 0.25rem;
@@ -988,7 +1007,7 @@ html body .section-body .extra .catalogue .catalogue-body .item-card {
   position: relative;
   display: block;
   max-width: 27%;
-  height: 21rem;
+  max-height: 18rem;
   margin-bottom: 2.5rem;
   margin-left: auto;
   margin-right: auto;
@@ -999,6 +1018,11 @@ html body .section-body .extra .catalogue .catalogue-body .item-card {
 }
 html body .section-body .extra .catalogue .catalogue-body .item-card:hover .previewer iframe {
   filter: brightness(125%);
+}
+@media (max-width: 1023px) {
+  html body .section-body .extra .catalogue .catalogue-body .item-card {
+    max-width: 40%;
+  }
 }
 html body .section-body .extra .catalogue .catalogue-body .item-card .previewer {
   position: relative;
@@ -1037,18 +1061,18 @@ html body .section-body .extra .catalogue .catalogue-body .item-card .card-conta
   padding-right: 0.6rem;
   margin-top: 0;
   color: #000000;
-  height: 11rem;
+  height: 12rem;
 }
 html body .section-body .extra .catalogue .catalogue-body .item-card .card-container .card-body .header {
   font-size: var(--fs-500);
   font-weight: 700;
   margin-bottom: 0.33rem;
+  margin-block-end: -2rem;
   letter-spacing: 1px;
 }
 html body .section-body .extra .catalogue .catalogue-body .item-card .card-container .card-body .info {
   width: 100%;
   height: auto;
-  min-height: 6.9rem;
   max-height: 6.9rem;
   overflow: hidden;
   font-size: calc(0.8 * var(--fs-200));
@@ -1056,7 +1080,7 @@ html body .section-body .extra .catalogue .catalogue-body .item-card .card-conta
   color: #000000;
 }
 html body .section-body .extra .catalogue .catalogue-body .item-card .card-container .card-body .stack-list {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
@@ -1064,10 +1088,6 @@ html body .section-body .extra .catalogue .catalogue-body .item-card .card-conta
   align-self: flex-end;
   width: 100%;
   justify-content: center;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
 }
 html body .section-body .extra .catalogue .catalogue-body .item-card .card-container .card-body .stack-list .stack-item {
   margin-right: auto;
@@ -1137,6 +1157,13 @@ html body .section-body .extra .carousel .carousel-body .carousel-slide {
   margin-left: 20%;
   margin-right: 20%;
   transition: transform 500ms ease-in-out;
+}
+@media (max-width: 1023px) {
+  html body .section-body .extra .carousel .carousel-body .carousel-slide {
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 html body .section-body .extra .carousel .carousel-body .carousel-slide .quote {
   display: flex;
@@ -1210,6 +1237,14 @@ html body .section-body .extra .profile-card {
   display: block;
   animation: card-glow 2500ms ease-in-out infinite;
 }
+@media (max-width: 1023px) {
+  html body .section-body .extra .profile-card {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 3rem;
+    padding-top: 3rem;
+  }
+}
 html body .section-body .extra .profile-card .profile-img {
   width: 10rem;
   max-height: 10rem;
@@ -1219,6 +1254,13 @@ html body .section-body .extra .profile-card .profile-img {
   border-radius: 1.5rem;
   margin-bottom: 1rem;
   overflow: hidden;
+}
+@media (max-width: 1023px) {
+  html body .section-body .extra .profile-card .profile-img {
+    width: 15rem;
+    max-height: 15rem;
+    margin-bottom: 2rem;
+  }
 }
 html body .section-body .extra .profile-card .profile-img img {
   width: inherit;
@@ -1236,6 +1278,13 @@ html body .section-body .extra .profile-card .profile-details .name {
   line-height: 20px;
   margin-bottom: 6px;
 }
+@media (max-width: 1023px) {
+  html body .section-body .extra .profile-card .profile-details .name {
+    font-size: 2.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
 html body .section-body .extra .profile-card .profile-details .role {
   font-size: 0.6rem;
   font-weight: 400;
@@ -1243,12 +1292,25 @@ html body .section-body .extra .profile-card .profile-details .role {
   letter-spacing: 1px;
   margin-bottom: 12px;
 }
+@media (max-width: 1023px) {
+  html body .section-body .extra .profile-card .profile-details .role {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
 html body .section-body .extra .profile-card .profile-details .social-menu {
   max-width: 100%;
   display: flex;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   margin-bottom: 0.25rem;
+}
+@media (max-width: 1023px) {
+  html body .section-body .extra .profile-card .profile-details .social-menu {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
 }
 html body .section-body .extra .profile-card .profile-details .social-menu .social-link {
   margin-left: auto;
@@ -1265,6 +1327,20 @@ html body .section-body .extra .profile-card .profile-details .hire-btn {
   margin-top: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+@media (max-width: 1023px) {
+  html body .section-body .extra .profile-card .profile-details .hire-btn {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 1023px) {
+  html body .section-body .extra .profile-card .profile-details .hire-btn .btn {
+    font-size: 2rem;
+    font-weight: 500;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 html body .section-body .extra .form {
   max-width: 80%;
@@ -1288,11 +1364,23 @@ html body .section-body .extra .form .form-container .form-group {
   margin-top: 0.6rem;
   margin-bottom: 0.9rem;
 }
+@media (max-width: 1023px) {
+  html body .section-body .extra .form .form-container .form-group {
+    flex-wrap: wrap;
+  }
+}
 html body .section-body .extra .form .form-container .form-group label {
   margin-right: 1rem;
 }
 html body .section-body .extra .form .form-container .form-group .form-input {
   flex: 1;
+  padding: 8px 12px;
+}
+@media (max-width: 1023px) {
+  html body .section-body .extra .form .form-container .form-group .form-input {
+    flex: 100%;
+    width: 100%;
+  }
 }
 html body .section-body .title {
   display: block;
@@ -1466,7 +1554,7 @@ html body span svg {
   padding-bottom: 0.15rem;
   margin-left: auto;
   margin-right: auto;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0px 3px 15px 1px #000000;
   transition: all 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
@@ -1584,15 +1672,22 @@ html body span svg {
   position: relative;
   display: block;
   margin-top: 1.775rem;
-  margin-left: 13.5%;
-  margin-right: 15.5%;
-  min-height: 35vh;
-  max-height: 80vh;
+  margin-left: 13%;
+  margin-right: 13%;
+  min-height: 70vh;
+  max-height: 90vh;
   overflow: hidden;
   z-index: 1;
 }
+@media (max-width: 1023px) {
+  .hero {
+    margin-top: 5vh;
+    min-height: 50vh;
+    max-height: 60vh;
+  }
+}
 .hero .intro {
-  width: 65%;
+  max-width: 100%;
   position: relative;
   z-index: 2;
   margin-top: 2rem;
@@ -1604,7 +1699,7 @@ html body span svg {
 .hero .intro .name {
   max-width: 100%;
   text-transform: capitalize;
-  font-size: 5.5rem;
+  font-size: 6.6vw;
   font-weight: 700;
   line-height: 6rem;
   margin-block-start: 0rem;
@@ -1650,22 +1745,21 @@ html body span svg {
   margin: 0;
 }
 .hero .sub-intro {
-  width: 35%;
-  right: 0;
-  top: 0;
+  min-width: 30%;
+  flex: 1;
 }
 .hero .sub-intro .profile-pic {
   position: relative;
   display: block;
-  height: 70dvh;
-  overflow: hidden;
+  min-height: 70dvh;
 }
 .hero .sub-intro .profile-pic img {
   object-fit: fill;
-  position: absolute;
+  position: inherit;
   width: 50vw;
-  left: -60%;
-  top: -8%;
+  left: -50%;
+  top: 0%;
+  clip: rect(20px, 330px, 420px, 160px);
 }
 .hero .sub-intro .quote {
   position: absolute;
@@ -1703,11 +1797,17 @@ html body span svg {
   position: absolute;
   z-index: 2;
   margin: 0;
+  max-width: 100vw;
   width: 100vw;
   height: 6rem;
   top: -90px;
-  left: -55px;
+  left: -60px;
   background-image: linear-gradient(180deg, transparent, #000000);
+}
+@media (max-width: 1023px) {
+  .about::before {
+    left: -25px;
+  }
 }
 .about::after {
   position: absolute;
