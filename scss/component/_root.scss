@@ -455,6 +455,11 @@ html {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
 
+        @include responsive(mobile) {
+          max-width: 8.5rem;
+          max-height: 9.25rem;
+        }
+
         &:hover {
           transition: all 1s;
           @include bg-opacity($g-900, 60);
@@ -463,7 +468,11 @@ html {
       }
 
       .body {
-        display: contents;
+        display: grid;
+        width: 100%;
+        padding-top: .5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
 
         .icon {
           display: contents;
@@ -474,19 +483,24 @@ html {
           margin-left: auto;
           margin-right: auto;
 
-          &.python {
-            width: 8rem;
-
-            img {
-              width: 6.5rem;
-              margin-left: auto;
-              margin-right: auto;
-              margin-top: 0.75rem;
-
-              @include responsive(mediadown) {
-              }
-            }
+          img {
+            margin-bottom: .75rem;
+            width: 7rem;
           }
+
+          // &.python {
+          //   width: 8rem;
+
+          //   img {
+          //     width: 6.5rem;
+          //     margin-left: auto;
+          //     margin-right: auto;
+          //     margin-top: 0.75rem;
+
+          //     @include responsive(mediadown) {
+          //     }
+          //   }
+          // }
 
           &.animate {
             animation: glow 4s ease-in-out infinite;
@@ -499,6 +513,7 @@ html {
         }
 
         .label {
+          justify-self: center;
           text-align: center;
           font-size: var(--fs-500);
           font-weight: 600;
@@ -731,6 +746,10 @@ html {
           margin-bottom: 0.5rem;
           margin-right: auto;
 
+          @include responsive(mobile) {
+            min-width: 100%;
+          }
+
           @include responsive(mediadown) {
             margin-left: auto;
             margin-right: auto;
@@ -757,10 +776,12 @@ html {
             list-style: circle;
 
             &.h-list {
-              display: flex;
-              flex-direction: row;
-              flex: 1;
-              align-content: space-evenly;
+              @include responsive(mediaup) {
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                align-content: space-evenly;
+              }
 
               .list-item {
                 margin-right: auto;
@@ -808,6 +829,13 @@ html {
                 margin-left: 0.7rem;
                 margin-right: 0.7rem;
 
+                @include responsive(mobile) {
+                  width: 35%;
+                  margin-left: auto;
+                  margin-right: auto;
+                  margin-bottom: 1rem;
+                }
+
                 &:hover {
                   transition: all 1s;
                   @include bg-opacity($primary, 90);
@@ -828,7 +856,11 @@ html {
             flex-direction: row;
             justify-content: space-evenly;
             width: 100%;
-            margin-top: 5rem;
+            margin-top: 3rem;
+
+            @include responsive(mobile) {
+              margin-top: 1rem;
+            }
 
             .item-card {
               position: relative;
@@ -851,14 +883,19 @@ html {
                 }
               }
 
-              @include responsive(mediadown) {
+              @include responsive (mobile) {
+                max-width: 70%;
+                border-radius: 2rem;
+              }
+
+              @include responsive(tablet) {
                 max-width: 40%;
               }
 
               .previewer {
                 position: relative;
                 width: 100%;
-                height: 42%;
+                height: 8rem;
                 margin-bottom: 0.1rem;
                 background-color: $g-400;
                 overflow: hidden;
@@ -878,24 +915,23 @@ html {
                   // background-color: $white;
                 }
 
-                iframe {
-                  transform: scale(0.27);
-                  transform-origin: top left;
-                  overflow: hidden;
-                  cursor: pointer;
+                img {
+                  // width: inherit;
+                  height: inherit;
                 }
               }
 
               .card-container {
+                position: relative;
                 display: block;
                 text-decoration: none;
                 width: 100%;
-                max-height: inherit;
 
                 .card-body {
                   position: relative;
                   display: flex;
                   flex-wrap: wrap;
+                  flex-direction: column;
                   padding-left: 0.6rem;
                   padding-right: 0.6rem;
                   margin-top: 0;
@@ -905,9 +941,13 @@ html {
                   .header {
                     font-size: var(--fs-500);
                     font-weight: 700;
-                    margin-bottom: 0.33rem;
-                    margin-block-end: -2rem;
+                    margin-bottom: 0.2rem;
                     letter-spacing: 1px;
+
+                    @include responsive(mobile) {
+                    font-size: var(--fs-600);
+
+                    }
                   }
 
                   .info {
@@ -915,7 +955,7 @@ html {
                     height: auto;
                     max-height: 6.9rem;
                     overflow: hidden;
-                    font-size: calc(0.8 * var(--fs-200));
+                    font-size: calc(.9 * var(--fs-300));
                     font-weight: 400;
                     color: $black;
                   }
@@ -1099,7 +1139,13 @@ html {
           display: block;
           animation: card-glow 2500ms ease-in-out infinite;
 
-          @include responsive(mediadown) {
+          @include responsive (mobile) {
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 3rem;
+          }
+
+          @include responsive(tablet) {
             margin-left: 4rem;
             margin-right: 4rem;
             margin-bottom: 3rem;
@@ -1137,7 +1183,7 @@ html {
             .name {
               font-weight: 600;
               font-size: 1.3rem;
-              line-height: 20px;
+              line-height: 2.5rem;
               margin-bottom: 6px;
 
               @include responsive(mediadown) {
@@ -1168,7 +1214,12 @@ html {
               padding-right: 1.5rem;
               margin-bottom: 0.25rem;
 
-              @include responsive(mediadown) {
+              @include responsive(mobile) {
+                padding-left: 1rem;
+                padding-right: 1rem;
+              }
+
+              @include responsive(tablet) {
                 padding-left: 3.5rem;
                 padding-right: 3.5rem;
               }
@@ -1193,14 +1244,19 @@ html {
               padding-left: 1rem;
               padding-right: 1rem;
 
-              @include responsive(mediadown) {
+              @include responsive(mobile) {
+                margin-top: .5rem;
+                margin-bottom: .5rem;
+              }
+
+              @include responsive(tablet) {
                 margin-top: 1.5rem;
                 margin-bottom: 1.5rem;
               }
 
               .btn {
                 @include responsive(mediadown) {
-                  font-size: 2rem;
+                  font-size: 1.5rem;
                   font-weight: 500;
                   padding-left: 2rem;
                   padding-right: 2rem;
@@ -1230,6 +1286,12 @@ html {
           padding-left: 2rem;
           padding-right: 2rem;
 
+          @include responsive(mobile) {
+            max-width: 100%;
+            padding-left: .5rem;
+            padding-right: .5rem;
+          }
+
           .sub-heading {
             margin-bottom: 1.5rem;
           }
@@ -1251,11 +1313,11 @@ html {
               label {
                 margin-right: 1rem;
               }
-              
+
               .form-input {
                 flex: 1;
                 padding: 8px 12px;
-                
+
                 @include responsive(mediadown) {
                   flex: 100%;
                   width: 100%;
@@ -1272,6 +1334,10 @@ html {
         margin-bottom: 0.5rem;
         font-weight: 600;
         text-transform: capitalize;
+
+        @include responsive(mobile) {
+          width: 95%;
+        }
 
         &::after {
           content: "";
@@ -1324,7 +1390,10 @@ html {
         width: 80%;
         margin-left: auto;
         margin-right: 10%;
-        // display: flex;
+
+        @include responsive(mobile) {
+          width: 90%;
+        }
 
         .branch {
           position: relative;
@@ -1337,6 +1406,10 @@ html {
             align-items: center;
             font-weight: 600;
             font-size: var(--fs-400);
+
+            @include responsive(mobile) {
+              width: 20%;
+            }
           }
 
           .content {
@@ -1349,6 +1422,10 @@ html {
             padding-left: 2rem;
             margin-left: 0.75rem;
             padding-bottom: 2rem;
+
+            @include responsive(mobile) {
+              width: 90%;
+            }
 
             &::before {
               content: "";
@@ -1402,6 +1479,7 @@ html {
                 margin-right: 1rem;
                 margin-bottom: 0.5rem;
                 letter-spacing: 1.5px;
+                text-transform: capitalize;
 
                 &.type-0 {
                   background-color: $primary;

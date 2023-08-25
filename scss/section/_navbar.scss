@@ -5,7 +5,6 @@
   position: sticky;
   transition: all 100ms ease-in-out;
   z-index: 99;
-  margin-top: 1.5rem;
   top: 1.5rem;
   display: flex;
   flex-wrap: nowrap;
@@ -19,10 +18,17 @@
   padding-bottom: 0.15rem;
   margin-left: auto;
   margin-right: auto;
-  @include bg-opacity($black, 80);
-  // background-color: $black;
+  @include bg-opacity($black, 80); 
   box-shadow: 0px 3px 15px 1px $black;
   transition: all 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  
+  @include responsive(mediaup) {
+    margin-top: 1.5rem;
+  }
+
+  @include responsive(mobile) {
+    top: 90vh;
+  }
 
   &.sidebar {
     position: fixed;
@@ -33,7 +39,7 @@
     padding-bottom: 1rem;
     padding-right: 0.25rem;
     padding-left: 0.25rem;
-  box-shadow: 0px 0px 15px 1px $black;
+    box-shadow: 0px 0px 15px 1px $black;
 
     .nav-menu {
       flex-direction: column;
@@ -111,7 +117,6 @@
             font-weight: 500;
           }
         }
-
       }
 
       &:hover {
@@ -152,4 +157,3 @@
     }
   }
 }
-

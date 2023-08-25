@@ -1,12 +1,12 @@
 "use strict";
 
+const wW = window.innerWidth;
 const wH = window.innerHeight; //  Gets window screen height
 const navBar = document.querySelector(".navbar"); //  Get nav bar DOM element
 window.addEventListener("scroll", function () {
   const sPosition = window.scrollY; // Get scroll position
-
   //  Adds the sidebar classe once the scroller reaches 50% of screen height
-  if (sPosition >= wH * 0.5) navBar.classList.add("sidebar");
+  if (sPosition >= wH * 0.5 && wW > 767) navBar.classList.add("sidebar");
   else
     navBar.classList.contains("sidebar") === true
       ? navBar.classList.remove("sidebar")
@@ -273,7 +273,7 @@ const insertHTML = (item) => {
   const html = `
     <div class="item-card option-${item.type}">
       <div class="previewer">
-        <iframe src="${item.url}" frameborder="0" width="1024px" height="768px"></iframe>
+        <img src="./assets/img/web-thumb.png" alt"${item.title}" />
       </div>
       <a href="#" class="card-container">
         <div class="card-body">

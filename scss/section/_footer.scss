@@ -5,6 +5,13 @@
     margin-bottom: 2rem;
 
     .credit {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        font-size: var(--fs-600);
+
+        span {
+            font-size: var(--fs-600);
+        }
         
         .footer-credit {
             color: $primary;
