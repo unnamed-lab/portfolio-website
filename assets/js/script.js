@@ -6,7 +6,7 @@ const navBar = document.querySelector(".navbar"); //  Get nav bar DOM element
 window.addEventListener("scroll", function () {
   const sPosition = window.scrollY; // Get scroll position
   //  Adds the sidebar classe once the scroller reaches 50% of screen height
-  if (sPosition >= wH * 0.5 && wW > 767) navBar.classList.add("sidebar");
+  if (sPosition >= wH * 0.5 && wW >= 768) navBar.classList.add("sidebar");
   else
     navBar.classList.contains("sidebar") === true
       ? navBar.classList.remove("sidebar")
@@ -284,6 +284,8 @@ const insertHTML = (item) => {
           <ul class="stack-list">
             ${stackItem}
           </ul>
+
+          <a href="${item.url}" class="btn">Visit Project</a>
         </div>
       </a>
     </div>
