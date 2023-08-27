@@ -15,3 +15,8 @@ $g-700: #505050;
 $g-800: #3c3c3c;
 $g-900: #282828;
 $black: #000000;
+
+:root {
+    --border-radius: 28px;
+    --border-radius-child: calc(var(--border-radius) - 16px);
+}

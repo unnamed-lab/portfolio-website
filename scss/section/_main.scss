@@ -19,10 +19,11 @@
   }
 
   @include responsive(mobile) {
-    margin-top: 0;
+    margin-top: 5%;
+    margin-bottom: 5%;
     margin-left: 10%;
     margin-right: 10%;
-    min-height: 30vh;
+    min-height: 50vh;
     max-height: 50vh;
   }
 
@@ -111,8 +112,6 @@
     .profile-pic {
       position: relative;
       display: block;
-      min-height: 70dvh;
-      // overflow: hidden;
 
       img {
         object-fit: fill;

@@ -275,19 +275,19 @@ const insertHTML = (item) => {
       <div class="previewer">
         <img src="./assets/img/web-thumb.png" alt"${item.title}" />
       </div>
-      <a href="#" class="card-container">
+      <div class="card-container">
         <div class="card-body">
           <div class="header">${item.title}.</div>
           <div class="info">
             ${item.info}
           </div>
+          </div>
+          <h6 class="stack">Stacks: </h6>
           <ul class="stack-list">
             ${stackItem}
           </ul>
-
-          <a href="${item.url}" class="btn">Visit Project</a>
-        </div>
-      </a>
+          <a href="${item.url}" class="project-btn">Visit Project</a>
+      </div>
     </div>
     `;
   catalogueBody.insertAdjacentHTML("beforeend", html);
