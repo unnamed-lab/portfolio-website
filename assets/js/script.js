@@ -164,6 +164,10 @@ const sexIcon = `
 const hobbyIcon = `
 <svg viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M22 4.9a6.64 6.64 0 0 0-9.4 0c-.2.2-.5.5-.7.8-.2-.3-.4-.5-.7-.8-2.5-2.5-6.6-2.5-9.2 0a6.64 6.64 0 0 0 0 9.4l10 10 10-10c2.6-2.6 2.6-6.8 0-9.4zM20.7 13 12 21.7S3.8 13.4 3.3 13c-1.8-1.8-1.8-4.8 0-6.7 1.8-1.8 4.8-1.8 6.7 0l2 2 2-2c1.8-1.8 4.8-1.8 6.7 0 1.9 1.8 1.9 4.8 0 6.7z" fill="#ffffff" class="fill-000000"></path><path d="M17 7v1c1.1 0 2 .9 2 2 0 .6-.2 1.1-.6 1.4l.7.7c.5-.5.9-1.3.9-2.1 0-1.7-1.3-3-3-3z" fill="#ffffff" class="fill-000000"></path>
 </svg>`;
+const downloadIcon = `
+<svg viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"><g id="_icons"><path d="M11.3 15.7c.1.1.2.2.3.2.1.1.3.1.4.1s.3 0 .4-.1c.1-.1.2-.1.3-.2l4-4c.4-.4.4-1 0-1.4s-1-.4-1.4 0L13 12.6V5c0-.6-.4-1-1-1s-1 .4-1 1v7.6l-2.3-2.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l4 4z" fill="#ffffff" class="fill-000000"></path><path d="M19 13c-.6 0-1 .4-1 1v2c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2v-2c0-.6-.4-1-1-1s-1 .4-1 1v2c0 2.2 1.8 4 4 4h8c2.2 0 4-1.8 4-4v-2c0-.6-.4-1-1-1z" fill="#ffffff" class="fill-000000"></path></g></svg>
+`;
+
 const createIcon = function (icon, iconclass) {
   document
     .querySelectorAll(`.${iconclass}`)
@@ -187,6 +191,7 @@ const iconArr = [
   [globeIcon, "globe-icon"],
   [sexIcon, "gender-icon"],
   [hobbyIcon, "hobby-icon"],
+  [downloadIcon, "download-icon"]
 ];
 iconArr.map((icon) => createIcon(icon[0], icon[1]));
 

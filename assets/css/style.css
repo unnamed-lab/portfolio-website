@@ -1838,7 +1838,7 @@ html body span svg {
     margin-left: 10%;
     margin-right: 10%;
     min-height: 50vh;
-    max-height: 50vh;
+    max-height: 60vh;
   }
 }
 .hero .intro {
@@ -1908,6 +1908,43 @@ html body span svg {
   width: 3rem;
 }
 .hero .intro .social-menu .social-link span svg {
+  width: inherit;
+  margin: 0;
+}
+.hero .intro .resume-tab {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 10rem;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-bottom: 1rem;
+  padding: 3px 8px;
+  outline: 1px solid #3c3c3c;
+  border-radius: var(--border-radius);
+}
+.hero .intro .resume-tab:hover {
+  box-shadow: 0 0 5px rgba(200, 200, 200, 0.5);
+  transition: all 500ms ease-in;
+}
+.hero .intro .resume-tab .resume {
+  display: contents;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 12px;
+}
+.hero .intro .resume-tab .resume:hover {
+  transition: all 500ms;
+  text-decoration: underline;
+}
+.hero .intro .resume-tab .resume .icon {
+  display: contents;
+  width: 2rem;
+  margin-right: 2rem;
+}
+.hero .intro .resume-tab .resume .icon svg {
   width: inherit;
   margin: 0;
 }
