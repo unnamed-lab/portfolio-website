@@ -461,8 +461,9 @@ html {
         margin-bottom: 0.5rem;
 
         @include responsive(mobile) {
-          max-width: 8.5rem;
+          max-width: 7.85rem;
           max-height: 9.25rem;
+          margin-bottom: 0;
         }
 
         &:hover {
@@ -475,7 +476,7 @@ html {
       .body {
         display: grid;
         width: 100%;
-        padding-top: .5rem;
+        padding-top: 0.5rem;
         padding-left: 1rem;
         padding-right: 1rem;
 
@@ -489,9 +490,9 @@ html {
           margin-right: auto;
 
           img {
-            margin-bottom: .75rem;
+            margin-bottom: 0.75rem;
             margin-right: auto;
-    margin-left: auto;
+            margin-left: auto;
             width: 7rem;
           }
 
@@ -527,7 +528,6 @@ html {
         padding-top: 1.75rem;
         padding-bottom: 0.85rem;
       }
-
     }
 
     .overlay {
@@ -728,7 +728,7 @@ html {
             flex: none;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between; 
+            justify-content: space-between;
 
             .row {
               display: flex;
@@ -842,11 +842,15 @@ html {
               background-color: $white;
               outline: 0.5px solid $white;
 
-              @include responsive (mediadown) {
-                max-width: 100%;
+              @include responsive(tablet) {
+                max-width: 70%;
                 border-radius: var(--border-radius);
               }
 
+              @include responsive(mobile) {
+                max-width: 100%;
+                border-radius: var(--border-radius);
+              }
 
               .previewer {
                 position: relative;
@@ -859,8 +863,6 @@ html {
                 @include responsive(mobile) {
                   height: 10rem;
                 }
-
-                
 
                 &::before {
                   content: "";
@@ -883,20 +885,30 @@ html {
 
               .card-container {
                 position: relative;
-                display: block;
-                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                // padding: 8px 12px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-top: 8px;
+                padding-bottom: 12px;
+                margin: 0 auto;
 
                 .project-btn {
-                  display: block;
+                  display: flex;
+                  flex: 1;
+                  justify-content: center;
                   border-radius: var(--border-radius-child);
                   max-width: 100%;
-                  margin: 12px;
+                  width: auto;
                   padding-top: 4px;
                   padding-bottom: 4px;
+                  padding-left: 1rem;
+                  padding-right: 1rem;
                   text-align: center;
                   background-color: $dark;
                   color: $white;
-                  font-size: var(--fs-700);
+                  font-size: var(--fs-400);
 
                   &:hover {
                     background-color: $primary;
@@ -906,50 +918,45 @@ html {
 
                 .stack {
                   color: $black;
-                  margin-left: .6rem;
-
                 }
 
                 .stack-list {
-                    display: flex;
-                    flex-wrap: wrap;
-                    align-content: center;
-                    margin-top: 6px;
-                    margin-bottom: 12px;
-                    align-self: flex-end;
-                    width: 100%;
-                    justify-content: center;
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-content: center;
+                  margin-top: 6px;
+                  margin-bottom: 12px;
+                  align-self: flex-end;
+                  width: 100%;
 
-                    .stack-item {
-                      color: $white;
-                      background-color: $g-600;
-                      padding: 4px 10px;
-                      margin-right: auto;
-                      margin-left: auto;
-                      font-size: var(--fs-400);
-                      font-weight: 500;
-                    }
+                  .stack-item {
+                    color: $white;
+                    background-color: $g-600;
+                    padding: 4px 8px;
+                    margin-right: 10px;
+                    margin-bottom: 6px;
+                    font-size: var(--fs-400);
+                    font-weight: 500;
                   }
+                }
 
                 .card-body {
                   position: relative;
                   display: block;
-                  padding-left: 0.6rem;
-                  padding-right: 0.6rem;
                   margin-top: 0;
                   color: $black;
                   min-height: 12rem;
-                  max-width: 100%; 
+                  max-width: 100%;
 
                   .header {
                     font-size: var(--fs-700);
                     font-weight: 700;
-                    margin-top: .33rem;
+                    margin-top: 0.33rem;
                     margin-bottom: 0.33rem;
                     letter-spacing: 1px;
 
                     @include responsive(mediadown) {
-                    font-size: var(--fs-800);
+                      font-size: var(--fs-800);
                     }
                   }
 
@@ -957,15 +964,14 @@ html {
                     width: 100%;
                     max-height: 100%;
                     overflow: hidden;
-                    font-size: var(--fs-400);
+                    font-size: 16px;
                     font-weight: 400;
                     color: $black;
 
                     @include responsive(mediadown) {
-                    font-size: var(--fs-500);
+                      font-size: var(--fs-500);
                     }
                   }
-
                 }
               }
             }
@@ -1116,10 +1122,14 @@ html {
           display: block;
           animation: card-glow 2500ms ease-in-out infinite;
 
-          @include responsive (mobile) {
+          @include responsive(mobile) {
             margin-left: 0;
             margin-right: 0;
             margin-bottom: 3rem;
+            animation: none;
+            outline: none;
+            padding-bottom: .5rem;
+            margin-bottom: .5rem;
           }
 
           @include responsive(tablet) {
@@ -1222,8 +1232,8 @@ html {
               padding-right: 1rem;
 
               @include responsive(mobile) {
-                margin-top: .5rem;
-                margin-bottom: .5rem;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
               }
 
               @include responsive(tablet) {
@@ -1267,9 +1277,11 @@ html {
           padding-right: 2rem;
 
           @include responsive(mobile) {
+            display: none;
+            margin: 0;
             max-width: 100%;
-            padding-left: .5rem;
-            padding-right: .5rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
           }
 
           .sub-heading {
@@ -1303,6 +1315,16 @@ html {
                   width: 100%;
                 }
               }
+            }
+
+            .form-btn {
+              font-size: 18px;
+              font-weight: 600;
+              text-align: center;
+              padding-top: 6px;
+              padding-bottom: 6px;
+              padding-left: 12px;
+              padding-right: 12px;
             }
           }
         }
@@ -1386,10 +1408,7 @@ html {
             align-items: center;
             font-weight: 600;
             font-size: var(--fs-400);
-
-            @include responsive(mobile) {
-              width: 20%;
-            }
+ 
           }
 
           .content {

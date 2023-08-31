@@ -272,9 +272,6 @@ const insertHTML = (item) => {
     .join("");
   const html = `
     <div class="item-card option-${item.type}">
-      <div class="previewer">
-        <img src="./assets/img/web-thumb.png" alt"${item.title}" />
-      </div>
       <div class="card-container">
         <div class="card-body">
           <div class="header">${item.title}.</div>

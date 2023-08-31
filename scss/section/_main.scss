@@ -109,6 +109,10 @@
     min-width: 30%;
     flex: 1;
 
+    @include responsive(mediadown) {
+      display:none;
+    }
+
     .profile-pic {
       position: relative;
       display: block;
@@ -165,8 +169,8 @@
     margin: 0;
     max-width: 100vw;
     width: 100vw;
-    height: 6rem;
-    top: -90px;
+    height: 4rem;
+    top: -50px;
     left: -60px;
     background-image: linear-gradient(180deg, transparent, $black);
 

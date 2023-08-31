@@ -22,17 +22,16 @@
   margin-right: auto;
   @include bg-opacity($black, 85);
   box-shadow: 0px 3px 15px 1px $black;
+  left: 50%;
+transform: translate(-50%);
   // transition: all 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
   @include responsive(mediaup) {
     top: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   @include responsive(mobile) {
     bottom: 1.5rem;
-    transform: translate(10%, -50%);
     width: 19rem;
   }
 
