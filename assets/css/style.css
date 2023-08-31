@@ -1671,6 +1671,10 @@ html body .section-body .work-tree .branch .content .brief {
 html body span svg {
   width: inherit !important;
 }
+html body input#file-upload-button {
+  background-color: #000000;
+  width: 9rem;
+}
 
 /*  Section SCSS Modules  */
 /*  Custom SCSS Pack   */
@@ -2056,10 +2060,10 @@ html body span svg {
   margin-top: 2rem;
   margin-bottom: 2rem;
   text-align: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .footer .credit {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
   font-size: var(--fs-600);
 }
 .footer .credit span {
