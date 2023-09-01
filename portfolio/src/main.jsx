@@ -1,10 +1,28 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Nav from "./Nav.jsx";
+import App from "./App.jsx";
+import Footer from "./Footer.jsx";
+import "./assets/css/style.css";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+
+ReactDOM.createRoot(document.getElementById("navbar")).render(
+  <React.StrictMode>
+    <Nav />
+  </React.StrictMode>
+);
+
+ReactDOM.createRoot(document.getElementById("portfolio")).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
+
+ReactDOM.createRoot(document.getElementById("footer")).render(
+  <React.StrictMode>
+    <Footer />
+  </React.StrictMode>
+);
+
+
+
