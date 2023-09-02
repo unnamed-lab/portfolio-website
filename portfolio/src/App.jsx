@@ -88,7 +88,7 @@ const App = ({ icon }) => {
           id: 0,
           type: 0,
           title: "Web3 Website Landing Page (Single-Page)",
-          info: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure similique modi alias pariatur reprehenderit? Reprehenderit voluptatem dolorum laboriosam, nam illum saepe corporis nobis iusto.",
+          info: "This project showcases my dedication to improving my frontend development skills. With careful design and skilled execution, I aimed to enhance my ability to create visually appealing and user-centered web interfaces.",
           url: "https://unnamed-web3-build01.vercel.app/",
           stacks: ["HTML", "CSS", "JavaScript"],
         },
@@ -381,15 +381,9 @@ const Projects = ({ bio, build, icon }) => {
   const pT = build.length;
   let itemCount = 5;
   let type = "all";
-  // const [activeTab, setActiveTab] = React.useState('');
-  // console.log(activeTab)
-
-  const changeType = (event) => {
-    const htmlText = event.target.innerHTML;
-    const id = event.target.id;
-    const elementID = document.getElementById(id).classList;
-    let item;
-    switch (htmlText) {
+  let item;
+  const convertID = (text) => {
+    switch (text) {
       case "All":
         item = "all";
         break;
@@ -403,13 +397,47 @@ const Projects = ({ bio, build, icon }) => {
         item = "api";
         break;
     }
+  };
+  const useStorageState = (key, initialState) => {
+    const [value, setValue] = React.useState(
+      // localStorage.getItem(key) ||
+      initialState
+    );
+    React.useEffect(() => {
+      localStorage.setItem(key, value);
+    }, [value, key]);
 
-    if (!elementID.contains("active")) {
-      elementID.add("active");
-      // document.getElementById(activeTab).classList.remove("active");
-      // setActiveTab(id);
-      type = item;
-      // console.log(item, activeTab)
+    return [value, setValue];
+  };
+  const [activeTab, setActiveTab] = useStorageState("tab", "projectAll");
+  const [htmlText, setHTMLText] = useStorageState("text", "All");
+  convertID(htmlText);
+  // console.log(htmlText, item, activeTab);
+
+  const setActiveCat = (target, id) => {
+    setHTMLText(target);
+    convertID(htmlText);
+    type = item;
+    console.log(activeTab)
+    if (document.getElementById(activeTab).classList.contains("active"))
+      document.getElementById(activeTab).classList.remove("active");
+    setActiveTab(id);
+  };
+
+  const changeType = (event) => {
+    const id = event.target.id;
+    const elementID = document.getElementById(id);
+    if (!elementID.classList.contains("active")) {
+      try {
+        if (!elementID.classList.contains("active")) {
+          setActiveCat(event.target.innerHTML, id);
+        } else {
+          elementID.classList.add("active");
+          setActiveCat(event.target.innerHTML, id);
+        }
+      } catch (error) {
+        console.log(error.message);
+      }
     }
   };
 
@@ -463,7 +491,7 @@ const Projects = ({ bio, build, icon }) => {
               <ul className="item-menu">
                 <li
                   id="projectAll"
-                  className="item-option active"
+                  className="item-option"
                   onClick={changeType}
                 >
                   All
@@ -491,6 +519,7 @@ const Projects = ({ bio, build, icon }) => {
                 </li>
               </ul>
             </div>
+
             <div className="catalogue-body">
               {render(build, itemCount, type)}
             </div>

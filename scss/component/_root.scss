@@ -657,6 +657,7 @@ html {
     }
 
     .section-tab {
+      cursor: pointer;
       min-width: min-content;
       width: max-content;
       height: 1rem;
@@ -783,6 +784,7 @@ html {
               align-content: space-evenly;
 
               .item-option {
+                cursor: pointer;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -795,6 +797,8 @@ html {
                 outline: 3px solid $g-400;
                 margin-left: 0.7rem;
                 margin-right: 0.7rem;
+                transition: all 500ms ease;
+                outline-offset: 0px;
 
                 @include responsive(mobile) {
                   width: 35%;
@@ -802,16 +806,18 @@ html {
                   margin-right: auto;
                   margin-bottom: 1rem;
                 }
+                &.active {
+                  outline: none;
+                }
 
                 &:hover {
-                  transition: all 1s;
                   @include bg-opacity($primary, 90);
                   outline: 3px solid $primary;
                 }
 
                 &.active {
+                  outline: 3px solid rgba($color: $primary, $alpha: 90);
                   @include bg-opacity($primary, 90);
-                  outline: 3px solid $primary;
                 }
               }
             }
@@ -832,11 +838,12 @@ html {
             .item-card {
               position: relative;
               display: block;
-              max-width: 45%;
+              max-width: 50%;
               min-height: 14rem;
+              height: auto;
               margin-bottom: 2.5rem;
-              margin-left: auto;
-              margin-right: auto;
+              margin-left: 2rem;
+              margin-right: 2rem;
               border-radius: var(--border-radius);
               overflow: hidden;
               background-color: $white;
@@ -852,67 +859,41 @@ html {
                 border-radius: var(--border-radius);
               }
 
-              .previewer {
-                position: relative;
-                width: 100%;
-                height: 14rem;
-                margin-bottom: 0.1rem;
-                background-color: $g-400;
-                overflow: hidden;
-
-                @include responsive(mobile) {
-                  height: 10rem;
-                }
-
-                &::before {
-                  content: "";
-                  position: absolute;
-                  bottom: -40px;
-                  left: 0;
-                  width: 100%;
-                  height: 5rem;
-                  background-image: linear-gradient(
-                    180deg,
-                    transparent,
-                    $black
-                  );
-                }
-
-                img {
-                  width: inherit;
-                }
-              }
-
               .card-container {
                 position: relative;
                 display: flex;
                 flex-wrap: wrap;
-                // padding: 8px 12px;
-                padding-left: 12px;
-                padding-right: 12px;
-                padding-top: 8px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 12px;
                 padding-bottom: 12px;
                 margin: 0 auto;
 
                 .project-btn {
+                  cursor: pointer;
                   display: flex;
                   flex: 1;
                   justify-content: center;
                   border-radius: var(--border-radius-child);
                   max-width: 100%;
                   width: auto;
-                  padding-top: 4px;
-                  padding-bottom: 4px;
+                  padding-top: 8px;
+                  padding-bottom: 8px;
                   padding-left: 1rem;
                   padding-right: 1rem;
                   text-align: center;
                   background-color: $dark;
                   color: $white;
-                  font-size: var(--fs-400);
+                  font-size: 1rem;
+                  font-weight: 700;
+                  text-transform: capitalize;
+                  transition: background-color 500ms ease-in-out, outline 300ms,
+                    color 500ms;
 
                   &:hover {
-                    background-color: $primary;
-                    transition: background-color 1s ease-in-out;
+                    background-color: transparent;
+                    color: $black;
+                    outline: 3px solid $black;
                   }
                 }
 
@@ -930,6 +911,7 @@ html {
                   width: 100%;
 
                   .stack-item {
+                    cursor: pointer;
                     color: $white;
                     background-color: $g-600;
                     padding: 4px 8px;
@@ -937,6 +919,11 @@ html {
                     margin-bottom: 6px;
                     font-size: var(--fs-400);
                     font-weight: 500;
+                    transition: all 1s ease;
+
+                    &:hover {
+                      background-color: $primary;
+                    }
                   }
                 }
 
@@ -984,6 +971,7 @@ html {
             width: 100%;
 
             .pag-btn {
+              cursor: pointer;
               border: none;
               background-color: $black;
               outline: 2px solid $g-900;
@@ -1128,8 +1116,8 @@ html {
             margin-bottom: 3rem;
             animation: none;
             outline: none;
-            padding-bottom: .5rem;
-            margin-bottom: .5rem;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
           }
 
           @include responsive(tablet) {
@@ -1144,10 +1132,11 @@ html {
             max-height: 10rem;
             margin-left: auto;
             margin-right: auto;
-            background-color: $g-200;
+            background-color: $white;
             border-radius: 1.5rem;
             margin-bottom: 1rem;
             overflow: hidden;
+            aspect-ratio: 1;
 
             @include responsive(mediadown) {
               width: 15rem;
@@ -1226,6 +1215,7 @@ html {
             }
 
             .hire-btn {
+              cursor: pointer;
               max-width: 100%;
               margin-top: 0.5rem;
               padding-left: 1rem;
@@ -1318,6 +1308,7 @@ html {
             }
 
             .form-btn {
+              cursor: pointer;
               font-size: 18px;
               font-weight: 600;
               text-align: center;
@@ -1408,7 +1399,6 @@ html {
             align-items: center;
             font-weight: 600;
             font-size: var(--fs-400);
- 
           }
 
           .content {
@@ -1506,6 +1496,5 @@ html {
         width: inherit !important;
       }
     }
-
   }
 }
