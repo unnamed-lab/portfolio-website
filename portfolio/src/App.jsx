@@ -380,8 +380,9 @@ const Skill = ({ info, icon }) => {
 const Projects = ({ bio, build, icon }) => {
   const pT = build.length;
   let itemCount = 5;
-  let type = "all";
   let item;
+  const [items, setItems] = React.useState(itemCount);
+  const [itemType, setItemType] = React.useState("all");
   const convertID = (text) => {
     switch (text) {
       case "All":
@@ -417,8 +418,8 @@ const Projects = ({ bio, build, icon }) => {
   const setActiveCat = (target, id) => {
     setHTMLText(target);
     convertID(htmlText);
-    type = item;
-    console.log(activeTab)
+    setItemType(item)
+    // console.log(activeTab)
     if (document.getElementById(activeTab).classList.contains("active"))
       document.getElementById(activeTab).classList.remove("active");
     setActiveTab(id);
@@ -441,31 +442,9 @@ const Projects = ({ bio, build, icon }) => {
     }
   };
 
-  const addItemList = () => (itemCount += 5);
+  const addItemList = () => (setItems(itemCount += 5));
 
-  const render = function (arr = build, sum = 5, type = "all") {
-    const filterType = function (filter = type) {
-      let type;
-      if (filter === "web") type = 0;
-      else if (filter === "app") type = 1;
-      else if (filter === "api") type = 2;
-      else type = 3;
-      return type;
-    };
-    const output = arr
-      .filter((item) => {
-        if (filterType() < 3) return item.type === filterType();
-        else return item.type < 3;
-      })
-      .filter((item, key) => key <= sum - 1)
-      .map((item) => {
-        const output = <ProjectItem key={item.id} {...item} />;
-        return output;
-      })
-      .sort((a, b) => a + b);
-
-    return output;
-  };
+  
 
   const pg = (
     <div className="paginator">
@@ -521,7 +500,12 @@ const Projects = ({ bio, build, icon }) => {
             </div>
 
             <div className="catalogue-body">
-              {render(build, itemCount, type)}
+              <RenderProjects
+                array={build} 
+                count={items}
+                type={itemType}
+               />
+              {/* {render(build, itemCount, type)} */}
             </div>
             {pT > 5 ? pg : null}
           </div>
@@ -530,6 +514,37 @@ const Projects = ({ bio, build, icon }) => {
     </section>
   );
 };
+
+const RenderProjects = ({array, count, type}) => {
+  const render = function (arr = array, sum = 5, type = "all") {
+    const filterType = function (filter = type) {
+      let type;
+      if (filter === "web") type = 0;
+      else if (filter === "app") type = 1;
+      else if (filter === "api") type = 2;
+      else type = 3;
+      return type;
+    };
+    const output = arr
+      .filter((item) => {
+        if (filterType() < 3) return item.type === filterType();
+        else return item.type < 3;
+      })
+      .filter((item, key) => key <= sum - 1)
+      .map((item) => {
+        return <ProjectItem key={item.id} {...item} />;
+      })
+      .sort((a, b) => a + b);
+
+    return output.length > 0 ? output : <><h1 style={{textTransform: "capitalize"}}>Nothing to see here!</h1></>
+  };
+
+  return (
+    <>
+    {render(array, count, type)} 
+    </>
+  );
+}
 
 const ProjectItem = ({ type, title, info, url, stacks }) => {
   return (
