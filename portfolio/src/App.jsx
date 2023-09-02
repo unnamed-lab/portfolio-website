@@ -1,3 +1,4 @@
+import React from "react";
 import "./assets/css/style.css";
 import profileImg from "./assets/img/profile.png";
 import htmlImg from "./assets/img/html-icon.png";
@@ -9,10 +10,9 @@ import reactImg from "./assets/img/react-icon.png";
 import angularImg from "./assets/img/angular-icon.png";
 import githubImg from "./assets/img/github-icon.png";
 import vscodeImg from "./assets/img/vscode-icon.png";
-// import { addIcons } from "./assets/js/icons";
 // console.log(addIcons());
 
-const App = () => {
+const App = ({ icon }) => {
   const data = {
     about: {
       firstName: "Anuoluwa S.",
@@ -109,18 +109,18 @@ const App = () => {
 
   return (
     <>
-      <Intro info={data.about} />
-      <About info={data.about} />
-      <Experience info={data.experience} />
-      <Skill info={data.skill} />
-      <Projects {...data.project} />
-      <Feedback profile={data.about} {...data.feedback} />
-      <Contact {...data.about} />
+      <Intro info={data.about} icon={icon} />
+      <About info={data.about} icon={icon} />
+      <Experience info={data.experience} icon={icon} />
+      <Skill info={data.skill} icon={icon} />
+      <Projects {...data.project} icon={icon} />
+      <Feedback profile={data.about} {...data.feedback} icon={icon} />
+      <Contact {...data.about} icon={icon} />
     </>
   );
 };
 
-const Intro = ({ info }) => {
+const Intro = ({ info, icon }) => {
   const { firstName, lastName, alias, imageUrl, resumeUrl, social } = info;
 
   return (
@@ -138,10 +138,15 @@ const Intro = ({ info }) => {
             </span>
 
             <div className="social-menu">
-              {/* {<Socials info={social} />} */}
-              {/* {socialMedia.map((el) => {
-                return el;
-              })} */}
+              <a href={social.facebook} className="social-link">
+                <span className="fb-box-icon">{icon.facebookBox}</span>
+              </a>
+              <a href={social.twitter} className="social-link">
+                <span className="tw-box-icon">{icon.twitterBox}</span>
+              </a>
+              <a href={social.linkedin} className="social-link">
+                <span className="lknd-box-icon">{icon.linkedinBox}</span>
+              </a>
             </div>
 
             <div className="resume-tab">
@@ -152,7 +157,8 @@ const Intro = ({ info }) => {
                 className="resume"
                 download
               >
-                <span className="icon download-icon"></span> Download Resume
+                <span className="icon download-icon">{icon.download}</span>{" "}
+                Download Resume
               </a>
             </div>
           </div>
@@ -167,50 +173,14 @@ const Intro = ({ info }) => {
   );
 };
 
-const Socials = ({ info }) => {
-  const { social } = info;
-
-  const socialLinks = () => {
-    let socialMedia = [];
-    for (const key of Object.keys(social)) {
-      let abbr = String(key);
-      if (key === "facebook") abbr = "fb";
-      else if (key === "twitter") abbr = "tw";
-      else if (key === "linkedin") abbr = "lknd";
-      else if (key === "github") abbr = "git";
-      socialMedia.push(
-        <SocialButton
-          key={key}
-          link={social.keys(key)}
-          classStyle={"social-link"}
-        >
-          <span className={`${abbr}-box-icon`}></span>
-        </SocialButton>
-      );
-    }
-
-    return socialMedia.map((item) => {
-      return item;
-    });
-  };
-
-  return socialLinks();
-};
-
-const SocialButton = ({ key, link, classStyle, children }) => (
-  <a key={key} href={link} className={classStyle}>
-    {children}
-  </a>
-);
-
-const About = ({ info }) => {
+const About = ({ info, icon }) => {
   const { jobTitle, jobBio, location, lang, nationality, gender, hobbies } =
     info;
 
   return (
     <section id="about" className="about">
       <div className="section-tab">
-        <span className="icon about-icon"></span>
+        <span className="icon about-icon">{icon.about}</span>
         <span className="title">About</span>
       </div>
       <div className="section-body">
@@ -221,7 +191,7 @@ const About = ({ info }) => {
         <div className="extra">
           <div className="item">
             <h3 className="sub-heading">
-              <span className="icon lang-icon"></span> Languages
+              <span className="icon lang-icon">{icon.language}</span> Languages
             </h3>
             <ul className="list-menu">
               <li className="list-item">{lang}</li>
@@ -229,7 +199,7 @@ const About = ({ info }) => {
           </div>
           <div className="item">
             <h3 className="sub-heading">
-              <span className="icon globe-icon"></span> Nationality
+              <span className="icon globe-icon">{icon.globe}</span> Nationality
             </h3>
             <ul className="list-menu">
               <li className="list-item">{nationality}</li>
@@ -237,7 +207,7 @@ const About = ({ info }) => {
           </div>
           <div className="item">
             <h3 className="sub-heading">
-              <span className="icon gender-icon"></span> Gender
+              <span className="icon gender-icon">{icon.gender}</span> Gender
             </h3>
             <ul className="list-menu">
               <li className="list-item">{gender}</li>
@@ -245,7 +215,7 @@ const About = ({ info }) => {
           </div>
           <div className="item">
             <h3 className="sub-heading">
-              <span className="icon hobby-icon"></span> Hobbies
+              <span className="icon hobby-icon">{icon.hobby}</span> Hobbies
             </h3>
             <ul className="list-menu h-list">
               {hobbies.map((el, key) => {
@@ -263,11 +233,11 @@ const About = ({ info }) => {
   );
 };
 
-const Experience = ({ info }) => {
+const Experience = ({ info, icon }) => {
   return (
     <section id="experience" className="work">
       <div className="section-tab">
-        <span className="icon work-icon"></span>
+        <span className="icon work-icon">{icon.work}</span>
         <span className="title">Work Experience</span>
       </div>
       <div className="section-body">
@@ -299,7 +269,7 @@ const Experience = ({ info }) => {
   );
 };
 
-const Skill = ({ info }) => {
+const Skill = ({ info, icon }) => {
   const { bio, coding, framework, other } = info;
 
   const setImg = (input) => {
@@ -339,7 +309,7 @@ const Skill = ({ info }) => {
   return (
     <section id="skills" className="skillset">
       <div className="section-tab">
-        <span className="icon skill-icon"></span>
+        <span className="icon skill-icon">{icon.skill}</span>
         <span className="title">Skills</span>
       </div>
       <div className="section-body">
@@ -407,18 +377,41 @@ const Skill = ({ info }) => {
   );
 };
 
-const Projects = ({ bio, build }) => {
+const Projects = ({ bio, build, icon }) => {
   const pT = build.length;
   let itemCount = 5;
   let type = "all";
+  // const [activeTab, setActiveTab] = React.useState('');
+  // console.log(activeTab)
 
-  const changeType = (input) => {
-    type = input;
-    console.log(`New input: ${input}`);
-    return type;
+  const changeType = (event) => {
+    const htmlText = event.target.innerHTML;
+    const id = event.target.id;
+    const elementID = document.getElementById(id).classList;
+    let item;
+    switch (htmlText) {
+      case "All":
+        item = "all";
+        break;
+      case "Website":
+        item = "web";
+        break;
+      case "Application":
+        item = "app";
+        break;
+      case "API":
+        item = "api";
+        break;
+    }
+
+    if (!elementID.contains("active")) {
+      elementID.add("active");
+      // document.getElementById(activeTab).classList.remove("active");
+      // setActiveTab(id);
+      type = item;
+      // console.log(item, activeTab)
+    }
   };
-
-  const projChange = () => {};
 
   const addItemList = () => (itemCount += 5);
 
@@ -457,7 +450,7 @@ const Projects = ({ bio, build }) => {
   return (
     <section id="project" className="projects">
       <div className="section-tab">
-        <span className="icon project-icon"></span>
+        <span className="icon project-icon">{icon.project}</span>
         <span className="title">Project</span>
       </div>
       <div className="section-body">
@@ -471,34 +464,36 @@ const Projects = ({ bio, build }) => {
                 <li
                   id="projectAll"
                   className="item-option active"
-                  onClick={projChange}
+                  onClick={changeType}
                 >
                   All
                 </li>
                 <li
                   id="projectWeb"
                   className="item-option"
-                  onClick={projChange.call(changeType, "web")}
+                  onClick={changeType}
                 >
                   Website
                 </li>
                 <li
                   id="projectApp"
                   className="item-option"
-                  onClick={projChange}
+                  onClick={changeType}
                 >
                   Application
                 </li>
                 <li
                   id="projectAPI"
                   className="item-option"
-                  onClick={projChange}
+                  onClick={changeType}
                 >
                   API
                 </li>
               </ul>
             </div>
-            <div className="catalogue-body">{render(build, itemCount)}</div>
+            <div className="catalogue-body">
+              {render(build, itemCount, type)}
+            </div>
             {pT > 5 ? pg : null}
           </div>
         </div>
@@ -531,7 +526,7 @@ const ProjectItem = ({ type, title, info, url, stacks }) => {
 
 const Stacks = ({ children }) => <li className="stack-item">{children}</li>;
 
-const Feedback = ({ profile, bio, testimonial }) => {
+const Feedback = ({ profile, bio, testimonial, icon }) => {
   const getTestimonials = () => {
     if (testimonial.length >= 1) {
       return testimonial.map((item, key) => (
@@ -550,7 +545,7 @@ const Feedback = ({ profile, bio, testimonial }) => {
           name={`${profile.firstName} ${profile.lastName}`}
           title={profile.jobTitle}
           img={profile.imageUrl}
-          review={`No feedback yet!  \nHopefully I get some seet reviews from my clients.`}
+          review={`No feedback yet!  \nHopefully I get some sweet reviews from my clients.`}
         />
       );
     }
@@ -559,7 +554,7 @@ const Feedback = ({ profile, bio, testimonial }) => {
   return (
     <section id="feedback" className="testimonial">
       <div className="section-tab">
-        <span className="icon star-icon"></span>
+        <span className="icon star-icon">{icon.review}</span>
         <span className="title">Review</span>
       </div>
       <div className="section-body">
@@ -593,110 +588,128 @@ const Review = ({ name, title, img, review }) => {
   );
 };
 
-const Contact = () => {
-
+const Contact = ({
+  firstName,
+  lastName,
+  jobTitle,
+  imageUrl,
+  email,
+  social,
+  icon,
+}) => {
   return (
-    <section id="contact" class="contact">
-      <div class="section-tab">
-        <span class="icon contact-icon"></span>
-        <span class="title">Contact</span>
+    <section id="contact" className="contact">
+      <div className="section-tab">
+        <span className="icon contact-icon">{icon.contact}</span>
+        <span className="title">Contact</span>
       </div>
-      <div class="section-body">
-        <h1 class="title">Connect with me.</h1>
+      <div className="section-body">
+        <h1 className="title">Connect with me.</h1>
 
-        <div class="extra">
-          <div class="col-lg-4 col-md-12 col-sm-12">
-            <div class="profile-card">
-              <div class="profile-img">
-                <img
-                  src="./assets/img/profile-img.png"
-                  alt="Anuoluwa S. Adebayo"
-                />
+        <div className="extra">
+          <div className="col-lg-4 col-md-12 col-sm-12">
+            <div className="profile-card">
+              <div className="profile-img">
+                <img src={imageUrl} alt={`${firstName} ${lastName}`} />
               </div>
-              <div class="profile-details">
-                <div class="name">Anuoluwa S. Adebayo</div>
-                <div class="role">Software Engineer &amp; Web Developer</div>
-                <div class="social-menu">
-                  <a href="#" class="social-link">
-                    <span class="fb-box-icon"></span>
+              <div className="profile-details">
+                <div className="name">{`${firstName} ${lastName}`}</div>
+                <div className="role">{jobTitle}</div>
+                <div className="social-menu">
+                  <a
+                    href={social.facebook}
+                    className="social-link"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <span className="fb-box-icon">{icon.facebookBox}</span>
                   </a>
-                  <a href="#" class="social-link">
-                    <span class="tw-box-icon"></span>
+                  <a
+                    href={social.twitter}
+                    className="social-link"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <span className="tw-box-icon">{icon.twitterBox}</span>
                   </a>
-                  <a href="#" class="social-link">
-                    <span class="lknd-box-icon"></span>
+                  <a
+                    href={social.linkedin}
+                    className="social-link"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <span className="lknd-box-icon">{icon.linkedinBox}</span>
                   </a>
                 </div>
-                <div class="hire-btn">
-                  <a href="#" class="btn primary">
-                    {" "}
-                    Hire Me!{" "}
+                <div className="hire-btn">
+                  <a href={`mailto:${email}`} className="btn primary">
+                    Hire Me!
                   </a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-8 col-md-12 col-sm-12">
-            <div class="form">
-              <h2 class="sub-heading">Send Me A Message.</h2>
-              <div class="form-container">
-                <div class="form-group">
-                  <label for="fName">Full Name:</label>
+          <div className="col-lg-8 col-md-12 col-sm-12">
+            <div className="form">
+              <h2 className="sub-heading">Send Me A Message.</h2>
+              <form action="javascript.void(0)" className="form-container">
+                <div className="form-group">
+                  <label htmlFor="fName">Full Name:</label>
                   <input
-                    class="form-input"
+                    className="form-input"
                     type="text"
                     name="fullname"
                     id="fName"
                   />
                 </div>
-                <div class="form-group">
-                  <label for="email">Email Address:</label>
+                <div className="form-group">
+                  <label htmlFor="email">Email Address:</label>
                   <input
-                    class="form-input"
+                    className="form-input"
                     type="email"
                     name="email"
                     id="email"
                   />
                 </div>
-                <div class="form-group">
-                  <label for="subject">Subject:</label>
+                <div className="form-group">
+                  <label htmlFor="subject">Subject:</label>
                   <input
-                    class="form-input"
+                    className="form-input"
                     type="text"
                     name="mailSubject"
                     id="subject"
                   />
                 </div>
-                <div class="form-group">
-                  <label for="message">Message:</label>
+                <div className="form-group">
+                  <label htmlFor="message">Message:</label>
                   <br />
                   <textarea
-                    class="form-input"
+                    className="form-input"
                     name="body"
                     id="message"
                     cols="50"
                     rows="10"
                   ></textarea>
                 </div>
-                <div class="form-group">
-                  <label for="attachFile">Attachment:</label>
+                <div className="form-group">
+                  <label htmlFor="attachFile">Attachment:</label>
                   <input type="file" name="attachFile" id="attachFile" />
                 </div>
-                <div class="col-5 mx-auto mt-2">
+                <div className="col-5 mx-auto mt-2">
                   <input
                     type="submit"
-                    class="btn form-btn primary"
+                    className="btn form-btn primary"
                     value="Send Message"
                   />
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 // addIcons();
 export default App;

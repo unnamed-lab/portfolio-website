@@ -1,5 +1,5 @@
 import "./assets/css/style.css";
-import { addIcons } from "./assets/js/icons";
+// import { addIcons } from "./assets/js/icons";
 
 const navMenu = [
   {
@@ -29,7 +29,7 @@ const navMenu = [
   },
   {
     title: "Testimonial",
-    icon: "star",
+    icon: "review",
     url: "feedback",
   },
   {
@@ -39,16 +39,29 @@ const navMenu = [
   },
 ];
 
-const Nav = () => {
+(function () {
+  const wW = window.innerWidth;
+  const wH = window.innerHeight;
+  const navBar = document.querySelector(".navbar");
+  window.addEventListener("scroll", function () {
+    const sPosition = window.scrollY;
+    if (sPosition >= wH * 0.5 && wW >= 768) navBar.classList.add("sidebar");
+    else
+      navBar.classList.contains("sidebar") === true
+        ? navBar.classList.remove("sidebar")
+        : null;
+  });
+})();
+
+const Nav = ({ icon }) => {
   return (
     <>
       <ul className="nav-menu">
-        {navMenu.map((item) => {
-          const keyID = navMenu.findIndex((el) => el.title === item.title);
+        {navMenu.map((item, key) => {
           return (
-            <li key={keyID} className="nav-item">
+            <li key={key} className="nav-item">
               <a href={`#${item.url}`} className="nav-link">
-                <span className={`${item.icon}-icon`}></span>
+                <span className={`${item.icon}-icon`}>{icon[item.icon]}</span>
               </a>
               <span className="tooltip">{`${item.title}`}</span>
             </li>
@@ -59,6 +72,5 @@ const Nav = () => {
   );
 };
 
-console.log(addIcons());
-addIcons();
+// addIcons();
 export default Nav;
