@@ -1,17 +1,25 @@
 {
   "name": "unnamed-portfolio",
+  "private": true,
   "version": "1.0.0",
   "description": "This is the version 1.0 of my official portfolio website. Cheers!",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass --watch scss:portfolio/src/assets/css"
+    "compile:sass": "sass --watch scss:/src/assets/css",
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "author": "Anuoluwa S. Adebayo (Unnamed)",
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
     "autoprefixer": "^10.4.14",
-    "postcss-cli": "^10.1.0"
+    "postcss-cli": "^10.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "sass": "^1.63.4"
