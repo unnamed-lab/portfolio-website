@@ -1,6 +1,7 @@
 # Anuoluwa S. Adebayo Portfolio
 
-Hey there! 👋 Welcome to my portfolio repository. I'm Anuoluwa S. Adebayo, also known as Unnamed in the coding realm. This repository showcases my journey as an aspiring Software Engineer and Full-stack Developer. Feel free to explore my projects, coding endeavors, and the skills I'm honing along the way.
+Hey there! 👋 Welcome to my portfolio repository. I'm Anuoluwa S. Adebayo, also known as Unnamed in the coding realm. 
+This repository showcases my journey as an aspiring Software Engineer and Full-stack Developer. Feel free to explore my projects, coding endeavors, and the skills I'm honing along the way.
 
 ## About Me
 
@@ -14,13 +15,9 @@ I am on a mission to become a proficient Software Engineer and a skilled Full-st
 
 Here are a few highlights from my portfolio:
 
-1. **Web3 Frontend Project (Stage One)**
+1. **Web3 Frontend Project**
    - Wrapped up the initial stage of a Web3 Frontend Project, showcasing my skills in blockchain technology.
    - Demonstrated proficiency in working with decentralized applications and smart contracts.
-
-2. **Portfolio Website (Version 1)**
-   - In progress: Currently working on crafting the first version of my personal portfolio website.
-   - Showcasing my projects, skills, and journey as a Software Engineer.
 
 ## Goals and Aspirations
 
