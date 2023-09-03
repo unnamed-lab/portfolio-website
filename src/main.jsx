@@ -4,7 +4,7 @@ import Nav from "./Nav.jsx";
 import App from "./App.jsx";
 import Footer from "./Footer.jsx";
 import { iconArr } from "./Icons.jsx";
-import "assets/css/style.css";
+import "./assets/css/style.css";
 
 ReactDOM.createRoot(document.getElementById("navbar")).render(
   <React.StrictMode>
