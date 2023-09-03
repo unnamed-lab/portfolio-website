@@ -1,15 +1,15 @@
 import React from "react";
-import "./assets/css/style.css";
-import profileImg from "./assets/img/profile.png";
-import htmlImg from "./assets/img/html-icon.png";
-import cssImg from "./assets/img/css-icon.png";
-import jsImg from "./assets/img/javascript-icon.png";
-import pythonImg from "./assets/img/python-icon.png";
-import sassImg from "./assets/img/sass-icon.png";
-import reactImg from "./assets/img/react-icon.png";
-import angularImg from "./assets/img/angular-icon.png";
-import githubImg from "./assets/img/github-icon.png";
-import vscodeImg from "./assets/img/vscode-icon.png";
+import "assets/css/style.css";
+import profileImg from "assets/img/profile.png";
+import htmlImg from "assets/img/html-icon.png";
+import cssImg from "assets/img/css-icon.png";
+import jsImg from "assets/img/javascript-icon.png";
+import pythonImg from "assets/img/python-icon.png";
+import sassImg from "assets/img/sass-icon.png";
+import reactImg from "assets/img/react-icon.png";
+import angularImg from "assets/img/angular-icon.png";
+import githubImg from "assets/img/github-icon.png";
+import vscodeImg from "assets/img/vscode-icon.png";
 // console.log(addIcons());
 
 const App = ({ icon }) => {

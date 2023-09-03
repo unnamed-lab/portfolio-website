@@ -1,4 +1,4 @@
-import "./assets/css/style.css";
+import "assets/css/style.css";
 // import { addIcons } from "./assets/js/icons";
 
 const navMenu = [
