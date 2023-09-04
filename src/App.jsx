@@ -41,7 +41,7 @@ const App = ({ icon }) => {
         facebook: "https://facebook.com/mradebayo2018",
         twitter: "https://twitter.com/unnamed_labs",
         linkedin: "https://linkedin.com/on/mradebayo2018",
-        github: "https://github.com/unnamed_lab",
+        github: "https://github.com/unnamed-lab",
       },
       email: "adebayo.anuoluwa02@gmail.com",
       resumeUrl:
@@ -116,9 +116,21 @@ const App = ({ icon }) => {
       <Projects {...data.project} icon={icon} />
       <Feedback profile={data.about} {...data.feedback} icon={icon} />
       <Contact {...data.about} icon={icon} />
+      <GitHubRedirect icon={icon} git={data.about.social.github} />
     </>
   );
 };
+
+const GitHubRedirect = ({icon, git}) => (
+  <>
+  <div className="git-redirect">
+    <a className="git-link" href={git} target="_blank" rel="noopener noreferrer">
+      <span className="label">GitHub</span>
+      <span className="git-icon">{icon.github}</span>
+    </a>
+  </div>
+  </>
+)
 
 const Intro = ({ info, icon }) => {
   const { firstName, lastName, alias, imageUrl, resumeUrl, social } = info;

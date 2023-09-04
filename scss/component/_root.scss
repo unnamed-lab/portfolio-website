@@ -1506,7 +1506,59 @@ html {
       }
     }
 
-    // div {outline: 2px solid red;}
+    .git-redirect {
+      z-index: 200;
+      position: fixed;
+      left: 0;
+      bottom: 4rem;
+      display: flex;
+      width: 10rem;
+      max-width: 10rem;
+      overflow: hidden;
+      height: 4rem;
+      @include bg-opacity($dark, 80);
+      border-radius: 0 2rem 2rem 0;
+      animation: card-glow 3s infinite;
+      transition: bottom 1s ease-in;
+
+      @include responsive(mobile) {
+        max-width: 4.5rem;
+        height: 3.75rem;
+        bottom: 30%;
+      }
+
+      .git-link {
+        display: flex;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $white;
+        padding: 1px 10px;
+        margin: 0 auto;
+        @include responsive(mobile) {
+          padding: 6px;
+        }
+
+        .label {
+          margin-right: .5rem;
+          letter-spacing: 1px;
+          font-size: var(--fs-600);
+
+          @include responsive(mobile) {
+            display: none;
+          }
+        }
+
+        .git-icon {
+          flex: 1;
+          width: 3rem;
+          height: 3rem;
+          margin: 0 auto;
+        }
+      }
+    }
 
     span {
       svg {

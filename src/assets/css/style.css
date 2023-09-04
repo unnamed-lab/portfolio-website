@@ -225,7 +225,7 @@
   }
   50% {
     transition: all 500ms;
-    box-shadow: 0 0 15px #c8c8c8;
+    box-shadow: 0 0 8px #c8c8c8;
   }
   0% {
     transition: all 500ms;
@@ -1679,6 +1679,60 @@ html body .section-body .work-tree .branch .content .brief {
   font-weight: 300;
   font-size: var(--fs-100);
   letter-spacing: 1px;
+}
+html body .git-redirect {
+  z-index: 200;
+  position: fixed;
+  left: 0;
+  bottom: 4rem;
+  display: flex;
+  width: 10rem;
+  max-width: 10rem;
+  overflow: hidden;
+  height: 4rem;
+  background-color: rgba(18, 19, 22, 0.8);
+  border-radius: 0 2rem 2rem 0;
+  animation: card-glow 3s infinite;
+  transition: bottom 1s ease-in;
+}
+@media (max-width: 767px) {
+  html body .git-redirect {
+    max-width: 4.5rem;
+    height: 3.75rem;
+    bottom: 30%;
+  }
+}
+html body .git-redirect .git-link {
+  display: flex;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 1px 10px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  html body .git-redirect .git-link {
+    padding: 6px;
+  }
+}
+html body .git-redirect .git-link .label {
+  margin-right: 0.5rem;
+  letter-spacing: 1px;
+  font-size: var(--fs-600);
+}
+@media (max-width: 767px) {
+  html body .git-redirect .git-link .label {
+    display: none;
+  }
+}
+html body .git-redirect .git-link .git-icon {
+  flex: 1;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto;
 }
 html body span svg {
   width: inherit !important;
