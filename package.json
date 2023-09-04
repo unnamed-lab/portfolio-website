@@ -12,7 +12,7 @@
     "url": "https://github.com/unnamed-lab/portfolio-website"
   },
   "scripts": {
-    "compile:sass": "sass --watch scss:/src/assets/css",
+    "compile:sass": "sass --watch scss:src/assets/css",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",

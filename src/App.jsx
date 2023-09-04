@@ -146,7 +146,7 @@ const Intro = ({ info, icon }) => {
               </a>
               <a href={social.linkedin} className="social-link">
                 <span className="lknd-box-icon">{icon.linkedinBox}</span>
-              </a>
+              </a> 
             </div>
 
             <div className="resume-tab">
@@ -468,43 +468,51 @@ const Projects = ({ bio, build, icon }) => {
           <div className="catalogue">
             <div className="navigation">
               <ul className="item-menu">
-                <li
-                  id="projectAll"
-                  className="item-option"
-                  onClick={changeType}
-                >
-                  All
+                <li>
+                  <button
+                    type="button"
+                    id="projectAll"
+                    className="item-option"
+                    onClick={changeType}
+                  >
+                    All
+                  </button>
                 </li>
-                <li
-                  id="projectWeb"
-                  className="item-option"
-                  onClick={changeType}
-                >
-                  Website
+                <li>
+                  <button
+                    type="button"
+                    id="projectWeb"
+                    className="item-option"
+                    onClick={changeType}
+                  >
+                    Website
+                  </button>
                 </li>
-                <li
-                  id="projectApp"
-                  className="item-option"
-                  onClick={changeType}
-                >
-                  Application
+                <li>
+                  <button
+                    type="button"
+                    id="projectApp"
+                    className="item-option"
+                    onClick={changeType}
+                  >
+                    Application
+                  </button>
                 </li>
-                <li
-                  id="projectAPI"
-                  className="item-option"
-                  onClick={changeType}
-                >
-                  API
+                <li>
+                  <button
+                    id="projectAPI"
+                    type="button"
+                    className="item-option"
+                    onClick={changeType}
+                  >
+                    API
+                  </button>
                 </li>
               </ul>
             </div>
 
             <div className="catalogue-body">
-              <RenderProjects
-                array={build} 
-                count={items}
-                type={itemType}
-               />
+              <RenderProjects array={build} count={items} type={itemType} />
               {/* {render(build, itemCount, type)} */}
             </div>
             {pT > 5 ? pg : null}
@@ -683,10 +691,10 @@ const Contact = ({
                     rel="noreferrer noopener"
                   >
                     <span className="lknd-box-icon">{icon.linkedinBox}</span>
-                  </a>
+                  </a> 
                 </div>
                 <div className="hire-btn">
-                  <a href={`mailto:${email}`} className="btn primary">
+                  <a href={`mailto:${email}`} target="_blank" rel="noreferrer noopener" className="btn primary">
                     Hire Me!
                   </a>
                 </div>

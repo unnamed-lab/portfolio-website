@@ -7,8 +7,11 @@
 /*  Component SCSS Modules  */
 /*  Custom SCSS Pack   */
 /*  Custom SCSS Pack   */
-/*  Custom SCSS Pack   */
 /*  Typography  */
+* {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
 :root {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -360,247 +363,247 @@ html body .mt-6 {
 html body .col-1 {
   max-width: 8.3333333333%;
   width: 8.3333333333%;
-  flex: 1;
+  flex: 100%;
 }
 html body .col-2 {
   max-width: 16.6666666667%;
   width: 16.6666666667%;
-  flex: 1;
+  flex: 100%;
 }
 html body .col-3 {
   max-width: 25%;
   width: 25%;
-  flex: 1;
+  flex: 100%;
 }
 html body .col-4 {
   max-width: 33.3333333333%;
   width: 33.3333333333%;
-  flex: 1;
+  flex: 100%;
 }
 html body .col-5 {
   max-width: 41.6666666667%;
   width: 41.6666666667%;
-  flex: 1;
+  flex: 100%;
 }
 html body .col-6 {
   max-width: 50%;
   width: 50%;
-  flex: 1;
+  flex: 100%;
 }
 html body .col-7 {
   max-width: 58.3333333333%;
   width: 58.3333333333%;
-  flex: 1;
+  flex: 100%;
 }
 html body .col-8 {
   max-width: 66.6666666667%;
   width: 66.6666666667%;
-  flex: 1;
+  flex: 100%;
 }
 html body .col-9 {
   max-width: 75%;
   width: 75%;
-  flex: 1;
+  flex: 100%;
 }
 html body .col-10 {
   max-width: 83.3333333333%;
   width: 83.3333333333%;
-  flex: 1;
+  flex: 100%;
 }
 html body .col-11 {
   max-width: 91.6666666667%;
   width: 91.6666666667%;
-  flex: 1;
+  flex: 100%;
 }
 html body .col-12 {
   max-width: 100%;
   width: 100%;
-  flex: 1;
+  flex: 100%;
 }
 @media (min-width: 1024px) {
   html body .col-lg-1 {
     max-width: 8.3333333333%;
     width: 8.3333333333%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-lg-2 {
     max-width: 16.6666666667%;
     width: 16.6666666667%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-lg-3 {
     max-width: 25%;
     width: 25%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-lg-4 {
     max-width: 33.3333333333%;
     width: 33.3333333333%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-lg-5 {
     max-width: 41.6666666667%;
     width: 41.6666666667%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-lg-6 {
     max-width: 50%;
     width: 50%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-lg-7 {
     max-width: 58.3333333333%;
     width: 58.3333333333%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-lg-8 {
     max-width: 66.6666666667%;
     width: 66.6666666667%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-lg-9 {
     max-width: 75%;
     width: 75%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-lg-10 {
     max-width: 83.3333333333%;
     width: 83.3333333333%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-lg-11 {
     max-width: 91.6666666667%;
     width: 91.6666666667%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-lg-12 {
     max-width: 100%;
     width: 100%;
-    flex: 1;
+    flex: 100%;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   html body .col-md-1 {
     max-width: 8.3333333333%;
     width: 8.3333333333%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-md-2 {
     max-width: 16.6666666667%;
     width: 16.6666666667%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-md-3 {
     max-width: 25%;
     width: 25%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-md-4 {
     max-width: 33.3333333333%;
     width: 33.3333333333%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-md-5 {
     max-width: 41.6666666667%;
     width: 41.6666666667%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-md-6 {
     max-width: 50%;
     width: 50%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-md-7 {
     max-width: 58.3333333333%;
     width: 58.3333333333%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-md-8 {
     max-width: 66.6666666667%;
     width: 66.6666666667%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-md-9 {
     max-width: 75%;
     width: 75%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-md-10 {
     max-width: 83.3333333333%;
     width: 83.3333333333%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-md-11 {
     max-width: 91.6666666667%;
     width: 91.6666666667%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-md-12 {
     max-width: 100%;
     width: 100%;
-    flex: 1;
+    flex: 100%;
   }
 }
 @media (max-width: 767px) {
   html body .col-sm-1 {
     max-width: 8.3333333333%;
     width: 8.3333333333%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-sm-2 {
     max-width: 16.6666666667%;
     width: 16.6666666667%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-sm-3 {
     max-width: 25%;
     width: 25%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-sm-4 {
     max-width: 33.3333333333%;
     width: 33.3333333333%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-sm-5 {
     max-width: 41.6666666667%;
     width: 41.6666666667%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-sm-6 {
     max-width: 50%;
     width: 50%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-sm-7 {
     max-width: 58.3333333333%;
     width: 58.3333333333%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-sm-8 {
     max-width: 66.6666666667%;
     width: 66.6666666667%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-sm-9 {
     max-width: 75%;
     width: 75%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-sm-10 {
     max-width: 83.3333333333%;
     width: 83.3333333333%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-sm-11 {
     max-width: 91.6666666667%;
     width: 91.6666666667%;
-    flex: 1;
+    flex: 100%;
   }
   html body .col-sm-12 {
     max-width: 100%;
     width: 100%;
-    flex: 1;
+    flex: 100%;
   }
 }
 html body .info {
@@ -1004,39 +1007,47 @@ html body .section-body .extra .catalogue .navigation .item-menu {
   flex-wrap: wrap;
   align-content: space-evenly;
 }
-html body .section-body .extra .catalogue .navigation .item-menu .item-option {
-  cursor: pointer;
+html body .section-body .extra .catalogue .navigation .item-menu li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding-left: 0.9rem;
-  padding-right: 0.9rem;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  border-radius: var(--border-radius);
-  outline: 3px solid #8c8c8c;
   margin-left: 0.7rem;
   margin-right: 0.7rem;
-  transition: all 500ms ease;
-  outline-offset: 0px;
 }
 @media (max-width: 767px) {
-  html body .section-body .extra .catalogue .navigation .item-menu .item-option {
-    width: 35%;
+  html body .section-body .extra .catalogue .navigation .item-menu li {
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1rem;
   }
 }
-html body .section-body .extra .catalogue .navigation .item-menu .item-option.active {
+html body .section-body .extra .catalogue .navigation .item-menu li .item-option {
+  cursor: pointer;
+  width: 100%;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: var(--fs-400);
+  color: #ffffff;
+  letter-spacing: 1px;
+  border-radius: var(--border-radius);
+  outline: 3px solid #8c8c8c;
+  transition: all 500ms ease;
+  outline-offset: 0px;
+  border: none;
+  background-color: transparent;
+}
+html body .section-body .extra .catalogue .navigation .item-menu li .item-option.active {
   outline: none;
 }
-html body .section-body .extra .catalogue .navigation .item-menu .item-option:hover {
+html body .section-body .extra .catalogue .navigation .item-menu li .item-option:hover {
   background-color: rgba(28, 167, 236, 0.9);
   outline: 3px solid #1ca7ec;
 }
-html body .section-body .extra .catalogue .navigation .item-menu .item-option.active {
+html body .section-body .extra .catalogue .navigation .item-menu li .item-option.active {
   outline: 3px solid #1ca7ec;
   background-color: rgba(28, 167, 236, 0.9);
 }
@@ -1071,12 +1082,16 @@ html body .section-body .extra .catalogue .catalogue-body .item-card {
   html body .section-body .extra .catalogue .catalogue-body .item-card {
     max-width: 70%;
     border-radius: var(--border-radius);
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media (max-width: 767px) {
   html body .section-body .extra .catalogue .catalogue-body .item-card {
     max-width: 100%;
     border-radius: var(--border-radius);
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 html body .section-body .extra .catalogue .catalogue-body .item-card .card-container {
@@ -1106,6 +1121,7 @@ html body .section-body .extra .catalogue .catalogue-body .item-card .card-conta
   color: #ffffff;
   font-size: 1rem;
   font-weight: 700;
+  letter-spacing: 1px;
   text-transform: capitalize;
   transition: background-color 500ms ease-in-out, outline 300ms, color 500ms;
 }
@@ -1831,12 +1847,11 @@ html body span svg {
 }
 @media (max-width: 767px) {
   .hero {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 15%;
     margin-left: 10%;
     margin-right: 10%;
-    min-height: 50vh;
-    max-height: 60vh;
+    min-height: 60vh;
+    max-height: 70vh;
   }
 }
 .hero .intro {

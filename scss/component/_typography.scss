@@ -2,6 +2,10 @@
 @use "./mixins" as *;
 
 /*  Typography  */
+
+* {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
 :root {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 400;

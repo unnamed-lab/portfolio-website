@@ -783,43 +783,54 @@ html {
               flex-wrap: wrap;
               align-content: space-evenly;
 
-              .item-option {
-                cursor: pointer;
+              li {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
-                padding-left: 0.9rem;
-                padding-right: 0.9rem;
-                padding-top: 2px;
-                padding-bottom: 2px;
-                border-radius: var(--border-radius);
-                outline: 3px solid $g-400;
                 margin-left: 0.7rem;
                 margin-right: 0.7rem;
-                transition: all 500ms ease;
-                outline-offset: 0px;
 
                 @include responsive(mobile) {
-                  width: 35%;
-                  margin-left: auto;
-                  margin-right: auto;
-                  margin-bottom: 1rem;
-                }
-                &.active {
-                  outline: none;
-                }
+                    width: 40%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 1rem;
+                  }
 
-                &:hover {
-                  @include bg-opacity($primary, 90);
-                  outline: 3px solid $primary;
-                }
+                .item-option {
+                  cursor: pointer;
+                  width: 100%;
+                  padding-left: 0.9rem;
+                  padding-right: 0.9rem;
+                  padding-top: 2px;
+                  padding-bottom: 2px;
+                  font-size: var(--fs-400);
+                  color: $white;
+                  letter-spacing: 1px;
+                  border-radius: var(--border-radius);
+                  outline: 3px solid $g-400;
+                  transition: all 500ms ease;
+                  outline-offset: 0px;
+                  border: none;
+                  background-color: transparent;
 
-                &.active {
-                  outline: 3px solid rgba($color: $primary, $alpha: 90);
-                  @include bg-opacity($primary, 90);
+                  &.active {
+                    outline: none;
+                  }
+  
+                  &:hover {
+                    @include bg-opacity($primary, 90);
+                    outline: 3px solid $primary;
+                  }
+  
+                  &.active {
+                    outline: 3px solid rgba($color: $primary, $alpha: 90);
+                    @include bg-opacity($primary, 90);
+                  }
                 }
               }
+
             }
           }
 
@@ -852,11 +863,16 @@ html {
               @include responsive(tablet) {
                 max-width: 70%;
                 border-radius: var(--border-radius);
+                margin-left: 0;
+                margin-right: 0;
               }
 
               @include responsive(mobile) {
                 max-width: 100%;
                 border-radius: var(--border-radius);
+                
+              margin-left: 0;
+              margin-right: 0;
               }
 
               .card-container {
@@ -886,6 +902,7 @@ html {
                   color: $white;
                   font-size: 1rem;
                   font-weight: 700;
+                  letter-spacing: 1px;
                   text-transform: capitalize;
                   transition: background-color 500ms ease-in-out, outline 300ms,
                     color 500ms;

@@ -1,6 +1,4 @@
-@use '../custom' as *;
-
-@use "../custom" as *;
+@use '../custom' as *; 
 
 @mixin responsive($breakpoint) {
   @if $breakpoint == mobile {
@@ -32,10 +30,10 @@
   @if $num <= 12 and $num > 0 {
     max-width: calc($num / 12 * 100%);
     width: calc($num / 12 * 100%);
-    flex: 1;
+    flex: 100%;
   } @else {
     max-width: 100%;
-    flex: 1;
+    flex: 100%;
   }
 }
 
