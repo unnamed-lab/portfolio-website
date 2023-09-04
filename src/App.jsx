@@ -33,14 +33,14 @@ const App = ({ icon }) => {
       gender: "Male",
       hobbies: [
         "Coding",
-        "Listening to music",
         "Cooking",
+        "Listening to music",
         "Watching anime shows",
       ],
       social: {
         facebook: "https://facebook.com/mradebayo2018",
         twitter: "https://twitter.com/unnamed_labs",
-        linkedin: "https://linkedin.com/on/mradebayo2018",
+        linkedin: "https://linkedin.com/in/mradebayo2018",
         github: "https://github.com/unnamed-lab",
       },
       email: "adebayo.anuoluwa02@gmail.com",
@@ -73,7 +73,7 @@ const App = ({ icon }) => {
             DOM manipulation, event handling and AJAX, and familiarity with
             popular libraries and frameworks like React, Angular and Vue.js.`,
       coding: ["html", "css", "javascript", "python"],
-      framework: ["sass", "react", "angular"],
+      framework: ["sass", "react"],
       other: ["github", "vscode"],
     },
     project: {
