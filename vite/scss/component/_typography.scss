@@ -1,0 +1,129 @@
+@use "../custom" as *;
+@use "./mixins" as *;
+
+/*  Typography  */
+
+* {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+:root {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: $white;
+
+  /*    Font Size Variables    */
+  --fs-100: 0.62rem;
+  --fs-200: 0.7225rem;
+  --fs-300: 0.85rem;
+  --fs-400: 1rem;
+  --fs-500: 1.2rem;
+  --fs-600: 1.44rem;
+  --fs-700: 1.728rem;
+  --fs-800: 2.07rem;
+  --fs-900: 2.48rem;
+
+  @include responsive(tablet) {
+    --fs-100: calc(0.85 * 0.62rem);
+    --fs-200: calc(0.85 * 0.7225rem);
+    --fs-300: calc(0.85 * 0.85rem);
+    --fs-400: calc(0.85 * 1rem);
+    --fs-500: calc(0.85 * 1.2rem);
+    --fs-600: calc(0.85 * 1.44rem);
+    --fs-700: calc(0.85 * 1.728rem);
+    --fs-800: calc(0.85 * 2.07rem);
+    --fs-900: calc(0.85 * 2.48rem);
+  }
+
+  @include responsive(mobile) {
+    --fs-100: calc(0.7 * 0.62rem);
+    --fs-200: calc(0.7 * 0.7225rem);
+    --fs-300: calc(0.7 * 0.85rem);
+    --fs-400: calc(0.7 * 1rem);
+    --fs-500: calc(0.7 * 1.2rem);
+    --fs-600: calc(0.7 * 1.44rem);
+    --fs-700: calc(0.7 * 1.728rem);
+    --fs-800: calc(0.7 * 2.07rem);
+    --fs-900: calc(0.7 * 2.48rem);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $white;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: var(--fs-900);
+    margin-block-start: calc(0.45 * var(--fs-900));
+    margin-block-end: calc(0.45 * var(--fs-900));
+  }
+  h2 {
+    font-size: var(--fs-800);
+    margin-block-start: calc(0.45 * var(--fs-800));
+    margin-block-end: calc(0.45 * var(--fs-800));
+  }
+  h3 {
+    font-size: var(--fs-700);
+    margin-block-start: calc(0.45 * var(--fs-700));
+    margin-block-end: calc(0.45 * var(--fs-700));
+  }
+  h4 {
+    font-size: var(--fs-600);
+    margin-block-start: calc(0.45 * var(--fs-600));
+    margin-block-end: calc(0.45 * var(--fs-600));
+  }
+  h5 {
+    font-size: var(--fs-500);
+    margin-block-start: calc(0.45 * var(--fs-500));
+    margin-block-end: calc(0.45 * var(--fs-500));
+  }
+  h6 {
+    font-size: var(--fs-400);
+    margin-block-start: calc(0.45 * var(--fs-400));
+    margin-block-end: calc(0.45 * var(--fs-400));
+  }
+
+  a {
+    color: $secondary;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  p {
+    color: $g-400;
+    font-size: var(--fs-400);
+    line-height: calc(1.33 * var(--fs-500));
+    margin-block-start: calc(0.5 * var(--fs-500));
+    margin-block-end: calc(0.5 * var(--fs-500));
+    align-self: center;
+
+    @include responsive(mobile) {
+      font-size: var(--fs-500);
+      font-size: $g-500;
+      line-height: calc(1.25 * var(--fs-500));
+      margin-block-start: calc(0.4 * var(--fs-500));
+      margin-block-end: calc(0.4 * var(--fs-500));
+    }
+  }
+
+  span {
+    font-size: calc(0.9 * var(--fs-400));
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+}

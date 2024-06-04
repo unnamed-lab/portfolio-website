@@ -1,0 +1,46 @@
+@use '../custom' as *; 
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (min-width: 768px) and (max-width: 1023px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  } @else if $breakpoint == mediadown {
+    @media (max-width: 1023px) {
+      @content;
+    }
+  } @else if $breakpoint == mediaup {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin column($num: 1) {
+  @if $num <= 12 and $num > 0 {
+    max-width: calc($num / 12 * 100%);
+    width: calc($num / 12 * 100%);
+    flex: 100%;
+  } @else {
+    max-width: 100%;
+    flex: 100%;
+  }
+}
+
+@mixin bg-opacity($colour, $percentage) {
+  background-color: rgba($color: $colour, $alpha: calc($percentage/100));
+}
+
+@mixin border-opacity($color, $opacity) {
+  border-color: rgba($color, $opacity);
+}

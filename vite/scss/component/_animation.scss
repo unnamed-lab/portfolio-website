@@ -1,0 +1,87 @@
+@use "../custom" as *;
+
+
+:root {
+  --hp-glow: 60%;
+  --fp-glow: 140%;
+}
+
+@keyframes tree-dot {
+  0% {
+    background-color: $g-800;
+    transition: all 1s;
+    outline: 3px solid $g-600;
+  }
+
+  25% {
+    background-color: $primary;
+    outline: 3px solid $g-100;
+  }
+
+  50% {
+    background-color: $g-800;
+    outline: 3px solid $g-600;
+  }
+
+  75% {
+    background-color: $primary;
+    outline: 3px solid $g-100;
+  }
+
+  100% {
+    background-color: $g-800;
+    transition: all 1s;
+    outline: 3px solid $g-600;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+    // filter: brightness(var(--hp-glow));
+    transition: all 1s;
+  }
+
+  50% {
+    transform: rotateZ(180deg);
+    // filter: brightness(var(--fp-glow));
+    transition: all 1s;
+  }
+  
+  100% {
+    transform: rotateZ(360deg);
+    // filter: brightness(var(--hp-glow));
+    transition: all 1s;
+  }
+}
+
+@keyframes glow {
+  0% {
+    filter: brightness(var(--hp-glow));
+    transition: all 1s;
+  }
+  
+  50% {
+    filter: brightness(var(--fp-glow));
+    transition: all 1s;
+  }
+  100% {
+    filter: brightness(var(--hp-glow));
+    transition: all 1s;
+  }
+}
+
+@keyframes card-glow {
+  0% {
+    transition: all 500ms;
+    box-shadow: 0 0 0px $g-100;
+  }
+  50% {
+    transition: all 500ms;
+    box-shadow: 0 0 8px $g-100;
+  }
+  0% {
+    transition: all 500ms;
+    box-shadow: 0 0 0px $g-100;
+  }
+}

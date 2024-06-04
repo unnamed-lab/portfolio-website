@@ -1,0 +1,40 @@
+{
+  "name": "unnamed-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "This is the version 1.0 of my official portfolio website. Cheers!",
+  "author": "Anuoluwa S. Adebayo (Unnamed)",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unnamed-lab/portfolio-website"
+  },
+  "scripts": {
+    "compile:sass": "sass --watch scss:src/assets/css",
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "autoprefixer": "^10.4.14",
+    "postcss-cli": "^10.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.63.4",
+    "vite": "^4.4.9",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.47.0", 
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3"
+  }
+}
