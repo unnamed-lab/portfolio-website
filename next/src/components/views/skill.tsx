@@ -14,7 +14,7 @@ export default function Skill({ data }: { data: IUser }) {
     "express",
     "nextdotjs",
     "prisma",
-    "vercel",
+    "next",
     "testinglibrary",
     "jest",
     "docker",
