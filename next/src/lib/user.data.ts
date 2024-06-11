@@ -14,6 +14,8 @@ const user = {
   country: "Nigeria",
   bio: "I am a full stack web developer with experience using the MERN stack for creating cool and responsive web apps.",
   desc: `As a Front-end Developer with 3 year of experience, I bring vibrant energy and a passion for crafting visually stunning web experiences. My biggest achievement lies in my mastery of CSS styling, ensuring pixel-perfect designs that captivate users. With a keen eye for detail and a commitment to delivery speed, I excel at creating seamless and responsive interfaces that leave a lasting impression.`,
+  skill_brief:
+    "I have a solid understand of HTML5 and CSS3 (with CSS framework like Tailwind CSS and SCSS), including responsive design principles and cross-broswer compatibility with an experience in creating visually appealing and accessible web interfaces. With quite some proficiency in intermediate-level JavaScript, including DOM manipulation, event handling and familiarity with popular libraries and frameworks like React, NextJs, ExpressJs and so on",
   experience: [
     {
       title: "Bachelor of Technology, Federal University of Technology Owerri",
@@ -41,6 +43,7 @@ export interface IUser {
   country: string;
   bio: string;
   desc: string;
+  skill_brief: string;
   experience: {
     title: string;
     timespan: string;
