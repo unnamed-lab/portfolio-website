@@ -1,6 +1,6 @@
 import reviews, { IReviewData } from "./user.review";
 
-const user = {
+const user: IUser = {
   firstname: "Anuoluwa",
   lastname: "Adebayo",
   middlename: "Success",
