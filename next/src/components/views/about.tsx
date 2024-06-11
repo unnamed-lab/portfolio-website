@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export default function About({ data }: { data: IUser }) {
   return (
-    <Section tab={<SectionTab title="About" icon={Icons.about} />} breakline>
+    <Section id="about" tab={<SectionTab title="About" icon={Icons.about} />} breakline>
       <h1 className="section-heading">
         {data.title}, based in {data.country}
       </h1>

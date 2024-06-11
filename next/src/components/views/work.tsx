@@ -6,7 +6,7 @@ import { Badge } from "../shadcn-ui/badge";
 
 export default function Work({ data }: { data: IUser }) {
   return (
-    <Section
+    <Section id="work"
       tab={<SectionTab title="Work Experience" icon={Icons.work} />}
       breakline
     >

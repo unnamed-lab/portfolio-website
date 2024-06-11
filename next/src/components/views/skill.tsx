@@ -12,9 +12,8 @@ export default function Skill({ data }: { data: IUser }) {
     "css3",
     "nodedotjs",
     "express",
-    "nextdotjs",
     "prisma",
-    "next",
+    "nextdotjs",
     "testinglibrary",
     "jest",
     "docker",
@@ -26,7 +25,7 @@ export default function Skill({ data }: { data: IUser }) {
     "python"
   ];
   return (
-    <Section tab={<SectionTab title="Talents" icon={Icons.skill} />} breakline>
+    <Section id="skill" tab={<SectionTab title="Talents" icon={Icons.skill} />} breakline>
       <h1 className="section-heading">Technical Experience/Skills</h1>
       <p className="info">{data.skill_brief}</p>
 

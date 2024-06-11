@@ -1,3 +1,5 @@
+import reviews, { IReviewData } from "./user.review";
+
 const user = {
   firstname: "Anuoluwa",
   lastname: "Adebayo",
@@ -25,6 +27,7 @@ const user = {
       type: "Education",
     },
   ],
+  review: reviews,
 };
 
 export interface IUser {
@@ -51,6 +54,7 @@ export interface IUser {
     location: string;
     type: "Education" | "Employment";
   }[];
+  review: IReviewData[];
 }
 
 export default user;
