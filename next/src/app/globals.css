@@ -30,4 +30,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .blue-line::after {
+    @apply content-[""] block w-[5rem] h-[0.66rem] bg-[#1ca7ec];
+  }
 }
+
+
