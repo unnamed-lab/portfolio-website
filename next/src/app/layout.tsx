@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Nav } from "@/components/ui";
+import { Footer, Nav } from "@/components/ui";
 import "./globals.css";
 import meta from "@/lib/metadata";
 
@@ -21,6 +21,7 @@ export default function RootLayout({
       <body className={inter.className + " h-full"}>
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
