@@ -37,7 +37,12 @@ interface IAboutMenu {
 
 function AboutMenu({ className, children }: IAboutMenu) {
   return (
-    <div className={cn("flex flex-wrap content-evenly my-4", className)}>
+    <div
+      className={cn(
+        "lg:flex lg:flex-wrap lg:content-evenly my-4 md:gap-2",
+        className
+      )}
+    >
       {children}
     </div>
   );
@@ -51,7 +56,6 @@ interface IAboutItem {
 }
 
 function AboutItem({ className, title, icon, list }: IAboutItem) {
-  console.log(list);
   const listing = list.map((el, index) => {
     return (
       <li key={index} className="font-medium capitalize mb-6">
@@ -62,7 +66,7 @@ function AboutItem({ className, title, icon, list }: IAboutItem) {
   return (
     <div
       className={cn(
-        "flex flex-wrap flex-1 min-w-[33.333%] my-2 mr-auto",
+        "flex flex-wrap flex-1 min-w-[30%] my-2 mr-auto",
         className
       )}
     >
@@ -70,7 +74,7 @@ function AboutItem({ className, title, icon, list }: IAboutItem) {
         <span className="about-icon">{icon}</span>
         {title}
       </h3>
-      <ul className="mt-1 ml-9 list-[circle] flex gap-12 flex-wrap content-evenly text-base">
+      <ul className="mt-3 ml-9 list-[circle] flex gap-y-2 gap-x-8 lg:gap-8 flex-wrap content-evenly text-base">
         {listing}
       </ul>
     </div>

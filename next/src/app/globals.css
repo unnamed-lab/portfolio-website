@@ -46,4 +46,8 @@ body {
   .about-icon {
     @apply !w-8 mr-3 after:content-[''] block after:absolute after:top-full after:block after:h-[0.3rem] after:w-8 after:mb-4 after:mt-1 after:bg-[#1ca7ec];
   }
+
+  .branch-pointer {
+    @apply before:content-[''] before:block before:absolute before:top-[40%] before:-left-[7px] before:w-[10px] before:h-[10px] before:rounded-[50%] before:bg-[#3c3c3c] before:outline before:outline-[3px] before:outline-[#646464] shadow-md;
+  }
 }
