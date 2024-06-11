@@ -1,10 +1,10 @@
-import { Hero } from "@/components/views";
-import Image from "next/image";
-
+import { About, Hero } from "@/components/views";
+import user from "@/lib/user.data";
 export default function Home() {
   return (
     <main className="font-sans">
-      <Hero />
+      <Hero data={user} />
+      <About data={user} />
     </main>
   );
 }

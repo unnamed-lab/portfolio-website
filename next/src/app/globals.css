@@ -34,6 +34,16 @@ body {
   .blue-line::after {
     @apply content-[""] block w-[5rem] h-[0.66rem] bg-[#1ca7ec];
   }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl w-full mb-6 lg:w-7/12 capitalize font-bold blue-line;
+  }
+
+  .info {
+    @apply font-light text-[#c8c8c8];
+  }
+
+  .about-icon {
+    @apply !w-8 mr-3 after:content-[''] block after:absolute after:top-full after:block after:h-[0.3rem] after:w-8 after:mb-4 after:mt-1 after:bg-[#1ca7ec];
+  }
 }
-
-
