@@ -17,7 +17,7 @@ import Link from "next/link";
 
 export default function Nav() {
   return (
-    <Dock className="md:fixed bottom-8 left-1/2 [transform:translate(-50%,0%)] min-h-fit z-50 hidden">
+    <Dock className="md:fixed bottom-8 left-1/2 [transform:translate(-50%,0%)] min-h-fit z-50 hidden md:flex bg-[#000000b1] backdrop-blur-sm">
       {navigation.map((el, index) => {
         return (
           <>
