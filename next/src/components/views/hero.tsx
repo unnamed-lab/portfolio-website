@@ -49,6 +49,7 @@ export default function Hero({ data }: { data: IUser }) {
         </div>
         <div className="absolute grow !h-full -z-10 opacity-35 md:opacity-100 md:z-0 top-0 right-0 md:relative w-full md:w-5/12 overflow-hidden">
           <Image
+            priority
             src={data.mascot}
             width={500}
             height={500}

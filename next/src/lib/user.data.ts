@@ -1,4 +1,5 @@
-import reviews, { IReviewData } from "./user.review";
+import projects, { TProjectData } from "./user.project";
+import reviews, { TReviewData } from "./user.review";
 
 const user: IUser = {
   firstname: "Anuoluwa",
@@ -28,6 +29,7 @@ const user: IUser = {
     },
   ],
   review: reviews,
+  catalog: projects,
 };
 
 export interface IUser {
@@ -54,7 +56,8 @@ export interface IUser {
     location: string;
     type: "Education" | "Employment";
   }[];
-  review: IReviewData[];
+  review: TReviewData;
+  catalog: TProjectData;
 }
 
 export default user;

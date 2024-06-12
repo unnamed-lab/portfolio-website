@@ -14,6 +14,7 @@ const config: Config = {
       animation: {
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        "beep-light": "card-beep 1500ms ease infinite alternate",
       },
       keyframes: {
         marquee: {
@@ -23,6 +24,10 @@ const config: Config = {
         "marquee-vertical": {
           from: { transform: "translateY(0)" },
           to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+        "card-beep": {
+          from: { opacity: "100%" },
+          to: { opacity: "60%" },
         },
       },
       backgroundImage: {

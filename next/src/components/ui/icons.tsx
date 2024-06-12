@@ -1,8 +1,10 @@
-const HomeIcon = () => (
+import { cn } from "@/lib/utils";
+
+export const HomeIcon = ({className}:{className?:string}) => (
   <>
     <svg
       data-name="Layer 2"
-      viewBox="0 0 32 32"
+      viewBox="0 0 32 32" className={cn(className)}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -18,9 +20,9 @@ const HomeIcon = () => (
     </svg>
   </>
 );
-const AboutIcon = () => (
+export const AboutIcon = ({className}:{className?:string}) => (
   <>
-    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 32 32" className={cn(className)} xmlns="http://www.w3.org/2000/svg">
       <g data-name="user people person users man">
         <path
           d="M23.74 16.18a1 1 0 1 0-1.41 1.42A9 9 0 0 1 25 24c0 1.22-3.51 3-9 3s-9-1.78-9-3a9 9 0 0 1 2.63-6.37 1 1 0 0 0 0-1.41 1 1 0 0 0-1.41 0A10.92 10.92 0 0 0 5 24c0 3.25 5.67 5 11 5s11-1.75 11-5a10.94 10.94 0 0 0-3.26-7.82Z"
@@ -36,10 +38,10 @@ const AboutIcon = () => (
     </svg>
   </>
 );
-const WorkIcon = () => (
+export const WorkIcon = ({className}:{className?:string}) => (
   <>
     <svg
-      viewBox="0 0 32 32"
+      viewBox="0 0 32 32" className={cn(className)}
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
       enableBackground="new 0 0 32 32"
@@ -77,7 +79,7 @@ const WorkIcon = () => (
     </svg>
   </>
 );
-const SkillIcon = () => (
+export const SkillIcon = ({className}:{className?:string}) => (
   <>
     <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -88,7 +90,7 @@ const SkillIcon = () => (
     </svg>
   </>
 );
-const ProjectIcon = () => (
+export const ProjectIcon = ({className}:{className?:string}) => (
   <>
     <svg
       data-name="Layer 27"
@@ -103,10 +105,10 @@ const ProjectIcon = () => (
     </svg>
   </>
 );
-const ReviewIcon = () => (
+export const ReviewIcon = ({className}:{className?:string}) => (
   <>
     <svg
-      viewBox="0 0 32 32"
+      viewBox="0 0 32 32" className={cn(className)}
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -127,9 +129,9 @@ const ReviewIcon = () => (
     </svg>
   </>
 );
-const ContactIcon = () => (
+export const ContactIcon = ({className}:{className?:string}) => (
   <>
-    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 32 32" className={cn(className)} xmlns="http://www.w3.org/2000/svg">
       <path
         d="m27.36 6.15-2.27-2.27a3 3 0 0 0-4.54.35l-2.21 3a3 3 0 0 0-.44 2.66l.13.38c.27.89.62 2 .84 2.74a1 1 0 0 1-.05.7 12.44 12.44 0 0 1-2.08 3 1 1 0 0 0 0 1.42 1 1 0 0 0 1.41 0 14.14 14.14 0 0 0 2.46-3.51 2.92 2.92 0 0 0 .17-2.17c-.21-.72-.57-1.86-.85-2.75l-.12-.39a1 1 0 0 1 .19-.87l2.21-3a1 1 0 0 1 1.51-.12l.67.67-2 3.1a1 1 0 0 0 .84 1.54 1 1 0 0 0 .84-.45l1.77-2.74.16.15a2.59 2.59 0 0 1 .68 1.88c0 1.76-1.19 5-6.73 10.44-5.81 5.7-10.42 8-12.33 6.07l-2.33-2.3A1 1 0 0 1 5 22.9a1 1 0 0 1 .41-.73l3-2.21a1 1 0 0 1 .88-.15l1.89.59-2.13 1.51a1 1 0 0 0-.24 1.4 1 1 0 0 0 .82.42 1 1 0 0 0 .57-.18l3.8-2.67a1 1 0 0 0 .25-1.4 1 1 0 0 0-.53-.36l-3.8-1.22a3 3 0 0 0-2.66.44l-3 2.21a3 3 0 0 0-.35 4.54l2.27 2.28a4.31 4.31 0 0 0 3.12 1.26c2.52 0 6.32-1.75 12-7.32 4.84-4.75 7.31-8.74 7.33-11.86a4.46 4.46 0 0 0-1.27-3.3Z"
         data-name="phone celuler contact call"
@@ -139,9 +141,9 @@ const ContactIcon = () => (
     </svg>
   </>
 );
-const TwitterIcon = () => (
+export const TwitterIcon = ({className}:{className?:string}) => (
   <>
-    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 32 32" className={cn(className)} xmlns="http://www.w3.org/2000/svg">
       <path
         d="M28.77 8.11a.87.87 0 0 0-.23-.2A4.69 4.69 0 0 0 29 6.54a1 1 0 0 0-.44-1 1 1 0 0 0-1.1 0 6.42 6.42 0 0 1-2.28.92 6.21 6.21 0 0 0-7.08-1A6.07 6.07 0 0 0 15 12.2a1 1 0 0 0 2-.4 4.08 4.08 0 0 1 2-4.52 4.24 4.24 0 0 1 5.12 1 1 1 0 0 0 .88.28h.25a1 1 0 0 0 .34 1.62 1 1 0 0 0-.36.88 13.07 13.07 0 0 1-4.89 11.24 12.75 12.75 0 0 1-12.65 2.31 9.06 9.06 0 0 0 4.54-2.18 1 1 0 0 0 .15-1.09 1 1 0 0 0-.93-.57 4 4 0 0 1-3-1.39 3.63 3.63 0 0 0 1-.35A1 1 0 0 0 10 18a1 1 0 0 0-.76-.84 4.42 4.42 0 0 1-3-2.48c.24 0 .48.05.74.06a1 1 0 0 0 1-.62A1 1 0 0 0 7.67 13C6 11.48 5.59 9.85 5.83 8.7a13.88 13.88 0 0 0 7 4 1 1 0 1 0 .38-2 12.1 12.1 0 0 1-6.82-4.39 1 1 0 0 0-.75-.38 1 1 0 0 0-.78.33 5.34 5.34 0 0 0-.31 6h-.09a1 1 0 0 0-.52.81 5.84 5.84 0 0 0 1.95 4.47 1 1 0 0 0-.18 1 6.63 6.63 0 0 0 3.18 3.57A13.89 13.89 0 0 1 4 23a1 1 0 0 0-.5 1.86 16.84 16.84 0 0 0 8.5 2.49 15.16 15.16 0 0 0 9.6-3.57 15.12 15.12 0 0 0 5.69-12.42 4.62 4.62 0 0 0 1.62-2.25 1 1 0 0 0-.14-1Z"
         data-name="twitter bird social media trending"
@@ -151,9 +153,9 @@ const TwitterIcon = () => (
     </svg>
   </>
 );
-const LinkedInIcon = () => (
+export const LinkedInIcon = ({className}:{className?:string}) => (
   <>
-    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 32 32" className={cn(className)} xmlns="http://www.w3.org/2000/svg">
       <g data-name="in linkedin portfolio social media">
         <path
           d="M6.5 3A3.5 3.5 0 1 0 10 6.5 3.5 3.5 0 0 0 6.5 3Zm0 5A1.5 1.5 0 1 1 8 6.5 1.5 1.5 0 0 1 6.5 8ZM9 11H4a1 1 0 0 0 0 2h4v14H5V16a1 1 0 0 0-2 0v12a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V12a1 1 0 0 0-1-1ZM27.34 12.68A5.94 5.94 0 0 0 23 11h-1a7.84 7.84 0 0 0-4 .89 1 1 0 0 0-1-.89h-5a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-9a2 2 0 0 1 4 0v9a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V17a5.9 5.9 0 0 0-1.66-4.32ZM27 27h-3v-8a4 4 0 0 0-8 0v8h-3V13h3v1a1 1 0 0 0 .62.92 1 1 0 0 0 1.09-.21c.95-1 1.7-1.71 4.29-1.71h1a4 4 0 0 1 2.92 1.09A4 4 0 0 1 27 17Z"
@@ -164,10 +166,10 @@ const LinkedInIcon = () => (
     </svg>
   </>
 );
-const FbIcon = () => (
+export const FbIcon = ({className}:{className?:string}) => (
   <>
     <svg
-      viewBox="0 0 100 100"
+      viewBox="0 0 100 100" className={cn(className)}
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
       enableBackground="new 0 0 100 100"
@@ -187,9 +189,9 @@ const FbIcon = () => (
     </svg>
   </>
 );
-const TwitterBoxIcon = () => (
+export const TwitterBoxIcon = ({className}:{className?:string}) => (
   <>
-    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 64 64" className={cn(className)} xmlns="http://www.w3.org/2000/svg">
       <g data-name="Layer 6">
         <path
           d="M50.47 17.15v29.08a4.64 4.64 0 0 1-4.62 4.63H17.27a4.64 4.64 0 0 1-4.62-4.62V17.15a4.64 4.64 0 0 1 4.62-4.62h28.58"
@@ -220,8 +222,8 @@ const TwitterBoxIcon = () => (
     </svg>
   </>
 );
-const LinkedInBoxIcon = () => (
-  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+export const LinkedInBoxIcon = ({className}:{className?:string}) => (
+  <svg viewBox="0 0 64 64" className={cn(className)} xmlns="http://www.w3.org/2000/svg">
     <g data-name="Layer 6">
       <path
         d="M50.43 17.31v29.08A4.64 4.64 0 0 1 45.81 51H17.22a4.64 4.64 0 0 1-4.62-4.62V17.31a4.64 4.64 0 0 1 4.63-4.63h28.58"
@@ -251,9 +253,9 @@ const LinkedInBoxIcon = () => (
     </g>
   </svg>
 );
-const FbBoxIcon = () => (
+export const FbBoxIcon = ({className}:{className?:string}) => (
   <>
-    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 64 64" className={cn(className)} xmlns="http://www.w3.org/2000/svg">
       <g data-name="Layer 6">
         <path
           d="M30.54 51H17.22a4.64 4.64 0 0 1-4.63-4.62v-29.1a4.64 4.64 0 0 1 4.63-4.63H45.8M50.43 17.28v29.08A4.64 4.64 0 0 1 45.8 51h-9"
@@ -284,9 +286,9 @@ const FbBoxIcon = () => (
     </svg>
   </>
 );
-const GitHubIcon = () => (
+export const GitHubIcon = ({className}:{className?:string}) => (
   <>
-    <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 60 60" className={cn(className)} xmlns="http://www.w3.org/2000/svg">
       <g fill="none" fillRule="evenodd">
         <path
           d="M30 60c16.569 0 30-13.431 30-30C60 13.431 46.569 0 30 0 13.431 0 0 13.431 0 30c0 16.569 13.431 30 30 30Z"
@@ -302,10 +304,10 @@ const GitHubIcon = () => (
     </svg>
   </>
 );
-const LangIcon = () => (
+export const LangIcon = ({className}:{className?:string}) => (
   <>
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 24 24" className={cn(className)}
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
       enableBackground="new 0 0 24 24"
@@ -343,12 +345,12 @@ const LangIcon = () => (
     </svg>
   </>
 );
-const GlobeIcon = () => (
+export const GlobeIcon = ({className}:{className?:string}) => (
   <>
     <svg
       id="Layer_1"
       version="1.1"
-      viewBox="0 0 24 24"
+      viewBox="0 0 24 24" className={cn(className)}
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
       enableBackground="new 0 0 24 24"
@@ -401,9 +403,9 @@ const GlobeIcon = () => (
     </svg>
   </>
 );
-const SexIcon = () => (
+export const SexIcon = ({className}:{className?:string}) => (
   <>
-    <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 256 256" className={cn(className)} xmlns="http://www.w3.org/2000/svg">
       <path fill="none" d="M0 0h256v256H0z"></path>
       <circle
         cx="120"
@@ -428,10 +430,10 @@ const SexIcon = () => (
     </svg>
   </>
 );
-const HobbyIcon = () => (
+export const HobbyIcon = ({className}:{className?:string}) => (
   <>
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 24 24" className={cn(className)}
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -448,10 +450,10 @@ const HobbyIcon = () => (
     </svg>
   </>
 );
-const DownloadIcon = () => (
+export const DownloadIcon = ({className}:{className?:string}) => (
   <>
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 24 24" className={cn(className)}
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
       enableBackground="new 0 0 24 24"
@@ -472,7 +474,7 @@ const DownloadIcon = () => (
   </>
 );
 
-const Icons = {
+export const Icons = {
   home: <HomeIcon />,
   about: <AboutIcon />,
   work: <WorkIcon />,
