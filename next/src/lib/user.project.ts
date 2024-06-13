@@ -4,6 +4,8 @@ export interface IProjectData {
   stack: string[];
   github: string;
   preview: string;
+  role: "author" | "contributor" | "maintainer";
+  status: "done" | "ongoing" | "closed";
 }
 
 export type TProjectData = Array<IProjectData>;
@@ -15,6 +17,8 @@ const projects: TProjectData = [
     stack: ["typescript", "nodejs", "mongodb", "express", "mongoose"],
     github: "https://github.com/unnamed-lab/cypheir-otp-server",
     preview: "https://github.com/unnamed-lab/cypheir-otp-server",
+    role: "author",
+    status: "ongoing"
   },
 ];
 

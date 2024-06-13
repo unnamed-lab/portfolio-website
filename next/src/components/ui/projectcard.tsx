@@ -14,19 +14,62 @@ import Link from "next/link";
 import Icons, { GitHubIcon } from "./icons";
 import { IUser } from "@/lib/user.data";
 import { IProjectData } from "@/lib/user.project";
+import { Badge } from "../shadcn-ui/badge";
 
 export default function ProjectCard({ data }: { data: IProjectData }) {
-  const { title, desc, stack, github, preview } = data;
+  const { title, desc, stack, github, preview, role, status } = data;
   const [stacks, setstacks] = useState<string[]>(stack || [""]);
+
+  let statusColor;
+
+  switch (status) {
+    case "done":
+      statusColor = "#22bb33";
+      break;
+    case "ongoing":
+      statusColor = "#ff8f00";
+      break;
+    case "closed":
+      statusColor = "#bb2124";
+      break;
+    default:
+      statusColor = "#aaaaaa";
+      break;
+  }
 
   return (
     <Card>
-      <CardHeader className="relative">
+      <CardHeader className="relative pb-3">
         <div className="absolute top-[8px] left-[8px] w-3 h-3 rounded-xl bg-slate-200 animate-pulse"></div>
         <CardTitle className="text-lg">{title}</CardTitle>
+        <div className="flex gap-3 my-2">
+          {role && (
+            <Badge
+              variant="outline"
+              className="uppercase font-medium pointer-events-none rounded"
+            >
+              {role}
+            </Badge>
+          )}
+          {status && (
+            <Badge
+              variant="default"
+              style={
+                {
+                  "--status-badge-colour": `${statusColor}`,
+                } as React.CSSProperties
+              }
+              className="uppercase font-medium pointer-events-none rounded border-[--status-badge-colour] text-[--status-badge-colour]"
+            >
+              {status}
+            </Badge>
+          )}
+        </div>
       </CardHeader>
       <CardContent className="pb-3">
-        <CardDescription className="text-xs font-light mb-2">{desc}</CardDescription>
+        <CardDescription className="text-xs font-light mb-2">
+          {desc}
+        </CardDescription>
         <div className="flex flex-wrap py-2 gap-2">
           {stacks.map((el, i, arr) => {
             if (i < 3) return <ProjectStack key={i} value={el} />;
