@@ -22,7 +22,7 @@ const user: IUser = {
   experience: [
     {
       title: "Bachelor of Technology, Federal University of Technology Owerri",
-      timespan: "Jan 2023 - Present",
+      timespan: "Dec 2022 - Present",
       desc: "I am currently studying Computer Science at the Federal University of Technology Owerri FUTO, pursuing a Bachelor of Technology degree. The program has provided me with a well-rounded education, covering both theoretical foundations and practical applications of computer science.",
       location: "Owerri, NG",
       type: "Education",

@@ -4,6 +4,8 @@ export interface IProjectData {
   stack: string[];
   github: string;
   preview: string;
+  role: "author" | "contributor" | "maintainer";
+  status: "done" | "ongoing" | "closed";
 }
 
 export type TProjectData = Array<IProjectData>;
@@ -15,6 +17,17 @@ const projects: TProjectData = [
     stack: ["typescript", "nodejs", "mongodb", "express", "mongoose"],
     github: "https://github.com/unnamed-lab/cypheir-otp-server",
     preview: "https://github.com/unnamed-lab/cypheir-otp-server",
+    role: "author",
+    status: "ongoing",
+  },
+  {
+    title: "MagicUI",
+    desc: "Magic UI is a versatile library of reusable components designed to be easily integrated into web applications. The library primarily focuses on elements, blocks, and templates that are ideal for crafting landing pages and marketing materials aimed at end-users. The philosophy behind Magic UI is rooted in the belief that high-quality design significantly enhances the value of software. Inspiration for this library comes heavily from UI Shadcn, another well-designed component library.",
+    stack: ["typescript", "nextjs", "tailwind", "docker"],
+    github: "https://github.com/magicuidesign/magicui",
+    preview: "https://magicui.design/",
+    role: "contributor",
+    status: "ongoing",
   },
 ];
 
