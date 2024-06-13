@@ -46,7 +46,7 @@ export default function ProjectCard({ data }: { data: IProjectData }) {
           {role && (
             <Badge
               variant="outline"
-              className="uppercase font-medium pointer-events-none rounded"
+              className="uppercase font-medium select-none pointer-events-none rounded"
             >
               {role}
             </Badge>
@@ -59,7 +59,7 @@ export default function ProjectCard({ data }: { data: IProjectData }) {
                   "--status-badge-colour": `${statusColor}`,
                 } as React.CSSProperties
               }
-              className="uppercase font-medium pointer-events-none rounded border-[--status-badge-colour] text-[--status-badge-colour]"
+              className="uppercase font-medium select-none pointer-events-none rounded border-[--status-badge-colour] text-[--status-badge-colour]"
             >
               {status}
             </Badge>
@@ -70,13 +70,13 @@ export default function ProjectCard({ data }: { data: IProjectData }) {
         <CardDescription className="text-xs font-light mb-2">
           {desc}
         </CardDescription>
-        <div className="flex flex-wrap py-2 gap-2">
+        <div className="flex flex-wrap py-2 gap-[0.333rem]">
           {stacks.map((el, i, arr) => {
             if (i < 3) return <ProjectStack key={i} value={el} />;
             else if (i === 3)
               return (
                 <ProjectStack
-                  className="bg-gray-900 animate-beep-light px-2"
+                  className="bg-gray-900 animate-beep-light"
                   key={i}
                   value={`${arr.length - 3}+`}
                 />
@@ -115,7 +115,7 @@ function ProjectStack({
   return (
     <div
       className={cn(
-        "p-1 text-[10px] font-light w-max h-fit bg-gray-800 uppercase select-none",
+        "py-1 px-2 text-[10px] font-medium w-max h-fit bg-gray-800 uppercase select-none",
         className
       )}
     >
