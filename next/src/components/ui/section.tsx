@@ -22,7 +22,7 @@ export default function Section({
     <section
       id={id}
       className={cn(
-        "w-full px-5 lg:px-[10%] py-4 lg:py-12",
+        "w-full px-5 md:px-[10%] py-4 md:py-12",
         breakage,
         className
       )}

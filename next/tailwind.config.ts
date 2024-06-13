@@ -27,7 +27,7 @@ const config: Config = {
         },
         "card-beep": {
           from: { opacity: "100%" },
-          to: { opacity: "60%" },
+          to: { opacity: "80%" },
         },
       },
       backgroundImage: {

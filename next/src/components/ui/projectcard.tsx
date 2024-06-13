@@ -22,18 +22,18 @@ export default function ProjectCard({ data }: { data: IProjectData }) {
   return (
     <Card>
       <CardHeader className="relative">
-        <div className="absolute top-[8px] left-[8px] w-3 h-3 rounded-xl bg-slate-200 animate-beep-light"></div>
+        <div className="absolute top-[8px] left-[8px] w-3 h-3 rounded-xl bg-slate-200 animate-pulse"></div>
         <CardTitle className="text-lg">{title}</CardTitle>
       </CardHeader>
       <CardContent className="pb-3">
-        <CardDescription className="text-xs font-light">{desc}</CardDescription>
+        <CardDescription className="text-xs font-light mb-2">{desc}</CardDescription>
         <div className="flex flex-wrap py-2 gap-2">
           {stacks.map((el, i, arr) => {
             if (i < 3) return <ProjectStack key={i} value={el} />;
             else if (i === 3)
               return (
                 <ProjectStack
-                  className="bg-gray-900"
+                  className="bg-gray-900 animate-beep-light px-2"
                   key={i}
                   value={`${arr.length - 3}+`}
                 />
@@ -46,7 +46,7 @@ export default function ProjectCard({ data }: { data: IProjectData }) {
         {github && (
           <Link
             href={github}
-            className="grid w-8 h-8 rounded-xl p-0 place-items-center bg-neutral-600"
+            className="grid w-8 h-8 rounded-2xl p-0 place-items-center bg-neutral-600"
           >
             <GitHubIcon className="w-7 h-7 mx-auto" />
           </Link>
@@ -72,7 +72,7 @@ function ProjectStack({
   return (
     <div
       className={cn(
-        "py-1 px-2 text-[10px] font-light w-max h-fit bg-gray-800 uppercase select-none",
+        "p-1 text-[10px] font-light w-max h-fit bg-gray-800 uppercase select-none",
         className
       )}
     >
