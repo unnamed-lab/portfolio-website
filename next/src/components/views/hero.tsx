@@ -23,7 +23,7 @@ export default function Hero({ data }: { data: IUser }) {
   ];
 
   return (
-    <section className="relative bg-neutral-900 z-0 after:content-[''] after:w-full after:h-16 after:block after:bg-gradient-to-b from-transparent to-neutral-950 after:z-[2] after:absolute after:bottom-0 w-full">
+    <section className="relative bg-neutral-900 z-0 after:content-[''] after:w-full after:h-16 after:block after:bg-gradient-to-b from-transparent to-neutral-950 after:z-[2] after:absolute after:bottom-0 after:select-none after:pointer-events-none w-full">
       <div className="md:flex md:items-center px-[10%] pt-10 lg:py-[5%] after:content-[''] lg:min-h-[60svh] w-full overflow-hidden">
         <div className="w-full md:w-7/12 !h-full grow">
           <p className="mb-4">My name is</p>
@@ -49,6 +49,7 @@ export default function Hero({ data }: { data: IUser }) {
         </div>
         <div className="absolute grow !h-full -z-10 opacity-35 md:opacity-100 md:z-0 top-0 right-0 md:relative w-full md:w-5/12 overflow-hidden">
           <Image
+            priority
             src={data.mascot}
             width={500}
             height={500}

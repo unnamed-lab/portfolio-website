@@ -1,9 +1,11 @@
-export interface IReviewData {
+interface IReviewData {
   name: string;
   username: string;
   body: string;
   img: string;
 }
+
+export type TReviewData = Array<IReviewData>;
 
 const reviews: IReviewData[] = [
   {

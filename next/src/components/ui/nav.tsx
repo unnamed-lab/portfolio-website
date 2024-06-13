@@ -2,18 +2,6 @@ import navigation from "@/lib/navigation";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import Link from "next/link";
 
-// display: block;
-// position: absolute;
-// left: -175%;
-// top: 50%;
-// transform: translate(-50%, -50%);
-// z-index: 1;
-// background-color: rgba(180, 180, 180, 0.6);
-// padding-left: 0.33rem;
-// padding-right: 0.33rem;
-// padding-top: 0.1rem;
-// padding-bottom: 0.1rem;
-// border-radius: 0.25rem;
 
 export default function Nav() {
   return (
