@@ -18,10 +18,7 @@ import { Badge } from "../shadcn-ui/badge";
 
 export default function ProjectCard({ data }: { data: IProjectData }) {
   const { title, desc, stack, github, preview, role, status } = data;
-  const [stacks, setstacks] = useState<string[]>(stack || [""]);
-
   let statusColor;
-
   switch (status) {
     case "done":
       statusColor = "#22bb33";
@@ -71,7 +68,7 @@ export default function ProjectCard({ data }: { data: IProjectData }) {
           {desc}
         </CardDescription>
         <div className="flex flex-wrap py-2 gap-[0.333rem]">
-          {stacks.map((el, i, arr) => {
+          {stack.map((el, i, arr) => {
             if (i < 3) return <ProjectStack key={i} value={el} />;
             else if (i === 3)
               return (
