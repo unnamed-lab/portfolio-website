@@ -33,6 +33,7 @@ function AboutItem({ className, title, icon, list }: IAboutItem) {
       </li>
     );
   });
+  
   return (
     <div
       className={cn(
