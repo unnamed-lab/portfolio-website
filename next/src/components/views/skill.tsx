@@ -37,6 +37,7 @@ export default function Skill({ data }: { data: IUser }) {
         <div className="w-full md:w-6/12">
           <AboutMenu>
             <AboutItem
+            key={1}
               className="min-w-[100%] gap-2"
               title="Programming/Coding"
               icon={Icons.skill}
@@ -50,12 +51,14 @@ export default function Skill({ data }: { data: IUser }) {
               ]}
             />
             <AboutItem
+            key={2}
               className="min-w-[100%] gap-2"
               title="Frameworks & Libraries."
               icon={Icons.skill}
               list={["React", "SASS", "Tailwind", "NextJs", "Express"]}
             />
             <AboutItem
+            key={3}
               className="min-w-[100%] gap-2"
               title="DevOps"
               icon={Icons.skill}
