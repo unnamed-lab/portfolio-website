@@ -7,6 +7,9 @@ on:
 
 jobs:
   prettier:
+    defaults:
+      run:
+        working-directory: next
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
