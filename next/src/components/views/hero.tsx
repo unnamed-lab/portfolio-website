@@ -23,16 +23,16 @@ export default function Hero({ data }: { data: IUser }) {
   ];
 
   return (
-    <section className="relative bg-neutral-900 z-0 after:content-[''] after:w-full after:h-16 after:block after:bg-gradient-to-b from-transparent to-neutral-950 after:z-[2] after:absolute after:bottom-0 after:select-none after:pointer-events-none w-full">
-      <div className="md:flex md:items-center px-[10%] pt-10 lg:py-[5%] after:content-[''] lg:min-h-[60svh] w-full overflow-hidden">
-        <div className="w-full md:w-7/12 !h-full grow">
+    <section className="relative z-0 w-full bg-neutral-900 from-transparent to-neutral-950 after:pointer-events-none after:absolute after:bottom-0 after:z-[2] after:block after:h-16 after:w-full after:select-none after:bg-gradient-to-b after:content-['']">
+      <div className="w-full overflow-hidden px-[10%] pt-10 after:content-[''] md:flex md:items-center lg:min-h-[60svh] lg:py-[5%]">
+        <div className="!h-full w-full grow md:w-7/12">
           <p className="mb-4">My name is</p>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold blue-line">
+          <h1 className="blue-line text-4xl font-bold md:text-5xl lg:text-7xl">
             {data.firstname} {data.middlename.slice(0, 1) + "."} {data.lastname}
           </h1>
-          <p className="py-7 text-zinc-600 uppercase">
+          <p className="py-7 uppercase text-zinc-600">
             {`I'm also known as `}
-            <span className="uppercase font-bold text-zinc-400 text-xl">
+            <span className="text-xl font-bold uppercase text-zinc-400">
               {data.nickname}
             </span>
           </p>
@@ -40,21 +40,21 @@ export default function Hero({ data }: { data: IUser }) {
           <p className="flex flex-nowrap gap-6 py-4">
             {socialList.map((el, index) => {
               return (
-                <Link key={index} href={el.url} className="w-[64px] h-[64px]">
+                <Link key={index} href={el.url} className="h-[64px] w-[64px]">
                   {el.icon}
                 </Link>
               );
             })}
           </p>
         </div>
-        <div className="absolute grow !h-full -z-10 opacity-35 md:opacity-100 md:z-0 top-0 right-0 md:relative w-full md:w-5/12 overflow-hidden">
+        <div className="absolute right-0 top-0 -z-10 !h-full w-full grow overflow-hidden opacity-35 md:relative md:z-0 md:w-5/12 md:opacity-100">
           <Image
             priority
             src={data.mascot}
             width={500}
             height={500}
             alt={`${data.firstname} ${data.lastname}`}
-            className="mix-blend-luminosity md:mix-blend-normal mt-auto w-full object-cover md:relative absolute top-0 -right-[30%] md:-right-0 h-auto pointer-events-none select-none cursor-pointer"
+            className="pointer-events-none absolute -right-[30%] top-0 mt-auto h-auto w-full cursor-pointer select-none object-cover mix-blend-luminosity md:relative md:-right-0 md:mix-blend-normal"
           />
         </div>
       </div>

@@ -9,8 +9,8 @@ function AboutMenu({ className, children }: IAboutMenu) {
   return (
     <div
       className={cn(
-        "lg:flex lg:flex-wrap lg:content-evenly my-4 md:gap-2",
-        className
+        "my-4 md:gap-2 lg:flex lg:flex-wrap lg:content-evenly",
+        className,
       )}
     >
       {children}
@@ -28,24 +28,24 @@ interface IAboutItem {
 function AboutItem({ className, title, icon, list }: IAboutItem) {
   const listing = list.map((el, index) => {
     return (
-      <li key={index} className="font-medium capitalize mb-6">
+      <li key={index} className="mb-6 font-medium capitalize">
         {el}
       </li>
     );
   });
-  
+
   return (
     <div
       className={cn(
-        "flex flex-wrap flex-1 min-w-[30%] my-2 mr-auto",
-        className
+        "my-2 mr-auto flex min-w-[30%] flex-1 flex-wrap",
+        className,
       )}
     >
-      <h3 className="relative w-full flex items-center font-semibold text-lg mb-3">
+      <h3 className="relative mb-3 flex w-full items-center text-lg font-semibold">
         <span className="about-icon">{icon}</span>
         {title}
       </h3>
-      <ul className="mt-3 ml-9 list-[circle] flex gap-y-2 gap-x-8 lg:gap-x-8 flex-wrap content-evenly text-base">
+      <ul className="ml-9 mt-3 flex list-[circle] flex-wrap content-evenly gap-x-8 gap-y-2 text-base lg:gap-x-8">
         {listing}
       </ul>
     </div>

@@ -22,13 +22,13 @@ export default function Section({
     <section
       id={id}
       className={cn(
-        "w-full px-5 md:px-[10%] py-4 md:py-12",
+        "w-full px-5 py-4 md:px-[10%] md:py-12",
         breakage,
-        className
+        className,
       )}
     >
       {tab && (
-        <div className="cursor-pointer min-w-min w-max h-4 rounded-xl border-2 border-solid border-[#c8c8c8] mb-4 md:mb-6 px-4 py-3 capitalize text-center flex justify-center items-center md:-translate-x-[3.75rem]">
+        <div className="mb-4 flex h-4 w-max min-w-min cursor-pointer items-center justify-center rounded-xl border-2 border-solid border-[#c8c8c8] px-4 py-3 text-center capitalize md:mb-6 md:-translate-x-[3.75rem]">
           {tab}
         </div>
       )}
@@ -45,8 +45,8 @@ interface ISectionTabProp {
 export function SectionTab({ title, icon }: ISectionTabProp) {
   return (
     <>
-      <span className="!w-4 !h-4 flex content-center mr-2">{icon}</span>
-      <span className="font-normal text-xs">{title}</span>
+      <span className="mr-2 flex !h-4 !w-4 content-center">{icon}</span>
+      <span className="text-xs font-normal">{title}</span>
     </>
   );
 }

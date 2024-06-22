@@ -17,4 +17,4 @@ jobs:
         uses: creyD/prettier_action@v4.3
         with:
           prettier_plugins: "prettier-plugin-tailwindcss"
-          prettier_options: "--write **/*.{js, ts, jsx, tsx, md, mdx}"
+          prettier_options: --write **/*.{js,ts,jsx,tsx,md,mdx}
