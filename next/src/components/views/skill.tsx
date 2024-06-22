@@ -20,16 +20,20 @@ export default function Skill({ data }: { data: IUser }) {
     "git",
     "github",
     "visualstudiocode",
-    "tailwindcss", 
+    "tailwindcss",
     "sass",
-    "python"
+    "python",
   ];
   return (
-    <Section id="skill" tab={<SectionTab title="Talents" icon={Icons.skill} />} breakline>
+    <Section
+      id="skill"
+      tab={<SectionTab title="Talents" icon={Icons.skill} />}
+      breakline
+    >
       <h1 className="section-heading">Technical Experience/Skills</h1>
       <p className="info">{data.skill_brief}</p>
 
-      <div className="w-full my-4 flex flex-wrap md:flex-nowrap gap-8">
+      <div className="my-4 flex w-full flex-wrap gap-8 md:flex-nowrap">
         <div className="w-full md:w-6/12">
           <IconCloud iconSlugs={slugs} />
         </div>
@@ -37,7 +41,7 @@ export default function Skill({ data }: { data: IUser }) {
         <div className="w-full md:w-6/12">
           <AboutMenu>
             <AboutItem
-            key={1}
+              key={1}
               className="min-w-[100%] gap-2"
               title="Programming/Coding"
               icon={Icons.skill}
@@ -51,14 +55,14 @@ export default function Skill({ data }: { data: IUser }) {
               ]}
             />
             <AboutItem
-            key={2}
+              key={2}
               className="min-w-[100%] gap-2"
               title="Frameworks & Libraries."
               icon={Icons.skill}
               list={["React", "SASS", "Tailwind", "NextJs", "Express"]}
             />
             <AboutItem
-            key={3}
+              key={3}
               className="min-w-[100%] gap-2"
               title="DevOps"
               icon={Icons.skill}

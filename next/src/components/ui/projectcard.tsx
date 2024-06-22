@@ -37,13 +37,13 @@ export default function ProjectCard({ data }: { data: IProjectData }) {
   return (
     <Card>
       <CardHeader className="relative pb-3">
-        <div className="absolute top-[8px] left-[8px] w-3 h-3 rounded-xl bg-slate-200 animate-pulse"></div>
+        <div className="absolute left-[8px] top-[8px] h-3 w-3 animate-pulse rounded-xl bg-slate-200"></div>
         <CardTitle className="text-lg">{title}</CardTitle>
-        <div className="flex gap-3 my-2">
+        <div className="my-2 flex gap-3">
           {role && (
             <Badge
               variant="outline"
-              className="uppercase font-medium select-none pointer-events-none rounded"
+              className="pointer-events-none select-none rounded font-medium uppercase"
             >
               {role}
             </Badge>
@@ -56,7 +56,7 @@ export default function ProjectCard({ data }: { data: IProjectData }) {
                   "--status-badge-colour": `${statusColor}`,
                 } as React.CSSProperties
               }
-              className="uppercase font-medium select-none pointer-events-none rounded border-[--status-badge-colour] text-[--status-badge-colour]"
+              className="pointer-events-none select-none rounded border-[--status-badge-colour] font-medium uppercase text-[--status-badge-colour]"
             >
               {status}
             </Badge>
@@ -64,16 +64,16 @@ export default function ProjectCard({ data }: { data: IProjectData }) {
         </div>
       </CardHeader>
       <CardContent className="pb-3">
-        <CardDescription className="text-xs font-light mb-2">
+        <CardDescription className="mb-2 text-xs font-light">
           {desc}
         </CardDescription>
-        <div className="flex flex-wrap py-2 gap-[0.333rem]">
+        <div className="flex flex-wrap gap-[0.333rem] py-2">
           {stack.map((el, i, arr) => {
             if (i < 3) return <ProjectStack key={i} value={el} />;
             else if (i === 3)
               return (
                 <ProjectStack
-                  className="bg-gray-900 animate-beep-light"
+                  className="animate-beep-light bg-gray-900"
                   key={i}
                   value={`${arr.length - 3}+`}
                 />
@@ -86,14 +86,14 @@ export default function ProjectCard({ data }: { data: IProjectData }) {
         {github && (
           <Link
             href={github}
-            className="grid w-8 h-8 rounded-2xl p-0 place-items-center bg-neutral-600"
+            className="grid h-8 w-8 place-items-center rounded-2xl bg-neutral-600 p-0"
           >
-            <GitHubIcon className="w-7 h-7 mx-auto" />
+            <GitHubIcon className="mx-auto h-7 w-7" />
           </Link>
         )}
         <Link
           href={preview}
-          className="flex items-center justify-center h-8 grow text-center uppercase text-sm font-bold bg-neutral-100 text-gray-950 rounded-md transition-colors ease-linear hover:bg-neutral-300"
+          className="flex h-8 grow items-center justify-center rounded-md bg-neutral-100 text-center text-sm font-bold uppercase text-gray-950 transition-colors ease-linear hover:bg-neutral-300"
         >
           Preview
         </Link>
@@ -112,8 +112,8 @@ function ProjectStack({
   return (
     <div
       className={cn(
-        "py-1 px-2 text-[10px] font-medium w-max h-fit bg-gray-800 uppercase select-none",
-        className
+        "h-fit w-max select-none bg-gray-800 px-2 py-1 text-[10px] font-medium uppercase",
+        className,
       )}
     >
       {value}

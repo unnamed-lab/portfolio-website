@@ -1,4 +1,3 @@
-
 import meta from "@/lib/metadata";
 import { MetadataRoute } from "next";
 

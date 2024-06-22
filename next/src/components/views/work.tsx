@@ -6,7 +6,8 @@ import { Badge } from "../shadcn-ui/badge";
 
 export default function Work({ data }: { data: IUser }) {
   return (
-    <Section id="work"
+    <Section
+      id="work"
       tab={<SectionTab title="Work Experience" icon={Icons.work} />}
       breakline
     >
@@ -58,17 +59,17 @@ function ExpBranch({
   location,
 }: IExpBranchProp) {
   return (
-    <div className={cn("relative md:flex w-full mb-4 md:mb-0", className)}>
-      <div className="w-full md:w-[25%] mr-auto md:flex flex-wrap items-center font-semibold text-base capitalize">
+    <div className={cn("relative mb-4 w-full md:mb-0 md:flex", className)}>
+      <div className="mr-auto w-full flex-wrap items-center text-base font-semibold capitalize md:flex md:w-[25%]">
         {timespan}
       </div>
-      <div className="md:branch-pointer relative w-full md:w-3/4 mt-0 pt-2 md:pt-0 pl-3 md:pl-8 ml-3 pb-8 md:border-l-4 md:border-l-[#3c3c3c] md:border-solid">
-        <h4 className="font-bold text-xl md:text-2xl mb-1 mt-0">{title}</h4>
-        <div className="flex gap-3 my-2">
+      <div className="md:branch-pointer relative ml-3 mt-0 w-full pb-8 pl-3 pt-2 md:w-3/4 md:border-l-4 md:border-solid md:border-l-[#3c3c3c] md:pl-8 md:pt-0">
+        <h4 className="mb-1 mt-0 text-xl font-bold md:text-2xl">{title}</h4>
+        <div className="my-2 flex gap-3">
           {type && (
             <Badge
               variant="outline"
-              className="uppercase font-medium pointer-events-none"
+              className="pointer-events-none font-medium uppercase"
             >
               {type}
             </Badge>
@@ -76,7 +77,7 @@ function ExpBranch({
           {location && (
             <Badge
               variant="default"
-              className="uppercase font-medium pointer-events-none bg-[#1ca7ec]"
+              className="pointer-events-none bg-[#1ca7ec] font-medium uppercase"
             >
               {location}
             </Badge>

@@ -14,14 +14,14 @@ export default function Review({ data }: { data: IUser }) {
       tab={<SectionTab title="Review" icon={Icons.review} />}
     >
       <h1 className="section-heading">Testimonial</h1>
-      <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden my-10">
-        <Marquee pauseOnHover className="[--duration:20s] gap-3 my-3">
+      <div className="relative my-10 flex h-full w-full flex-col items-center justify-center overflow-hidden">
+        <Marquee pauseOnHover className="my-3 gap-3 [--duration:20s]">
           {firstRow.map((review) => (
             <ReviewCard key={review.username} {...review} />
           ))}
         </Marquee>
 
-        <Marquee reverse pauseOnHover className="[--duration:20s] gap-3">
+        <Marquee reverse pauseOnHover className="gap-3 [--duration:20s]">
           {secondRow.map((review) => (
             <ReviewCard key={review.username} {...review} />
           ))}
