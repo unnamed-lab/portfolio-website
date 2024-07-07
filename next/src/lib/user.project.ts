@@ -29,6 +29,16 @@ const projects: TProjectData = [
     role: "contributor",
     status: "ongoing",
   },
+
+  {
+    title: "Cypheir Mock",
+    desc: `Cypheir Mock API is a powerful tool for developers, enabling quick creation of mock APIs. Whether you’re building new applications, testing integrations, or simulating responses during development, this service has you covered. Easily create API endpoints with customizable routes, request parameters, and response data. Generate mock data based on your API specifications, ensuring accurate testing of input validation and edge cases.`,
+    stack: ["typescript", "nextjs", "tailwind", "prisma", "jest", "mongodb"],
+    github: "https://github.com/unnamed-lab/cypheir-mock",
+    preview: "https://mock.cypheir.xyz/",
+    role: "author",
+    status: "ongoing",
+  },
 ];
 
 export default projects;

@@ -59,7 +59,7 @@ export default function Skill({ data }: { data: IUser }) {
               className="min-w-[100%] gap-2"
               title="Frameworks & Libraries."
               icon={Icons.skill}
-              list={["React", "SASS", "Tailwind", "NextJs", "Express"]}
+              list={["React", "SASS", "Tailwind", "NextJs", "Express", "Prisma", "Jest", "Testing Library"]}
             />
             <AboutItem
               key={3}
@@ -73,7 +73,6 @@ export default function Skill({ data }: { data: IUser }) {
                 "Git",
                 "YAML",
                 "Vercel",
-                "Prisma",
                 "Docker",
               ]}
             />
