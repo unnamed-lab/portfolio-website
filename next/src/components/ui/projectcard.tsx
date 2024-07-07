@@ -63,11 +63,11 @@ export default function ProjectCard({ data }: { data: IProjectData }) {
           )}
         </div>
       </CardHeader>
-      <CardContent className="pb-3">
+      <CardContent className="h-auto min-h-[200px] pb-3">
         <CardDescription className="mb-2 text-xs font-light">
           {desc}
         </CardDescription>
-        <div className="flex flex-wrap gap-[0.333rem] py-2">
+        <div className="mt-auto flex flex-wrap gap-[0.333rem] py-2">
           {stack.map((el, i, arr) => {
             if (i < 3) return <ProjectStack key={i} value={el} />;
             else if (i === 3)
@@ -82,7 +82,7 @@ export default function ProjectCard({ data }: { data: IProjectData }) {
           })}
         </div>
       </CardContent>
-      <CardFooter className="gap-4">
+      <CardFooter className="mt-auto gap-4">
         {github && (
           <Link
             href={github}
