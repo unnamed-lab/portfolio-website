@@ -1,8 +1,9 @@
+import React from "react";
 import { IUser } from "@/lib/user.data";
 import { Icons, ProjectCard, Section } from "../ui";
 import { SectionTab } from "../ui/section";
 
-export default function Project({ data }: { data: IUser }) {
+export default function Project({ data }: Readonly<{ data: IUser }>) {
   const { catalog } = data;
   if (catalog.length >= 1)
     return (

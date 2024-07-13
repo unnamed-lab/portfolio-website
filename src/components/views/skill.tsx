@@ -1,9 +1,10 @@
+import React from "react";
 import { IUser } from "@/lib/user.data";
 import { AboutItem, AboutMenu, Icons } from "../ui";
 import Section, { SectionTab } from "../ui/section";
 import IconCloud from "@/components/magicui/icon-cloud";
 
-export default function Skill({ data }: { data: IUser }) {
+export default function Skill({ data }: Readonly<{ data: IUser }>) {
   const slugs = [
     "typescript",
     "javascript",

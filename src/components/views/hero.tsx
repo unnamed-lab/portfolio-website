@@ -1,9 +1,10 @@
+import React from "react";
 import { Icons } from "../ui";
 import Link from "next/link";
 import Image from "next/image";
 import { IUser } from "@/lib/user.data";
 
-export default function Hero({ data }: { data: IUser }) {
+export default function Hero({ data }: Readonly<{ data: IUser }>) {
   const socialList = [
     {
       name: "facebook",

@@ -15,7 +15,7 @@ export default function Section({
   className,
   children,
   breakline = false,
-}: ISectionProp) {
+}: Readonly<ISectionProp>) {
   const breakage = breakline
     ? "border-b border-b-neutral-700 border-b-solid mb-8"
     : "";
@@ -43,7 +43,7 @@ interface ISectionTabProp {
   icon: React.ReactNode;
 }
 
-export function SectionTab({ title, icon }: ISectionTabProp) {
+export function SectionTab({ title, icon }: Readonly<ISectionTabProp>) {
   return (
     <>
       <span className="mr-2 flex !h-4 !w-4 content-center">{icon}</span>

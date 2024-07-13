@@ -1,8 +1,9 @@
+import React from "react";
 import { IUser } from "@/lib/user.data";
 import { Section, Icons, AboutMenu, AboutItem } from "../ui";
 import { SectionTab } from "../ui/section";
 
-export default function About({ data }: { data: IUser }) {
+export default function About({ data }: Readonly<{ data: IUser }>) {
   return (
     <Section
       id="about"

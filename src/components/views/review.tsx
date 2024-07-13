@@ -1,10 +1,11 @@
+import React from "react";
 import { IUser } from "@/lib/user.data";
 import Marquee from "../magicui/marquee";
 import { Icons, Section } from "../ui";
 import { SectionTab } from "../ui/section";
 import { ReviewCard } from "../ui/reviewcard";
 
-export default function Review({ data }: { data: IUser }) {
+export default function Review({ data }: Readonly<{ data: IUser }>) {
   const { review } = data;
   const firstRow = review.slice(0, review.length / 2);
   const secondRow = review.slice(review.length / 2);

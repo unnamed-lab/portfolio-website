@@ -1,14 +1,14 @@
 "use client";
+import React, { PropsWithChildren, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import React, { PropsWithChildren, useRef } from "react";
 
 export interface DockProps extends VariantProps<typeof dockVariants> {
-  className?: string;
-  magnification?: number;
-  distance?: number;
-  children: React.ReactNode;
+  readonly className?: string;
+  readonly magnification?: number;
+  readonly distance?: number;
+  readonly children: React.ReactNode;
 }
 
 const DEFAULT_MAGNIFICATION = 60;
@@ -58,13 +58,13 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
 Dock.displayName = "Dock";
 
 export interface DockIconProps {
-  size?: number;
-  magnification?: number;
-  distance?: number;
-  mouseX?: any;
-  className?: string;
-  children?: React.ReactNode;
-  props?: PropsWithChildren;
+  readonly size?: number;
+  readonly magnification?: number;
+  readonly distance?: number;
+  readonly mouseX?: any;
+  readonly className?: string;
+  readonly children?: React.ReactNode;
+  readonly props?: PropsWithChildren;
 }
 
 const DockIcon = ({

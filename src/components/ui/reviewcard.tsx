@@ -1,3 +1,4 @@
+import React from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -6,12 +7,12 @@ export const ReviewCard = ({
   name,
   username,
   body,
-}: {
+}: Readonly<{
   img: string;
   name: string;
   username: string;
   body: string;
-}) => {
+}>) => {
   return (
     <figure
       className={cn(
