@@ -5,7 +5,7 @@ import { SectionTab } from "../ui/section";
 import { cn } from "@/lib/utils";
 import { Badge } from "../shadcn-ui/badge";
 
-export default function Work({ data }: { data: IUser }) {
+export default function Work({ data }: Readonly<{ data: IUser }>) {
   return (
     <Section
       id="work"
@@ -38,7 +38,7 @@ interface IExpTreeProp {
   children: React.ReactNode;
 }
 
-function ExpTree({ className, children }: IExpTreeProp) {
+function ExpTree({ className, children }: Readonly<IExpTreeProp>) {
   return (
     <div className={cn("ml-auto mr-[10%] lg:px-7", className)}>{children}</div>
   );
@@ -60,7 +60,7 @@ function ExpBranch({
   desc,
   type,
   location,
-}: IExpBranchProp) {
+}: Readonly<IExpBranchProp>) {
   return (
     <div className={cn("relative mb-4 w-full md:mb-0 md:flex", className)}>
       <div className="mr-auto w-full flex-wrap items-center text-base font-semibold capitalize md:flex md:w-[25%]">

@@ -1,3 +1,4 @@
+import React from "react";
 import { About, Hero, Project, Review, Skill, Work } from "@/components/views";
 import user from "@/lib/user.data";
 export default function Home() {

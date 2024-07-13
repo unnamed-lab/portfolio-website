@@ -1,3 +1,4 @@
+import React from "react";
 import user from "@/lib/user.data";
 import Link from "next/link";
 

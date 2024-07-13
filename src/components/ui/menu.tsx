@@ -2,8 +2,8 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface IAboutMenu {
-  className?: string;
-  children: React.ReactNode;
+  readonly className?: string;
+  readonly children: React.ReactNode;
 }
 
 function AboutMenu({ className, children }: IAboutMenu) {
@@ -20,10 +20,10 @@ function AboutMenu({ className, children }: IAboutMenu) {
 }
 
 interface IAboutItem {
-  className?: string;
-  title: string;
-  icon: React.ReactNode;
-  list: string[];
+  readonly className?: string;
+  readonly title: string;
+  readonly icon: React.ReactNode;
+  readonly list: string[];
 }
 
 function AboutItem({ className, title, icon, list }: IAboutItem) {

@@ -2,12 +2,12 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface MarqueeProps {
-  className?: string;
-  reverse?: boolean;
-  pauseOnHover?: boolean;
-  children?: React.ReactNode;
-  vertical?: boolean;
-  repeat?: number;
+  readonly className?: string;
+  readonly reverse?: boolean;
+  readonly pauseOnHover?: boolean;
+  readonly children?: React.ReactNode;
+  readonly vertical?: boolean;
+  readonly repeat?: number;
   [key: string]: any;
 }
 
