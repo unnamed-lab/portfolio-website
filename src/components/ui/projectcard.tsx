@@ -15,7 +15,9 @@ import { GitHubIcon } from "./icons";
 import { IProjectData } from "@/lib/user.project";
 import { Badge } from "../shadcn-ui/badge";
 
-export default function ProjectCard({ data }: Readonly<{ data: IProjectData }>) {
+export default function ProjectCard({
+  data,
+}: Readonly<{ data: IProjectData }>) {
   const { title, desc, stack, github, preview, role, status } = data;
   let statusColor;
   switch (status) {

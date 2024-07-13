@@ -9,12 +9,12 @@ export default function Nav() {
       {navigation.map((el, index) => {
         const itemId = "item-" + index;
         return (
-            <DockIcon key={itemId} className="bg-transparent" size={4}>
-              <Link href={el.url} className="h-full w-full">
-                {el.icon}
-              </Link>
-              {/* <div className="absolute py-[0.1rem] px-[0.33rem] bg-[#b4b3b399] rounded-md z-[1] bottom-[-60%] capitalize transition-all opacity-0 peer-hover:opacity-100">{el.title}</div> */}
-            </DockIcon>
+          <DockIcon key={itemId} className="bg-transparent" size={4}>
+            <Link href={el.url} className="h-full w-full">
+              {el.icon}
+            </Link>
+            {/* <div className="absolute py-[0.1rem] px-[0.33rem] bg-[#b4b3b399] rounded-md z-[1] bottom-[-60%] capitalize transition-all opacity-0 peer-hover:opacity-100">{el.title}</div> */}
+          </DockIcon>
         );
       })}
     </Dock>
