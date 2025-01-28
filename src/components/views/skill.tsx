@@ -24,6 +24,13 @@ export default function Skill({ data }: Readonly<{ data: IUser }>) {
     "tailwindcss",
     "sass",
     "python",
+    "reactnative",
+    "expo",
+    "yarn",
+    "pnpm",
+    "npm",
+    "rust",
+    "solidity"
   ];
   return (
     <Section
