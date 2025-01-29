@@ -28,9 +28,18 @@ export default function Skill({ data }: Readonly<{ data: IUser }>) {
     "yarn",
     "pnpm",
     "npm",
-    "rust",
-    "solidity"
+    "solidity",
+    "mongodb",
+    "mysql",
+    "django",
+    "graphql",
+    "postman",
+    "babel",
+    "materialdesign",
+    "bootstrap",
+    "figma",
   ];
+
   return (
     <Section
       id="skill"
@@ -50,49 +59,83 @@ export default function Skill({ data }: Readonly<{ data: IUser }>) {
             <AboutItem
               key={"about-item-1"}
               className="min-w-[100%] gap-2"
-              title="Programming/Coding"
+              title="Programming Languages"
               icon={Icons.skill}
               list={[
-                "HTML",
-                "CSS",
                 "JavaScript",
                 "TypeScript",
                 "Python",
-                "MongoDB",
-                "Rust"
+                "Java",
+                "HTML5",
+                "CSS3",
+                "Node.js",
+                "Solidity",
               ]}
             />
             <AboutItem
               key={"about-item-2"}
               className="min-w-[100%] gap-2"
-              title="Frameworks & Libraries."
+              title="Frameworks & Libraries"
               icon={Icons.skill}
               list={[
-                "React",
-                "SASS",
-                "Tailwind",
-                "NextJs",
-                "Express",
+                "React.js",
+                "Next.js",
+                "React Native",
+                "Expo",
+                "Express.js",
+                "Django",
                 "Prisma",
                 "Jest",
-                "Testing Library",
-                "React Native",
+                "Mocha",
+                "React Testing Library",
               ]}
             />
             <AboutItem
               key={"about-item-3"}
               className="min-w-[100%] gap-2"
-              title="DevOps"
+              title="Databases"
+              icon={Icons.skill}
+              list={["MongoDB", "MySQL"]}
+            />
+            <AboutItem
+              key={"about-item-4"}
+              className="min-w-[100%] gap-2"
+              title="Tools & Technologies"
               icon={Icons.skill}
               list={[
-                "GitHub",
-                "NPM",
-                "PNPM",
                 "Git",
-                "YAML",
-                "Vercel",
+                "GitHub",
                 "Docker",
-                "Yarn"
+                "Vercel",
+                "Postman",
+                "YAML",
+                "Babel",
+                "NPM",
+                "Yarn",
+                "PNPM",
+              ]}
+            />
+            <AboutItem
+              key={"about-item-5"}
+              className="min-w-[100%] gap-2"
+              title="Styling"
+              icon={Icons.skill}
+              list={[
+                "Tailwind CSS",
+                "SCSS",
+                "Bootstrap",
+                "Material Design",
+              ]}
+            />
+            <AboutItem
+              key={"about-item-6"}
+              className="min-w-[100%] gap-2"
+              title="Additional Skills"
+              icon={Icons.skill}
+              list={[
+                "Agile Methodologies",
+                "Figma (Design Tools)",
+                "Authentication/Authorization (OAuth, JWT)",
               ]}
             />
           </AboutMenu>
