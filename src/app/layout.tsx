@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import React from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react"
 import { Inter, Poppins } from "next/font/google";
 import { Footer, Nav } from "@/components/ui";
 import "./globals.css";
@@ -41,6 +42,7 @@ export default function RootLayout({
         <Nav />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
