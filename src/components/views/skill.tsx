@@ -2,7 +2,7 @@ import React from "react";
 import { IUser } from "@/lib/user.data";
 import { AboutItem, AboutMenu, Icons } from "../ui";
 import Section, { SectionTab } from "../ui/section";
-import IconCloud from "@/components/magicui/icon-cloud";
+import { IconCloud } from "@/components/magicui/icon-cloud";
 
 export default function Skill({ data }: Readonly<{ data: IUser }>) {
   const slugs = [
@@ -40,6 +40,10 @@ export default function Skill({ data }: Readonly<{ data: IUser }>) {
     "figma",
   ];
 
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
+  );
+
   return (
     <Section
       id="skill"
@@ -50,8 +54,8 @@ export default function Skill({ data }: Readonly<{ data: IUser }>) {
       <p className="info">{data.skill_brief}</p>
 
       <div className="my-4 flex w-full flex-wrap gap-8 md:flex-nowrap">
-        <div className="w-full md:w-6/12">
-          <IconCloud iconSlugs={slugs} />
+        <div className="relative w-full md:w-6/12 flex items-center justify-center">
+          <IconCloud images={images} className="w-full" />
         </div>
 
         <div className="w-full md:w-6/12">
