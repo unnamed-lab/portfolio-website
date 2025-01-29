@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
 import React from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import { Footer, Nav } from "@/components/ui";
 import "./globals.css";
 import meta from "@/lib/metadata";
 
+// Load the Inter font
 const inter = Inter({ subsets: ["latin"] });
+
+// Load the Poppins font
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: meta.title,
@@ -28,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + " h-full"}>
+      <body className={`${inter.className} ${poppins.className} h-full`}>
         <SpeedInsights />
         <Nav />
         {children}

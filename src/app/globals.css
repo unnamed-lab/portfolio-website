@@ -16,6 +16,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    font-family: var(--font-poppins), sans-serif;
 }
 
 @layer utilities {
