@@ -1,6 +1,8 @@
 import projects, { TProjectData } from "./user.project";
 import reviews, { TReviewData } from "./user.review";
 
+const exp = calculateExperience("March 2023")
+
 const user: IUser = {
   firstname: "Anuoluwa",
   lastname: "Adebayo",
@@ -14,11 +16,11 @@ const user: IUser = {
     github: "https://github.com/unnamed-lab/",
   },
   resumeUrl: "/resume.pdf",
-  exp: calculateExperience("March 2023"),
+  exp,
   title: "Software Developer",
   country: "Nigeria",
-  bio: "An experienced software developer with over 3 years of experience in designing and implementing software solutions. Skilled in developing responsive web applications using React and Next.js, and mobile applications for Android and iOS platforms with React Native.",
-  desc: `As a software developer with 3 years of experience, I specialize in creating responsive web and mobile applications. My expertise lies in using modern frameworks like React, Next.js, and React Native to build scalable and user-friendly solutions. I am passionate about writing clean, maintainable code and continuously improving my skills in design patterns, data structures, and algorithms.`,
+  bio: `An experienced software developer with over ${exp} years of experience in designing and implementing software solutions. Skilled in developing responsive web applications using React and Next.js, and mobile applications for Android and iOS platforms with React Native.`,
+  desc: `As a software developer with ${exp} years of experience, I specialize in creating responsive web and mobile applications. My expertise lies in using modern frameworks like React, Next.js, and React Native to build scalable and user-friendly solutions. I am passionate about writing clean, maintainable code and continuously improving my skills in design patterns, data structures, and algorithms.`,
   skill_brief:
     "I have a solid understanding of HTML5 and CSS3 (with CSS frameworks like Tailwind CSS and SCSS), including responsive design principles and cross-browser compatibility with experience in creating visually appealing and accessible web interfaces. With proficiency in intermediate-level JavaScript, including DOM manipulation, event handling, and familiarity with popular libraries and frameworks like React, Next.js, Express.js, and more.",
   experience: [
