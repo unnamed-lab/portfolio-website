@@ -38,6 +38,8 @@ export default function Skill({ data }: Readonly<{ data: IUser }>) {
     "materialdesign",
     "bootstrap",
     "figma",
+    "rust",
+    "android"
   ];
 
   const images = slugs.map(
@@ -74,6 +76,7 @@ export default function Skill({ data }: Readonly<{ data: IUser }>) {
                 "CSS3",
                 "Node.js",
                 "Solidity",
+                "Rust"
               ]}
             />
             <AboutItem
