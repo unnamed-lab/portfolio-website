@@ -54,7 +54,7 @@ export default function Skill({ data }: Readonly<{ data: IUser }>) {
       <p className="info">{data.skill_brief}</p>
 
       <div className="my-4 flex w-full flex-wrap gap-8 md:flex-nowrap">
-        <div className="relative w-full md:w-6/12 flex items-center justify-center">
+        <div className="relative flex w-full items-center justify-center md:w-6/12">
           <IconCloud images={images} className="w-full" />
         </div>
 
@@ -124,12 +124,7 @@ export default function Skill({ data }: Readonly<{ data: IUser }>) {
               className="min-w-[100%] gap-2"
               title="Styling"
               icon={Icons.skill}
-              list={[
-                "Tailwind CSS",
-                "SCSS",
-                "Bootstrap",
-                "Material Design",
-              ]}
+              list={["Tailwind CSS", "SCSS", "Bootstrap", "Material Design"]}
             />
             <AboutItem
               key={"about-item-6"}

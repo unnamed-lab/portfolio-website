@@ -43,7 +43,8 @@ const user: IUser = {
       type: "Employment",
     },
     {
-      title: "Bachelor of Technology, Computer Science - Federal University of Technology Owerri",
+      title:
+        "Bachelor of Technology, Computer Science - Federal University of Technology Owerri",
       timespan: "December 2022 - December 2026",
       desc: "Pursuing a comprehensive curriculum that combines theoretical foundations and practical applications of computer science, preparing for a career in software development.",
       location: "Owerri, Nigeria",

@@ -24,7 +24,11 @@ function easeOutCubic(t: number): number {
   return 1 - Math.pow(1 - t, 3);
 }
 
-export function IconCloud({ icons, images, className }: Readonly<IconCloudProps>) {
+export function IconCloud({
+  icons,
+  images,
+  className,
+}: Readonly<IconCloudProps>) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [iconPositions, setIconPositions] = useState<Icon[]>([]);
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
