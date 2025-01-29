@@ -13,6 +13,7 @@ const user: IUser = {
     twitter: "https://twitter.com/unnamedcodes",
     github: "https://github.com/unnamed-lab/",
   },
+  resumeUrl: "/resume.pdf",
   exp: calculateExperience("March 2023"),
   title: "Software Developer",
   country: "Nigeria",
@@ -67,6 +68,7 @@ export interface IUser {
     twitter: string;
     github: string;
   };
+  resumeUrl: string;
   exp: number;
   title: string;
   country: string;

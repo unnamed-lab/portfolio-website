@@ -3,6 +3,7 @@ import { Icons } from "../ui";
 import Link from "next/link";
 import Image from "next/image";
 import { IUser } from "@/lib/user.data";
+import ResumeBtn from "../ui/resumeBtn";
 
 export default function Hero({ data }: Readonly<{ data: IUser }>) {
   const socialList = [
@@ -25,19 +26,19 @@ export default function Hero({ data }: Readonly<{ data: IUser }>) {
 
   return (
     <section className="relative z-0 w-full bg-neutral-900 from-transparent to-neutral-950 after:pointer-events-none after:absolute after:bottom-0 after:z-[2] after:block after:h-16 after:w-full after:select-none after:bg-gradient-to-b after:content-['']">
-      <div className="w-full overflow-hidden px-[10%] pt-10 after:content-[''] md:flex md:items-center lg:min-h-[60svh] lg:py-[5%]">
-        <div className="!h-full w-full grow md:w-7/12">
+      <div className="min-h-[60svh] w-full overflow-hidden px-[10%] pt-10 after:content-[''] md:flex md:items-center lg:min-h-[70svh] lg:py-[5%]">
+        <div className="!h-full w-full grow pb-8 md:w-7/12">
           <p className="mb-4">My name is</p>
           <h1 className="blue-line text-4xl font-bold md:text-5xl lg:text-7xl">
             {data.firstname} {data.middlename.slice(0, 1) + "."} {data.lastname}
           </h1>
-          <p className="py-7 uppercase text-zinc-600">
+          <p className="py-5 uppercase text-zinc-600 md:py-7">
             {`I'm also known as `}
             <span className="text-xl font-bold uppercase text-zinc-400">
               {data.nickname}
             </span>
           </p>
-          <p>{data.bio}</p>
+          <p className="text-xs md:text-base">{data.bio}</p>
           <p className="flex flex-nowrap gap-6 py-4">
             {socialList.map((el, index) => {
               const itemId = "item-" + index;
@@ -49,6 +50,7 @@ export default function Hero({ data }: Readonly<{ data: IUser }>) {
               );
             })}
           </p>
+          <ResumeBtn data={data} />
         </div>
         <div className="absolute right-0 top-0 -z-10 !h-full w-full grow overflow-hidden opacity-35 md:relative md:z-0 md:w-5/12 md:opacity-100">
           <Image
