@@ -24,7 +24,6 @@ export default function Skill({ data }: Readonly<{ data: IUser }>) {
     "tailwindcss",
     "sass",
     "python",
-    "reactnative",
     "expo",
     "yarn",
     "pnpm",
@@ -60,6 +59,7 @@ export default function Skill({ data }: Readonly<{ data: IUser }>) {
                 "TypeScript",
                 "Python",
                 "MongoDB",
+                "Rust"
               ]}
             />
             <AboutItem
@@ -76,6 +76,7 @@ export default function Skill({ data }: Readonly<{ data: IUser }>) {
                 "Prisma",
                 "Jest",
                 "Testing Library",
+                "React Native",
               ]}
             />
             <AboutItem
@@ -91,6 +92,7 @@ export default function Skill({ data }: Readonly<{ data: IUser }>) {
                 "YAML",
                 "Vercel",
                 "Docker",
+                "Yarn"
               ]}
             />
           </AboutMenu>
