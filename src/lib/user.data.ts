@@ -25,8 +25,15 @@ const user: IUser = {
     "I have a solid understanding of HTML5 and CSS3 (with CSS frameworks like Tailwind CSS and SCSS), including responsive design principles and cross-browser compatibility with experience in creating visually appealing and accessible web interfaces. With proficiency in intermediate-level JavaScript, including DOM manipulation, event handling, and familiarity with popular libraries and frameworks like React, Next.js, Express.js, and more.",
   experience: [
     {
+      title: "Backend Developer - BunchBay",
+      timespan: "April 2025 - Present",
+      desc: "Working with the team on delivering client products backend server using technologies like NestJs, TypeOrm, Prisma etc, which help increased skills by 80% on backend concepts and implementation.",
+      location: "Lagos, Nigeria (Remote)",
+      type: "Employment",
+    },
+    {
       title: "Frontend Developer - Petit",
-      timespan: "August 2024 - Present",
+      timespan: "August 2024 - February 2025",
       desc: "Led the design of the UI for the mobile app using React Native and the website using Next.js, which enhanced skills by 70%. Designed 30+ pages and screens while using efficient architectural and design patterns, maintaining 100% best coding practices. Worked side-by-side with 2 other React developers in developing the Petit application and website. Improved proficiency in design patterns, data structures, algorithms, and object-oriented design by 60%.",
       location: "Budapest, Hungary (Remote)",
       type: "Employment",
