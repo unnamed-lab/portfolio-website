@@ -39,7 +39,9 @@ export default function Skill({ data }: Readonly<{ data: IUser }>) {
     "bootstrap",
     "figma",
     "rust",
-    "android"
+    "android",
+    "typeorm",
+    "nestjs"
   ];
 
   const images = slugs.map(
@@ -95,6 +97,8 @@ export default function Skill({ data }: Readonly<{ data: IUser }>) {
                 "Jest",
                 "Mocha",
                 "React Testing Library",
+                "NestJs",
+                "TypeORM"
               ]}
             />
             <AboutItem
