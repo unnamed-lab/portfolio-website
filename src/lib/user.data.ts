@@ -15,7 +15,7 @@ const user: IUser = {
     twitter: "https://twitter.com/unnamedcodes",
     github: "https://github.com/unnamed-lab/",
   },
-  resumeUrl: "https://drive.google.com/file/d/1i8alIPysTzsE6WXBC083Aq2yia3bi02t/view?usp=drivesdk",
+  resumeUrl: "https://docs.google.com/document/d/1XggQbCgMQSK37jgopa_qhByN4yee4JskzUklUHo71wA/edit?usp=drivesdk",
   exp,
   title: "Software Developer",
   country: "Nigeria",
