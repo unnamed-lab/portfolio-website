@@ -1,7 +1,7 @@
 import projects, { TProjectData } from "./user.project";
 import reviews, { TReviewData } from "./user.review";
 
-const exp = calculateExperience("March 2023")
+const exp = calculateExperience("March 2022")
 
 const user: IUser = {
   firstname: "Anuoluwa",
