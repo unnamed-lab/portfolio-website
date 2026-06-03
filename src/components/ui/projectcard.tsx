@@ -18,7 +18,7 @@ import { Badge } from "../shadcn-ui/badge";
 export default function ProjectCard({
   data,
 }: Readonly<{ data: IProjectData }>) {
-  const { title, desc, stack, github, preview, role, status } = data;
+  const { title, desc, stack, github, preview, role, status, type } = data;
   let statusColor;
   switch (status) {
     case "done":
@@ -35,18 +35,39 @@ export default function ProjectCard({
       break;
   }
 
-  return (
-    <Card>
+  const roleLabel = role === "founder" ? "Founder / CEO" : role;
+
+  const cardContent = (
+    <Card
+      className={cn(
+        type === "featured" && "border-blue-500/40 bg-blue-500/[0.03]",
+      )}
+    >
       <CardHeader className="relative pb-3">
-        <div className="absolute left-[8px] top-[8px] h-3 w-3 animate-pulse rounded-xl bg-slate-200"></div>
+        <div
+          className={cn(
+            "absolute left-[8px] top-[8px] h-3 w-3 animate-pulse rounded-xl",
+            type === "featured"
+              ? "bg-blue-400"
+              : type === "bounty"
+                ? "bg-amber-400"
+                : type === "private"
+                  ? "bg-gray-500"
+                  : "bg-slate-200",
+          )}
+        />
         <CardTitle className="text-lg">{title}</CardTitle>
-        <div className="my-2 flex gap-3">
+        <div className="my-2 flex flex-wrap gap-3">
           {role && (
             <Badge
               variant="outline"
-              className="pointer-events-none select-none rounded font-medium uppercase"
+              className={cn(
+                "pointer-events-none select-none rounded font-medium uppercase",
+                type === "featured" &&
+                  "border-blue-500 text-blue-400",
+              )}
             >
-              {role}
+              {roleLabel}
             </Badge>
           )}
           {status && (
@@ -60,6 +81,32 @@ export default function ProjectCard({
               className="pointer-events-none select-none rounded border-[--status-badge-colour] font-medium uppercase text-[--status-badge-colour]"
             >
               {status}
+            </Badge>
+          )}
+          {type === "bounty" && (
+            <Badge
+              variant="default"
+              className="pointer-events-none select-none rounded border-amber-500 font-medium uppercase text-amber-500"
+              style={
+                {
+                  "--status-badge-colour": "#d97706",
+                } as React.CSSProperties
+              }
+            >
+              Bounty Submission
+            </Badge>
+          )}
+          {type === "private" && (
+            <Badge
+              variant="default"
+              className="pointer-events-none select-none rounded border-gray-500 font-medium uppercase text-gray-500"
+              style={
+                {
+                  "--status-badge-colour": "#6b7280",
+                } as React.CSSProperties
+              }
+            >
+              Private
             </Badge>
           )}
         </div>
@@ -85,24 +132,38 @@ export default function ProjectCard({
           })}
         </div>
       </CardContent>
-      <CardFooter className="mt-auto gap-4">
-        {github && (
-          <Link
-            href={github}
-            className="grid h-8 w-8 place-items-center rounded-2xl bg-neutral-600 p-0"
-          >
-            <GitHubIcon className="mx-auto h-7 w-7" />
-          </Link>
-        )}
-        <Link
-          href={preview}
-          className="flex h-8 grow items-center justify-center rounded-md bg-neutral-100 text-center text-sm font-bold uppercase text-gray-950 transition-colors ease-linear hover:bg-neutral-300"
-        >
-          Preview
-        </Link>
-      </CardFooter>
+      {github || preview ? (
+        <CardFooter className="mt-auto gap-4">
+          {github && (
+            <Link
+              href={github}
+              className="grid h-8 w-8 place-items-center rounded-2xl bg-neutral-600 p-0"
+            >
+              <GitHubIcon className="mx-auto h-7 w-7" />
+            </Link>
+          )}
+          {preview && (
+            <Link
+              href={preview}
+              className="flex h-8 grow items-center justify-center rounded-md bg-neutral-100 text-center text-sm font-bold uppercase text-gray-950 transition-colors ease-linear hover:bg-neutral-300"
+            >
+              Preview
+            </Link>
+          )}
+        </CardFooter>
+      ) : null}
     </Card>
   );
+
+  if (type === "featured") {
+    return (
+      <div className="relative col-span-full rounded-xl bg-gradient-to-r from-blue-500/20 via-blue-500/10 to-blue-500/20 p-[1px]">
+        {cardContent}
+      </div>
+    );
+  }
+
+  return cardContent;
 }
 
 function ProjectStack({

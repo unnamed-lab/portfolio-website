@@ -17,16 +17,23 @@ const user: IUser = {
   },
   resumeUrl: "https://docs.google.com/document/d/1XggQbCgMQSK37jgopa_qhByN4yee4JskzUklUHo71wA/edit?usp=drivesdk",
   exp,
-  title: "Software Developer",
+  title: "Software Developer & Web3 Engineer",
   country: "Nigeria",
-  bio: `An experienced software developer with over ${exp} years of experience in designing and implementing software solutions. Skilled in developing responsive web applications using React and Next.js, and mobile applications for Android and iOS platforms with React Native.`,
-  desc: `As a software developer with ${exp} years of experience, I specialize in creating responsive web and mobile applications. My expertise lies in using modern frameworks like React, Next.js, and React Native to build scalable and user-friendly solutions. I am passionate about writing clean, maintainable code and continuously improving my skills in design patterns, data structures, and algorithms.`,
+  bio: `A software engineer with over ${exp} years of experience building full-stack applications and Web3 infrastructure. Proficient in TypeScript, React, Next.js, and NestJS on the frontend and backend, with deep expertise in Solana blockchain development using Anchor and Rust. Founded Herald Protocol, a privacy-preserving notification layer for DeFi. Passionate about clean architecture, developer tooling, and shipping production-grade systems.`,
+  desc: `A full-stack engineer and founder with expertise across the entire development stack from responsive web interfaces to Solana smart contracts. I build production systems using TypeScript, React, Next.js, NestJS, and PostgreSQL, and I write Solana programs in Rust with Anchor. I have experience leading product development, collaborating across teams, and delivering to deadline in both startup and contract environments.`,
   skill_brief:
-    "I have a solid understanding of HTML5 and CSS3 (with CSS frameworks like Tailwind CSS and SCSS), including responsive design principles and cross-browser compatibility with experience in creating visually appealing and accessible web interfaces. With proficiency in intermediate-level JavaScript, including DOM manipulation, event handling, and familiarity with popular libraries and frameworks like React, Next.js, Express.js, and more.",
+    "Proficient in TypeScript, JavaScript, React, Next.js, and NestJS for building full-stack web applications. Experienced with Solana blockchain development using Rust, Anchor, and Web3.js. Comfortable with PostgreSQL, Prisma, Docker, Tailwind CSS, and Framer Motion. Familiar with smart contract development, Web3 integration, and cloud infrastructure (AWS).",
   experience: [
     {
+      title: "Founder & CEO - Herald Protocol",
+      timespan: "February 2026 - Present",
+      desc: "Founded and leading development of privacy-preserving notification infrastructure for Web3. Built the Solana Anchor program, NestJS notification gateway with AWS Nitro Enclave TEE decryption, Next.js user portal and developer dashboard, TypeScript SDK published on npm, and marketing landing page. Coordinated cross-functional team across smart contracts, backend, frontend, and design.",
+      location: "Remote",
+      type: "Employment",
+    },
+    {
       title: "Backend Developer - BunchBay",
-      timespan: "April 2025 - Present",
+      timespan: "May 2025 - March 2026",
       desc: "Working with the team on delivering client products backend server using technologies like NestJs, TypeOrm, Prisma etc, which help increased skills by 80% on backend concepts and implementation.",
       location: "Lagos, Nigeria (Remote)",
       type: "Employment",
